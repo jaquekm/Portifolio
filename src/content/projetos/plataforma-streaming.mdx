@@ -1,0 +1,29 @@
+## Contexto
+
+A empresa precisava processar eventos transacionais em tempo real para alimentar dashboards operacionais e modelos preditivos. O sistema anterior era batch-based, com latência superior a 6 horas.
+
+## Complexidade técnica
+
+- Alto volume de eventos (milhões/dia)
+- Necessidade de baixa latência (\< 2 segundos)
+- Garantia de consistência eventual
+- Tolerância a falhas e reprocessamento
+
+## Arquitetura
+
+A solução foi estruturada em quatro camadas claras:
+
+1. Ingestão  
+2. Processamento  
+3. Enriquecimento  
+4. Exposição  
+
+Arquitetura orientada a eventos com Kafka para ingestão, Flink para processamento de streams, microsserviços desacoplados e persistência híbrida (PostgreSQL + Data Lake).
+
+## Impacto
+
+- Latência reduzida de ~6h para 1.8s  
+- Aumento de confiabilidade operacional  
+- Base estruturada para modelos de machine learning  
+- Redução de retrabalho em análises manuais  
+

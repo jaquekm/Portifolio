@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  /* Paleta base escura (deep navy / graphite) */
+  --bg: #020617;
+  --fg: #e5e7eb;
+
+  --surface-elevated: #020617;
+  --surface-muted: #020617;
+  --surface-soft: #0b1120;
+
+  --border-subtle: #1e293b;
+
+  --accent: #6366f1; /* Indigo suave */
+  --accent-soft: #4f46e5;
+  --accent-green: #10b981;
+  --accent-violet: #8b5cf6;
+}
+
+/* Tema claro opcional para o toggle */
+:root[data-theme="light"] {
+  --bg: #f9fafb;
+  --fg: #020617;
+
+  --surface-elevated: #ffffff;
+  --surface-muted: #f3f4f6;
+  --surface-soft: #e5e7eb;
+
+  --border-subtle: #d1d5db;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-editorial-serif);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+::selection {
+  background: rgba(99, 102, 241, 0.25);
+}
+
+:focus-visible {
+  outline: 2px solid rgba(99, 102, 241, 0.55);
+  outline-offset: 3px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* MDX / conteúdo editorial */
+.prose {
+  line-height: 1.75;
+}
+
+.prose :where(h2, h3) {
+  font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+}
+
+.prose :where(a) {
+  color: rgba(226, 232, 240, 0.95);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.prose :where(code) {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: rgba(148, 163, 184, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 10px;
+  padding: 0.1em 0.4em;
+}
