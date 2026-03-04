@@ -37,7 +37,7 @@ export function About() {
                   </span>
                 </p>
                 <p>
-                  Sou engenheira de software com perfil analítico, especializada
+                  Sou desenvolvedora com perfil analítico, especializada
                   em arquitetura de sistemas, engenharia de dados e ambientes
                   distribuídos. Meu foco não é apenas implementar funcionalidades,
                   mas projetar estruturas que organizem a complexidade e sustentem
