@@ -1,98 +1,56 @@
 "use client";
 
 import { Container } from "@/components/layout/Container";
-import { useAppContext } from "@/components/layout/AppProviders";
 import { MotionReveal } from "@/components/ui/MotionReveal";
-
-// Sub-componente para destacar áreas de atuação
-function SkillBadge({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="rounded-full border border-slate-700 bg-slate-800/40 px-3 py-1 text-xs text-slate-300">
-      {children}
-    </span>
-  );
-}
+import Image from "next/image";
 
 export function About() {
-  const { language } = useAppContext();
-  const isPt = language === "pt";
-
   return (
-    <section id="sobre" className="relative overflow-hidden border-b border-slate-800/60 bg-[color:var(--bg)]/95 py-24 md:py-32">
-      {/* Decorativo de fundo: Padrão de Grade sutil */}
-      <div className="absolute inset-0 -z-10 opacity-[0.03] [mask-image:radial-gradient(black,transparent_70%)]">
-        <div className="absolute inset-0 h-full w-full bg-[grid:20px_20px] [bg-image:linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)]" />
-      </div>
-
+    <section id="sobre" className="border-b border-slate-200 dark:border-slate-800/60 bg-white dark:bg-[color:var(--bg)] py-24 md:py-32">
       <Container className="max-w-4xl">
-        <div className="grid gap-12 lg:grid-cols-[1fr_320px]">
-          <MotionReveal>
-            <p className="text-xs font-medium uppercase tracking-[0.25em] text-indigo-400">
-              {isPt ? "Pensamento sistêmico aplicado à engenharia" : "Systems thinking applied to engineering"}
-            </p>
-
-            <h2 className="mt-4 font-[var(--font-serif)] text-3xl font-semibold tracking-tight text-slate-50 md:text-4xl">
-              {isPt ? "Sobre" : "About"}
-            </h2>
-
-            <div className="mt-8 space-y-6 text-base leading-relaxed text-slate-300 md:text-lg">
-              {isPt ? (
-                <>
-                  <p>
-                    Minha trajetória sempre foi guiada por uma pergunta:{" "}
-                    <span className="font-medium text-indigo-300">
-                      “Como estruturar sistemas que continuem coerentes à medida que escalam?”
-                    </span>
-                  </p>
-                  <p className="text-sm md:text-base">
-                    Sou desenvolvedora com perfil analítico, especializada em <strong className="text-slate-100">arquitetura de sistemas e engenharia de dados</strong>. 
-                    Projeto estruturas que organizam a complexidade para sustentar o crescimento do negócio.
-                  </p>
-                </>
-              ) : (
-                <>
-                  <p>
-                    I approach engineering as <span className="font-medium text-indigo-300">system design</span>, not just feature delivery.
-                  </p>
-                  <p className="text-sm md:text-base text-slate-400">
-                    With a strong analytical mindset, I specialize in distributed architectures and data-intensive systems.
-                  </p>
-                </>
-              )}
-            </div>
-
-            {/* Nova seção de Badges para "Scan" rápido */}
-            <div className="mt-8 flex flex-wrap gap-2">
-              <SkillBadge>Distributed Systems</SkillBadge>
-              <SkillBadge>Event-Driven</SkillBadge>
-              <SkillBadge>Data Engineering</SkillBadge>
-              <SkillBadge>Cloud Native</SkillBadge>
-            </div>
-          </MotionReveal>
-
-          {/* Coluna Lateral: Um "Quote" ou Stats sutil */}
-          <MotionReveal delay={0.2} className="hidden lg:block">
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
-              <div className="mb-4 h-8 w-8 rounded-full bg-indigo-500/10 flex items-center justify-center text-indigo-400">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <p className="text-sm italic text-slate-400">
-                {isPt 
-                  ? "Maturidade técnica não está em usar mais tecnologia, mas em escolher com precisão."
-                  : "Technical maturity is not about using more technology, but about choosing with precision."}
-              </p>
-            </div>
-          </MotionReveal>
-        </div>
-
-        <MotionReveal delay={0.3}>
-          <p className="mt-12 rounded-xl border border-indigo-500/20 bg-indigo-500/5 p-5 text-sm font-medium text-indigo-200/80 backdrop-blur-sm">
-            {isPt
-              ? "Complexidade não deve ser eliminada — deve ser organizada."
-              : "Complexity should not be eliminated — it should be structured."}
+        <MotionReveal>
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-indigo-600 dark:text-indigo-400">
+            Pensamento sistêmico aplicado à engenharia
           </p>
+          
+          <div className="mt-12 md:mt-16 flex flex-col md:flex-row gap-10 md:gap-16 items-start">
+            {/* Sua Foto Redonda */}
+            <div className="shrink-0">
+              <div className="relative h-32 w-32 md:h-40 md:w-40 overflow-hidden rounded-full border-2 border-slate-200 dark:border-slate-800 shadow-sm">
+                <Image 
+                  src="/perfil.jpg" 
+                  alt="Jaqueline Kogh" 
+                  fill 
+                  className="object-cover grayscale hover:grayscale-0 transition-all duration-500" 
+                />
+              </div>
+            </div>
+
+            {/* Seus Textos */}
+            <div className="space-y-6 text-base md:text-lg text-slate-700 dark:text-slate-300">
+              <p>
+                Minha trajetória em tecnologia sempre foi guiada por uma pergunta central: <span className="text-slate-900 dark:text-slate-50 font-medium">"Como estruturar sistemas que continuem coerentes à medida que escalam?"</span>
+              </p>
+              
+              <p>
+                Sou desenvolvedora com perfil analítico, especializada em arquitetura de sistemas, engenharia de dados e ambientes distribuídos. Meu foco não é apenas implementar funcionalidades, mas projetar estruturas que organizem a complexidade e sustentem crescimento.
+              </p>
+              
+              <p>
+                Tenho experiência desenhando arquiteturas orientadas a eventos, pipelines de dados em larga escala, microsserviços resilientes e estratégias de observabilidade para ambientes críticos.
+              </p>
+              
+              <p>
+                Minha abordagem combina pensamento sistêmico, clareza estrutural, decisões técnicas fundamentadas e foco em impacto mensurável. Acredito que maturidade técnica não está em usar mais tecnologia, mas em escolher com precisão.
+              </p>
+
+              <div className="mt-8 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 p-6">
+                <p className="text-center font-medium text-slate-900 dark:text-slate-200 italic">
+                  "Complexidade não deve ser eliminada — deve ser organizada."
+                </p>
+              </div>
+            </div>
+          </div>
         </MotionReveal>
       </Container>
     </section>
