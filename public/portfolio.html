@@ -678,7 +678,7 @@ body.menu-open{overflow:hidden}
     <div class="sec-head rv">
       <p class="kick" data-i18n="wk"><b>02</b>SELECTED WORK</p>
       <h2 class="sec-title" data-i18n="wt">O QUE JÁ CONSTRUÍ<span class="dot">.</span></h2>
-      <p class="sec-note" data-i18n="wn">Dois sistemas em produção e um produto próprio em desenvolvimento. <b>As interfaces são as protagonistas.</b></p>
+      <p class="sec-note" data-i18n="wn">Dois sistemas em produção e dois projetos próprios ainda não publicados. <b>As interfaces são as protagonistas.</b></p>
     </div>
 
     <!-- índice — o que cada projeto demonstra -->
@@ -700,6 +700,12 @@ body.menu-open{overflow:hidden}
         <span class="widx-num">03</span>
         <span class="widx-name">IRON BEAR</span>
         <span class="widx-what" data-i18n="wi3w">PRODUTO PRÓPRIO — APP MOBILE E PAINEL, EM DESENVOLVIMENTO</span>
+        <span class="widx-ar"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 6h10M7 2l4 4-4 4"/></svg></span>
+      </a>
+      <a class="widx-row" href="#p4">
+        <span class="widx-num">04</span>
+        <span class="widx-name">GESTÃO DE ESTOQUES</span>
+        <span class="widx-what" data-i18n="wi4w">SISTEMA WEB PARA LOJAS — RAILS, NÃO PUBLICADO</span>
         <span class="widx-ar"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 6h10M7 2l4 4-4 4"/></svg></span>
       </a>
     </div>
@@ -898,6 +904,44 @@ body.menu-open{overflow:hidden}
       </div>
     </article>
 
+    <article class="proj" id="p4">
+      <span class="proj-idx" aria-hidden="true">04</span>
+      <div class="proj-grid pg-left">
+        <div class="shots rv" data-d="1">
+          <figure class="browser" data-cursor="VER">
+            <div class="shot">
+              <img src="imagens/estoque-estoques.png" alt="Sistema de Gestão de Estoques — tela de estoques com saldo, previsão e situação" loading="lazy" onerror="this.closest('.shot').classList.add('noimg')">
+              <div class="ph-msg"><strong>TELA · ESTOQUES</strong><p><b>imagens/estoque-estoques.png</b></p></div>
+              <figcaption data-i18n="es1">01 · Saldo, previsão de venda e situação por produto</figcaption>
+            </div>
+          </figure>
+          <figure class="browser" data-cursor="VER">
+            <div class="shot">
+              <img src="imagens/estoque-relatorios.png" alt="Sistema de Gestão de Estoques — relatórios de vendas, mais vendidos e pagamentos" loading="lazy" onerror="this.closest('.shot').classList.add('noimg')">
+              <div class="ph-msg"><strong>TELA · RELATÓRIOS</strong><p><b>imagens/estoque-relatorios.png</b></p></div>
+              <figcaption data-i18n="es2">02 · Relatórios de vendas, mais vendidos e pagamentos</figcaption>
+            </div>
+          </figure>
+          <p class="fig" data-i18n="esFig"><b>FIG. 05</b> — SISTEMA DE GESTÃO DE ESTOQUES · TELAS ILUSTRATIVAS · DADOS FICTÍCIOS</p>
+        </div>
+        <div class="rv" data-d="1">
+          <p class="proj-kick" data-i18n="p5k"><b>04</b> / VAREJO · ESTOQUE · WEB</p>
+          <h3 class="proj-name" data-i18n="p5n">SISTEMA DE GESTÃO DE ESTOQUES</h3>
+          <p class="proj-sub" data-i18n="p5s">Sistema web para gestão de estoques de lojas: produtos, saldo por loja, previsão de venda, contagem de estoque, compras, vendas e relatórios.</p>
+          <dl class="spec">
+            <div class="spec-row"><dt data-i18n="lbCat">CATEGORIA</dt><dd data-i18n="p5d0">Varejo · Gestão de estoque · Web</dd></div>
+            <div class="spec-row"><dt data-i18n="lbStat">STATUS</dt><dd data-i18n="p5d1"><b>NÃO PUBLICADO</b> · telas ilustrativas de como o sistema ficaria</dd></div>
+            <div class="spec-row"><dt data-i18n="lbRole">PAPEL</dt><dd data-i18n="p5d2"><b>Desenvolvimento e adaptação</b> do sistema</dd></div>
+            <div class="spec-row"><dt data-i18n="lbBase">BASE</dt><dd data-i18n="p5d6">Open ERP — projeto de código aberto em Ruby on Rails</dd></div>
+            <div class="spec-row"><dt data-i18n="lbStack">STACK</dt><dd data-i18n="p5d3">Ruby on Rails 7 · Hotwire (Turbo, Stimulus) · PostgreSQL · Redis · GoodJob</dd></div>
+            <div class="spec-row"><dt data-i18n="lbScope">ESCOPO</dt><dd data-i18n="p5d4">Produtos e SKUs, saldo por loja, previsão de venda, contagem de estoque, compras e fornecedores, vendas, relatórios e etiquetas com QR code.</dd></div>
+            <div class="spec-row"><dt data-i18n="lbInt">INTEGRAÇÕES</dt><dd data-i18n="p5d5">ERP Bling via API.</dd></div>
+          </dl>
+          <div class="proj-tags"><span class="chip">RUBY ON RAILS</span><span class="chip" data-i18n="tEst">ESTOQUE</span><span class="chip" data-i18n="tVar">VAREJO</span><span class="chip">HOTWIRE</span><span class="chip warn" data-i18n="chipNP">NÃO PUBLICADO</span></div>
+        </div>
+      </div>
+    </article>
+  
       </section>
 
   <!-- ============ 03 ESTUDO DE CASO (PRESCRITTOMED — REAL) ============ -->
@@ -1109,9 +1153,9 @@ body.menu-open{overflow:hidden}
       <p class="sec-note" data-i18n="stk3">O conjunto completo, agrupado por função — e <b>onde cada camada roda de verdade</b>. Cada projeto tem a sua própria stack.</p>
     </div>
     <div class="stk rv"><div class="stk-g" data-i18n="gA"><i>A</i>LINGUAGENS</div><div class="stk-i"><span class="sit">Python</span><span class="sit">Ruby</span><span class="sit">JavaScript</span><span class="sit">TypeScript</span><span class="sit">PHP</span><span class="sit">Java</span><span class="sit">Dart</span><span class="sit">SQL</span></div><div class="stk-a" data-i18n="apA"><b>APLICADO EM</b> — Python: PrescrittoMED · Ruby: Conexiia · TypeScript: Iron Bear</div></div>
-    <div class="stk rv"><div class="stk-g"><i>B</i>BACKEND &amp; APIS</div><div class="stk-i"><span class="sit">Ruby on Rails</span><span class="sit">Python</span><span class="sit">PHP</span><span class="sit">Java</span><span class="sit" data-i18n="sB1">APIs REST</span><span class="sit">Webhooks</span><span class="sit" data-i18n="sB3">Autenticação</span><span class="sit" data-i18n="sB6">Filas &amp; workers</span></div><div class="stk-a" data-i18n="apB"><b>APLICADO EM</b> — Rails: Conexiia · Python: PrescrittoMED</div></div>
+    <div class="stk rv"><div class="stk-g"><i>B</i>BACKEND &amp; APIS</div><div class="stk-i"><span class="sit">Ruby on Rails</span><span class="sit">Python</span><span class="sit">PHP</span><span class="sit">Java</span><span class="sit" data-i18n="sB1">APIs REST</span><span class="sit">Webhooks</span><span class="sit" data-i18n="sB3">Autenticação</span><span class="sit" data-i18n="sB6">Filas &amp; workers</span></div><div class="stk-a" data-i18n="apB"><b>APLICADO EM</b> — Rails: Conexiia · Gestão de Estoques · Python: PrescrittoMED</div></div>
     <div class="stk rv"><div class="stk-g" data-i18n="gDb"><i>C</i>DADOS</div><div class="stk-i"><span class="sit">PostgreSQL</span><span class="sit">Redis</span><span class="sit">Supabase</span><span class="sit" data-i18n="sDb5">Modelagem de dados</span><span class="sit">RLS</span></div><div class="stk-a" data-i18n="apDb"><b>APLICADO EM</b> — todos os projetos · RLS: Iron Bear</div></div>
-    <div class="stk rv"><div class="stk-g"><i>D</i>FRONTEND</div><div class="stk-i"><span class="sit">React</span><span class="sit">Next.js</span><span class="sit">Hotwire (Turbo · Stimulus)</span><span class="sit">Tailwind CSS</span><span class="sit">HTML · CSS</span><span class="sit" data-i18n="sC2">Arquitetura de componentes</span><span class="sit" data-i18n="sC3">Dashboards densos em dados</span><span class="sit" data-i18n="sC4">Sistemas responsivos</span></div><div class="stk-a" data-i18n="apC"><b>APLICADO EM</b> — Iron Bear · Conexiia · PrescrittoMED</div></div>
+    <div class="stk rv"><div class="stk-g"><i>D</i>FRONTEND</div><div class="stk-i"><span class="sit">React</span><span class="sit">Next.js</span><span class="sit">Hotwire (Turbo · Stimulus)</span><span class="sit">Tailwind CSS</span><span class="sit">HTML · CSS</span><span class="sit" data-i18n="sC2">Arquitetura de componentes</span><span class="sit" data-i18n="sC3">Dashboards densos em dados</span><span class="sit" data-i18n="sC4">Sistemas responsivos</span></div><div class="stk-a" data-i18n="apC"><b>APLICADO EM</b> — Iron Bear · Conexiia · Gestão de Estoques · PrescrittoMED</div></div>
     <div class="stk rv"><div class="stk-g" data-i18n="gM"><i>E</i>MOBILE</div><div class="stk-i"><span class="sit">React Native</span><span class="sit">Expo</span><span class="sit">Flutter</span></div><div class="stk-a" data-i18n="apM"><b>APLICADO EM</b> — Iron Bear</div></div>
     <div class="stk rv"><div class="stk-g" data-i18n="gD"><i>F</i>IA</div><div class="stk-i"><span class="sit" data-i18n="sD1">Integração de LLM</span><span class="sit" data-i18n="sD2">Agentes</span><span class="sit" data-i18n="sD3">Saídas estruturadas</span><span class="sit">Prompt engineering</span><span class="sit" data-i18n="sD5">Avaliação</span></div><div class="stk-a" data-i18n="apD"><b>APLICADO EM</b> — PrescrittoMED · Iron Bear</div></div>
     <div class="stk rv"><div class="stk-g" data-i18n="gE"><i>G</i>INFRAESTRUTURA</div><div class="stk-i"><span class="sit">Docker</span><span class="sit">Linux</span><span class="sit">CI / CD</span><span class="sit">Git</span><span class="sit">Cloud</span><span class="sit">Vercel</span></div><div class="stk-a" data-i18n="apE"><b>APLICADO EM</b> — tudo que está em produção</div></div>
@@ -1554,6 +1598,24 @@ ibS2:`SESSION`,
 ibQ1:`Bench press — 4×8 · 60 kg`,ibQ2:`Incline press — 3×10 · 24 kg`,ibQ3:`Chest fly — 3×12 · 16 kg`,ibQ4:`Rope pushdown — 3×12 · 30 kg`,ibQ5:`Skull crusher — 3×10 · 25 kg`,
 ibE2:`NEW RECORD`,ibT2:`Bench press · 62.5 kg`,ibP2:`+2.5 kg · achievement unlocked`,
 ibSy:`<b>● COACH</b> SUGGESTED LOAD +2.5 KG`
+});
+
+Object.assign(EN,{
+wn:`Two production systems and two projects of my own, not yet published. <b>The interfaces are the protagonists.</b>`,
+wi4w:`WEB SYSTEM FOR RETAIL STORES — RAILS, NOT PUBLISHED`,
+apB:`<b>APPLIED IN</b> — Rails: Conexiia · Stock Management · Python: PrescrittoMED`,
+apC:`<b>APPLIED IN</b> — Iron Bear · Conexiia · Stock Management · PrescrittoMED`,
+es1:`01 · Balance, sales forecast and status per product`,es2:`02 · Sales reports, best sellers and payments`,
+esFig:`<b>FIG. 05</b> — STOCK MANAGEMENT SYSTEM · ILLUSTRATIVE SCREENS · FICTIONAL DATA`,
+p5k:`<b>04</b> / RETAIL · INVENTORY · WEB`,p5n:`STOCK MANAGEMENT SYSTEM`,
+p5s:`Web system for retail store inventory: products, balance per store, sales forecast, stock counts, purchasing, sales and reports.`,
+p5d0:`Retail · Inventory management · Web`,
+p5d1:`<b>NOT PUBLISHED</b> · illustrative screens of how the system would look`,
+p5d2:`<b>Development and adaptation</b> of the system`,
+p5d3:`Ruby on Rails 7 · Hotwire (Turbo, Stimulus) · PostgreSQL · Redis · GoodJob`,
+p5d4:`Products and SKUs, balance per store, sales forecast, stock counts, purchasing and suppliers, sales, reports and QR-code labels.`,
+p5d5:`Bling ERP via API.`,p5d6:`Open ERP — an open-source Ruby on Rails project`,
+lbBase:`BASE`,tEst:`INVENTORY`,tVar:`RETAIL`,chipNP:`NOT PUBLISHED`
 });
 
 const DICTS={pt:{},en:EN};
