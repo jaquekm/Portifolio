@@ -322,24 +322,7 @@ body.menu-open{overflow:hidden}
 .evline .es.s-ok{color:var(--ok)}
 .evline.new{color:var(--txt)}
 
-/* — Atlas — */
-.at-tabs{display:flex;gap:20px;padding:11px 16px;border-bottom:1px solid var(--line);font:500 10px var(--fm);letter-spacing:.14em;color:var(--mut)}
-.at-tabs .on{color:var(--txt);border-bottom:2px solid var(--acc);padding-bottom:6px;margin-bottom:-12px}
-.at-tabs .at-stat{margin-left:auto;color:var(--mut)}
-.at-body{display:grid;grid-template-columns:250px 1fr;min-height:300px}
-.at-routes{border-right:1px solid var(--line);padding:12px 14px;font:400 10px var(--fm)}
-.at-r{display:flex;align-items:center;gap:8px;padding:8px 6px;border-bottom:1px solid var(--line);color:var(--txt2)}
-.at-r b{font-weight:600;font-size:8.5px;letter-spacing:.08em;padding:2px 6px;border:1px solid var(--line2);color:var(--txt2);flex:none}
-.at-r span{color:var(--mut);margin-left:auto}
-.at-log{padding:12px 16px;font:400 10.5px/2.1 var(--fm);overflow:hidden}
-.aline{display:grid;grid-template-columns:64px 44px 1fr 40px 52px;gap:10px;color:var(--txt2);white-space:nowrap}
-.aline .lt{color:#4A4A50}
-.aline .lm{font-weight:600}
-.aline .lp{overflow:hidden;text-overflow:ellipsis}
-.aline.new{color:var(--txt)}
-.aline .lms{color:#4A4A50;text-align:right}
-
-/* — Orbit — */
+/* — Iron Bear (celulares) — */
 .phones{display:flex;justify-content:center;gap:34px;padding:20px 0 8px;min-height:540px;align-items:flex-start}
 .phone{width:232px;flex:none;background:#0D0D10;border:1px solid var(--line2);border-radius:32px;padding:9px;transition:transform .5s cubic-bezier(.2,.65,.2,1),border-color .4s}
 .phone:hover{transform:translateY(-8px) rotate(0deg)!important;border-color:#3E3E45}
@@ -383,8 +366,7 @@ body.menu-open{overflow:hidden}
 .ib{--acc:#B87333;--acc-hi:#C47A3D}
 .ib .pbtn.solid{color:#111}
 
-/* — Signal — */
-.sig-wrap{padding:8px 10px}
+/* — diagramas SVG (arquitetura do estudo de caso) — */
 .node{fill:#121216;stroke:#2E2E34}
 .node.hot{stroke:var(--acc)}
 .node-lb{fill:var(--txt);font:600 10px var(--fm);letter-spacing:.08em}
@@ -516,17 +498,6 @@ body.menu-open{overflow:hidden}
 .tl-role em{font-style:normal;color:var(--mut);font-weight:500}
 .tl-item p{font-size:14px;line-height:1.7;color:var(--txt2);max-width:60ch}
 
-/* ============ DEPOIMENTOS ============ */
-.voices-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
-.quote{border-left:1px solid var(--line2);padding:6px 0 6px 30px;position:relative}
-.quote::before{content:"“";position:absolute;left:30px;top:-34px;font:400 64px/1 var(--fd);color:var(--acc);opacity:.9}
-.quote p{font:500 19px/1.55 var(--fb);color:var(--txt);max-width:44ch}
-.quote footer{font:500 10px var(--fm);letter-spacing:.16em;color:var(--mut);margin-top:18px}
-.quote footer b{color:var(--txt2);font-weight:500}
-.q1{grid-column:1/8;padding-top:38px}
-.q2{grid-column:7/13;margin-top:70px}
-.q3{grid-column:2/9;margin-top:56px}
-
 /* ============ CONTATO ============ */
 .contact{padding-bottom:90px}
 .contact h2{font:400 clamp(44px,7.4vw,104px)/1 var(--fd);text-transform:uppercase;margin:10px 0 34px}
@@ -559,8 +530,6 @@ body.menu-open{overflow:hidden}
   .case-side{position:static}
   .cap-inner{grid-template-columns:1fr;padding-left:0}
   .about-grid{grid-template-columns:1fr;gap:48px}
-  .voices-grid{display:block}
-  .quote{margin:0 0 48px!important;max-width:640px}
 }
 @media(max-width:900px){
   :root{--gx:24px}
@@ -658,7 +627,7 @@ body.menu-open{overflow:hidden}
   <a href="#stack" data-i18n="mS">STACK<em>05</em></a>
   <a href="#process" data-i18n="mP">PROCESSO<em>06</em></a>
   <a href="#about" data-i18n="mA">SOBRE<em>07</em></a>
-  <a href="#contact" data-i18n="mK">CONTATO<em>10</em></a>
+  <a href="#contact" data-i18n="mK">CONTATO<em>09</em></a>
   <div class="mnav-lang">
     <span data-i18n="langL">IDIOMA</span>
     <div class="lang-tog" role="group" aria-label="Idioma / Language">
@@ -722,8 +691,8 @@ body.menu-open{overflow:hidden}
   <section class="sec" id="work" style="border-top:none">
     <div class="sec-head rv">
       <p class="kick" data-i18n="wk"><b>02</b>SELECTED WORK</p>
-      <h2 class="sec-title" data-i18n="wt">DOIS MODOS DE CONSTRUIR<span class="dot">.</span></h2>
-      <p class="sec-note" data-i18n="wn">Dois sistemas em produção, dois modos de construção. <b>As interfaces são as protagonistas.</b></p>
+      <h2 class="sec-title" data-i18n="wt">O QUE JÁ CONSTRUÍ<span class="dot">.</span></h2>
+      <p class="sec-note" data-i18n="wn">Dois sistemas em produção e um produto próprio em desenvolvimento. <b>As interfaces são as protagonistas.</b></p>
     </div>
 
     <!-- índice — o que cada projeto demonstra -->
@@ -739,6 +708,12 @@ body.menu-open{overflow:hidden}
         <span class="widx-num">02</span>
         <span class="widx-name">CONEXIIA</span>
         <span class="widx-what" data-i18n="wi2w">EVOLUÇÃO CONTÍNUA DE UM SISTEMA EMPRESARIAL EM PRODUÇÃO</span>
+        <span class="widx-ar"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 6h10M7 2l4 4-4 4"/></svg></span>
+      </a>
+      <a class="widx-row" href="#p3">
+        <span class="widx-num">03</span>
+        <span class="widx-name">IRON BEAR</span>
+        <span class="widx-what" data-i18n="wi3w">PRODUTO PRÓPRIO — APP MOBILE E PAINEL, EM DESENVOLVIMENTO</span>
         <span class="widx-ar"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 6h10M7 2l4 4-4 4"/></svg></span>
       </a>
     </div>
@@ -906,50 +881,11 @@ body.menu-open{overflow:hidden}
       </div>
     </article>
 
-    <!-- ✳ EXEMPLO — substitua pelo seu projeto real (mesma estrutura) -->
     <article class="proj" id="p3">
       <span class="proj-idx" aria-hidden="true">03</span>
-      <div class="proj-grid" style="grid-template-columns:1fr">
-        <div class="rv" style="max-width:640px">
-          <p class="proj-kick" data-i18n="p3k"><b>03</b> / HUB DE APIS &amp; INTEGRAÇÕES</p>
-          <h3 class="proj-name">ATLAS GATEWAY</h3>
-          <p class="proj-sub" data-i18n="p3s">Uma camada de API unificada conectando e-commerce, logística e cobrança atrás de uma interface autenticada e observável — com retries, idempotência e rate limits resolvidos uma vez, no centro.</p>
-        </div>
-        <div class="proj-grid pg-left" style="margin-top:44px;align-items:stretch">
-          <div class="mock term rv" data-cursor="VER">
-            <div class="term-bar"><i class="tdot"></i><i class="tdot"></i><i class="tdot"></i><span class="tt">atlas-gateway — prod</span><span class="term-live live" data-i18n="tLive">AO VIVO</span></div>
-            <div class="at-tabs" data-i18n="atT"><span class="on">LOG AO VIVO</span><span>ROTAS</span><span>SCHEMA</span><span class="at-stat">p95 <b class="c-ok">14ms</b></span></div>
-            <div class="at-body">
-              <div class="at-routes m-hide">
-                <div class="at-r"><b>GET</b>/v1/orders<span>9ms</span></div>
-                <div class="at-r"><b>POST</b>/v1/webhooks/payment<span>11ms</span></div>
-                <div class="at-r"><b>GET</b>/v1/shipments/:id<span>14ms</span></div>
-                <div class="at-r"><b>POST</b>/v1/webhooks/shipment<span>18ms</span></div>
-                <div class="at-r"><b>GET</b>/v1/customers/:id<span>7ms</span></div>
-                <div class="at-r"><b>DEL</b>/v1/cache/:key<span>6ms</span></div>
-              </div>
-              <div class="at-log" id="atLog" aria-live="off"></div>
-            </div>
-          </div>
-          <div class="rv" data-d="1">
-            <dl class="spec">
-              <div class="spec-row"><dt data-i18n="lbProb">PROBLEMA</dt><dd data-i18n="p3d1">Cada nova integração significava código novo, credenciais novas, modos de falha novos.</dd></div>
-              <div class="spec-row"><dt data-i18n="lbRole">PAPEL</dt><dd data-i18n="p3d2"><b>Arquitetura de backend, design de API, observabilidade.</b></dd></div>
-              <div class="spec-row"><dt data-i18n="lbStack">STACK</dt><dd data-i18n="p3d3">Python · REST · Webhooks · Redis · Docker</dd></div>
-              <div class="spec-row"><dt data-i18n="lbCha">DESAFIO</dt><dd data-i18n="p3d4">Normalizar webhooks de provedores que reenviam, reordenam e ocasionalmente mentem — idempotência em tudo.</dd></div>
-              <div class="spec-row"><dt data-i18n="lbOut">RESULTADO</dt><dd data-i18n="p3d5">Novas integrações entram <b>em dias via configuração</b>, não em código novo.</dd></div>
-            </dl>
-            <div class="proj-tags"><span class="chip">APIS</span><span class="chip">WEBHOOKS</span><span class="chip" data-i18n="tInt">INTEGRAÇÕES</span><span class="chip" data-i18n="tObs">OBSERVABILIDADE</span><span class="chip demo" data-i18n="chipDemo">EXEMPLO</span></div>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <article class="proj" id="p4">
-      <span class="proj-idx" aria-hidden="true">04</span>
       <div class="proj-grid pg-right">
         <div class="rv">
-          <p class="proj-kick" data-i18n="p4k"><b>04</b> / FITNESS · MOBILE · B2B2C</p>
+          <p class="proj-kick" data-i18n="p4k"><b>03</b> / FITNESS · MOBILE · B2B2C</p>
           <h3 class="proj-name">IRON BEAR</h3>
           <p class="proj-sub" data-i18n="p4s">Plataforma social fitness: o app do aluno — treino, evolução, coach com IA e gamificação — e o painel da academia, sobre o mesmo backend.</p>
           <dl class="spec">
@@ -1011,69 +947,7 @@ body.menu-open{overflow:hidden}
       </div>
     </article>
 
-    <!-- ✳ EXEMPLO — substitua pelo seu projeto real (mesma estrutura) -->
-    <article class="proj" id="p5">
-      <span class="proj-idx" aria-hidden="true">05</span>
-      <div class="proj-grid pg-left">
-        <div class="mock rv" data-cursor="VER">
-          <div class="mock-bar"><i class="tdot"></i><i class="tdot"></i><i class="tdot"></i><span class="mock-url" data-i18n="uSg">signal.interno/pipelines/intake</span><span class="mock-tag" data-i18n="tagOn">ATIVO</span></div>
-          <div class="sig-wrap">
-            <svg viewBox="0 0 680 430" aria-hidden="true">
-              <path class="wire flow" d="M170,67 L230,67"/>
-              <path class="wire flow" d="M380,67 L440,67"/>
-              <path class="wire flow" d="M520,94 L520,170"/>
-              <path class="wire flow" d="M500,224 L500,262 L215,262 L215,300"/>
-              <path class="wire flow" d="M520,224 L520,262 L415,262 L415,300"/>
-              <path class="wire flow hot" d="M560,224 L560,300"/>
-              <rect class="node" x="30" y="40" width="140" height="54" rx="3"/>
-              <text class="node-lb" x="46" y="62">WEBHOOK IN</text>
-              <text class="node-sb" x="46" y="78">POST /inbound</text>
-              <circle class="sdot-g" cx="158" cy="50" r="3"/>
-              <rect class="node" x="230" y="40" width="150" height="54" rx="3"/>
-              <text class="node-lb" x="246" y="62" data-i18n="sg1">PARSE + VALIDAÇÃO</text>
-              <text class="node-sb" x="246" y="78" data-i18n="sg2">schema · idempotência</text>
-              <circle class="sdot-g" cx="368" cy="50" r="3"/>
-              <rect class="node hot" x="440" y="40" width="160" height="54" rx="3"/>
-              <text class="node-lb" x="456" y="62" data-i18n="sg3">CLASSIFICADOR LLM</text>
-              <text class="node-sb" x="456" y="78" data-i18n="sg4">saída estruturada</text>
-              <circle class="sdot-o" cx="588" cy="50" r="3"/>
-              <rect class="node" x="440" y="170" width="160" height="54" rx="3"/>
-              <text class="node-lb" x="456" y="192" data-i18n="sg5">ROTEADOR</text>
-              <text class="node-sb" x="456" y="208" data-i18n="sg6">por confiança</text>
-              <circle class="sdot-g" cx="588" cy="180" r="3"/>
-              <rect class="node" x="140" y="300" width="150" height="54" rx="3"/>
-              <text class="node-lb" x="156" y="322" data-i18n="sg7">ATUALIZA CRM</text>
-              <text class="node-sb" x="156" y="338" data-i18n="sg8">worker de fila</text>
-              <circle class="sdot-g" cx="278" cy="310" r="3"/>
-              <rect class="node" x="340" y="300" width="150" height="54" rx="3"/>
-              <text class="node-lb" x="356" y="322" data-i18n="sg9">NOTIFICA SLACK</text>
-              <text class="node-sb" x="356" y="338" data-i18n="sg10">webhook de saída</text>
-              <circle class="sdot-g" cx="478" cy="310" r="3"/>
-              <rect class="node hot" x="540" y="300" width="130" height="54" rx="3"/>
-              <text class="node-lb" x="554" y="322" data-i18n="sg11">REVISÃO HUMANA</text>
-              <text class="node-sb" x="554" y="338" data-i18n="sg12">casos difíceis</text>
-              <circle class="sdot-o" cx="658" cy="310" r="3"/>
-              <text class="wl" x="568" y="266" data-i18n="sg13">conf &lt; 0,8</text>
-              <text class="wl" x="30" y="400" data-i18n="sgB">UPTIME 99,97% · PIPELINE MÉDIO 1,8S · TAXA DE ESCALAÇÃO 9%</text>
-            </svg>
-          </div>
-        </div>
-        <div class="rv" data-d="1">
-          <p class="proj-kick" data-i18n="p5k"><b>05</b> / SISTEMA DE AUTOMAÇÃO COM IA</p>
-          <h3 class="proj-name">SIGNAL</h3>
-          <p class="proj-sub" data-i18n="p5s">Automação orientada a eventos que lê solicitações recebidas, classifica e enriquece com um LLM e roteia para o sistema certo — e a pessoa certa — automaticamente.</p>
-          <dl class="spec">
-            <div class="spec-row"><dt data-i18n="lbProb">PROBLEMA</dt><dd data-i18n="p5d1">Uma caixa de entrada de suporte e três ferramentas desconectadas; cada solicitação era redigitada à mão.</dd></div>
-            <div class="spec-row"><dt data-i18n="lbRole">PAPEL</dt><dd data-i18n="p5d2"><b>Ponta a ponta — design do pipeline, integração de LLM, lógica de automação.</b></dd></div>
-            <div class="spec-row"><dt data-i18n="lbStack">STACK</dt><dd data-i18n="p5d3">Python · Agentes de LLM · Webhooks · Workers de fila</dd></div>
-            <div class="spec-row"><dt data-i18n="lbCha">DESAFIO</dt><dd data-i18n="p5d4">Confiança — o sistema escala para revisão humana em baixa confiança em vez de adivinhar; o time só vê os casos difíceis.</dd></div>
-            <div class="spec-row"><dt data-i18n="lbOut">RESULTADO</dt><dd data-i18n="p5d5">Solicitações rotineiras resolvem <b>sem toque humano</b>; o time trabalha a fila que importa.</dd></div>
-          </dl>
-          <div class="proj-tags"><span class="chip" data-i18n="tAg">AGENTES DE IA</span><span class="chip" data-i18n="tLlm">PIPELINE DE LLM</span><span class="chip" data-i18n="tAut">AUTOMAÇÃO</span><span class="chip" data-i18n="tQ">FILAS</span><span class="chip demo" data-i18n="chipDemo">EXEMPLO</span></div>
-        </div>
-      </div>
-    </article>
-  </section>
+      </section>
 
   <!-- ============ 03 ESTUDO DE CASO (PRESCRITTOMED — REAL) ============ -->
   <section class="sec" id="case">
@@ -1223,7 +1097,7 @@ body.menu-open{overflow:hidden}
           <li>Auth, permissões e rate limiting feitos direito</li>
           <li>Filas, workers e jobs agendados que se recuperam sozinhos</li>
         </ul>
-        <div class="cap-seen" data-i18n="c2s">VISTO EM — <a href="#p2">CONEXIIA</a> · <a href="#p3">ATLAS GATEWAY</a></div>
+        <div class="cap-seen" data-i18n="c2s">VISTO EM — <a href="#p2">CONEXIIA</a></div>
       </div></div></div>
     </div>
 
@@ -1235,7 +1109,7 @@ body.menu-open{overflow:hidden}
           <li>Retrieval, tool use e saídas estruturadas</li>
           <li>Humano no loop onde o risco exige</li>
         </ul>
-        <div class="cap-seen" data-i18n="c3s">VISTO EM — <a href="#p1">PRESCRITTOMED</a> · <a href="#p4">IRON BEAR</a></div>
+        <div class="cap-seen" data-i18n="c3s">VISTO EM — <a href="#p1">PRESCRITTOMED</a> · <a href="#p3">IRON BEAR</a></div>
       </div></div></div>
     </div>
 
@@ -1247,7 +1121,7 @@ body.menu-open{overflow:hidden}
           <li>Handlers idempotentes para terceiros instáveis</li>
           <li>Monitoramento que diz mais do que "quebrou"</li>
         </ul>
-        <div class="cap-seen" data-i18n="c4s">VISTO EM — <a href="#p2">CONEXIIA</a> · <a href="#p5">SIGNAL</a></div>
+        <div class="cap-seen" data-i18n="c4s">VISTO EM — <a href="#p2">CONEXIIA</a></div>
       </div></div></div>
     </div>
 
@@ -1259,7 +1133,7 @@ body.menu-open{overflow:hidden}
           <li>Interações com sensação nativa, sem time nativo</li>
           <li>Push, sync e trabalho em background feitos direito</li>
         </ul>
-        <div class="cap-seen" data-i18n="c5s">VISTO EM — <a href="#p4">IRON BEAR</a></div>
+        <div class="cap-seen" data-i18n="c5s">VISTO EM — <a href="#p3">IRON BEAR</a></div>
       </div></div></div>
     </div>
 
@@ -1284,7 +1158,7 @@ body.menu-open{overflow:hidden}
       <p class="sec-note" data-i18n="stk3">O conjunto completo, agrupado por função — e <b>onde cada camada roda de verdade</b>. Cada projeto tem a sua própria stack.</p>
     </div>
     <div class="stk rv"><div class="stk-g" data-i18n="gA"><i>A</i>LINGUAGENS</div><div class="stk-i"><span class="sit">Python</span><span class="sit">Ruby</span><span class="sit">JavaScript</span><span class="sit">TypeScript</span><span class="sit">PHP</span><span class="sit">Java</span><span class="sit">Dart</span><span class="sit">SQL</span></div><div class="stk-a" data-i18n="apA"><b>APLICADO EM</b> — Python: PrescrittoMED · Ruby: Conexiia · TypeScript: Iron Bear</div></div>
-    <div class="stk rv"><div class="stk-g"><i>B</i>BACKEND &amp; APIS</div><div class="stk-i"><span class="sit">Ruby on Rails</span><span class="sit">Python</span><span class="sit">PHP</span><span class="sit">Java</span><span class="sit" data-i18n="sB1">APIs REST</span><span class="sit">Webhooks</span><span class="sit" data-i18n="sB3">Autenticação</span><span class="sit" data-i18n="sB6">Filas &amp; workers</span></div><div class="stk-a" data-i18n="apB"><b>APLICADO EM</b> — Rails: Conexiia · Python: PrescrittoMED · Atlas Gateway</div></div>
+    <div class="stk rv"><div class="stk-g"><i>B</i>BACKEND &amp; APIS</div><div class="stk-i"><span class="sit">Ruby on Rails</span><span class="sit">Python</span><span class="sit">PHP</span><span class="sit">Java</span><span class="sit" data-i18n="sB1">APIs REST</span><span class="sit">Webhooks</span><span class="sit" data-i18n="sB3">Autenticação</span><span class="sit" data-i18n="sB6">Filas &amp; workers</span></div><div class="stk-a" data-i18n="apB"><b>APLICADO EM</b> — Rails: Conexiia · Python: PrescrittoMED</div></div>
     <div class="stk rv"><div class="stk-g" data-i18n="gDb"><i>C</i>DADOS</div><div class="stk-i"><span class="sit">PostgreSQL</span><span class="sit">Redis</span><span class="sit">Supabase</span><span class="sit" data-i18n="sDb5">Modelagem de dados</span><span class="sit">RLS</span></div><div class="stk-a" data-i18n="apDb"><b>APLICADO EM</b> — todos os projetos · RLS: Iron Bear</div></div>
     <div class="stk rv"><div class="stk-g"><i>D</i>FRONTEND</div><div class="stk-i"><span class="sit">React</span><span class="sit">Next.js</span><span class="sit">Hotwire (Turbo · Stimulus)</span><span class="sit">Tailwind CSS</span><span class="sit">HTML · CSS</span><span class="sit" data-i18n="sC2">Arquitetura de componentes</span><span class="sit" data-i18n="sC3">Dashboards densos em dados</span><span class="sit" data-i18n="sC4">Sistemas responsivos</span></div><div class="stk-a" data-i18n="apC"><b>APLICADO EM</b> — Iron Bear · Conexiia · PrescrittoMED</div></div>
     <div class="stk rv"><div class="stk-g" data-i18n="gM"><i>E</i>MOBILE</div><div class="stk-i"><span class="sit">React Native</span><span class="sit">Expo</span><span class="sit">Flutter</span></div><div class="stk-a" data-i18n="apM"><b>APLICADO EM</b> — Iron Bear</div></div>
@@ -1361,24 +1235,9 @@ body.menu-open{overflow:hidden}
     </div>
   </section>
 
-  <!-- ============ 09 DEPOIMENTOS ============ -->
-  <!-- ✳ Substitua pelos depoimentos reais que você receber -->
-  <section class="sec" id="voices">
-    <div class="sec-head rv">
-      <p class="kick" data-i18n="vok"><b>09</b>COLABORAÇÃO</p>
-      <h2 class="sec-title" data-i18n="vot">NAS PALAVRAS DE QUEM CONTRATOU<span class="dot">.</span></h2>
-      <p class="sec-note" data-i18n="von">Curto, editorial, crível — <b>como um bom feedback soa de verdade.</b></p>
-    </div>
-    <div class="voices-grid">
-      <blockquote class="quote q1 rv"><p data-i18n="q1">Ela mapeou como nossa operação funcionava de verdade antes de escrever uma linha de código. O sistema que ela construiu substituiu três ferramentas e muito trabalho manual.</p><footer data-i18n="qf1"><b>LÍDER DE OPERAÇÕES</b> — CLIENTE DE LOGÍSTICA</footer></blockquote>
-      <blockquote class="quote q2 rv" data-d="1"><p data-i18n="q2">A primeira desenvolvedora que discordou da nossa lista de funcionalidades — e estava certa. O que entrou em produção era menor, e entregava mais.</p><footer data-i18n="qf2"><b>FUNDADORA</b> — CLIENTE SAAS B2B</footer></blockquote>
-      <blockquote class="quote q3 rv" data-d="2"><p data-i18n="q3">Sênior no sentido que importa: você para de pensar no software e passa a pensar no negócio.</p><footer data-i18n="qf3"><b>CTO</b> — PILOTO HEALTHTECH</footer></blockquote>
-    </div>
-  </section>
-
-  <!-- ============ 10 CONTATO ============ -->
+  <!-- ============ 09 CONTATO ============ -->
   <section class="sec contact" id="contact">
-    <p class="kick rv" data-i18n="ctk"><b>10</b>CONTATO</p>
+    <p class="kick rv" data-i18n="ctk"><b>09</b>CONTATO</p>
     <h2 class="lines" id="ctH" data-i18n="cth">
       <span class="l"><i>TEM UM PROBLEMA</i></span>
       <span class="l"><i>QUE MERECE</i></span>
@@ -1486,7 +1345,7 @@ skip:`Skip to content`,
 nW:`WORK`,nC:`CAPABILITIES`,nS:`STACK`,nP:`PROCESS`,nA:`ABOUT`,nK:`CONTACT`,
 nStatus:`<i class="pulse"></i>AVAILABLE FOR SELECTED PROJECTS`,
 nCta:`LET'S TALK`,
-mW:`WORK<em>02</em>`,mC:`CAPABILITIES<em>04</em>`,mS:`STACK<em>05</em>`,mP:`PROCESS<em>06</em>`,mA:`ABOUT<em>07</em>`,mK:`CONTACT<em>10</em>`,
+mW:`WORK<em>02</em>`,mC:`CAPABILITIES<em>04</em>`,mS:`STACK<em>05</em>`,mP:`PROCESS<em>06</em>`,mA:`ABOUT<em>07</em>`,mK:`CONTACT<em>09</em>`,
 langL:`LANGUAGE`,
 hRoles:`DEVELOPER<b>·</b>SYSTEMS ARCHITECT<b>·</b>PRODUCT BUILDER`,
 h1:`<span class="l"><i>I BUILD DIGITAL PRODUCTS</i></span><span class="l"><i>THAT WORK IN THE</i></span><span class="l"><i>REAL WORLD<span class="c-acc">.</span><span class="ann">// and keep them running</span></i></span>`,
@@ -1499,10 +1358,11 @@ fig1:`<b>FIG. 01</b> — CONTINUOUS DEPLOYMENT · EVERY PUSH GOES THROUGH THIS`,
 hm1:`BUILDING SOFTWARE · AI · SYSTEMS`,hm2:`SCROLL`,hm3a:`LOCAL TIME`,
 fL:`ALL SYSTEMS OPERATIONAL`,fM:`DESIGNED &amp; BUILT BY HAND — NO TEMPLATES`,toTop:`TOP`,
 wk:`<b>02</b>SELECTED WORK`,
-wt:`TWO WAYS OF BUILDING<span class="dot">.</span>`,
-wn:`Two production systems, two ways of building. <b>The interfaces are the protagonists.</b>`,
+wt:`WHAT I'VE BUILT<span class="dot">.</span>`,
+wn:`Two production systems and one product of my own in development. <b>The interfaces are the protagonists.</b>`,
 wxh:`WHAT EACH PROJECT DEMONSTRATES`,
 wi1w:`A PRODUCT BUILT END TO END BY ME`,
+wi3w:`A PRODUCT OF MY OWN — MOBILE APP AND DASHBOARD, IN DEVELOPMENT`,
 wi2w:`CONTINUOUS EVOLUTION OF AN ENTERPRISE SYSTEM IN PRODUCTION`,
 chipDemo:`DEMO`,
 
@@ -1653,16 +1513,16 @@ c1ul:`<li>Data-dense UIs that stay fast under real load</li><li>Design systems t
 c1s:`SEEN IN — <a href="#p1">PRESCRITTOMED</a> · <a href="#p2">CONEXIIA</a>`,
 c2t:`BACKEND &amp; APIS`,c2d:`Scalable services, integrations, authentication, data processing and business logic.`,
 c2ul:`<li>REST APIs with contracts worth trusting</li><li>Auth, permissions and rate limiting done properly</li><li>Queues, workers and scheduled jobs that recover on their own</li>`,
-c2s:`SEEN IN — <a href="#p2">CONEXIIA</a> · <a href="#p3">ATLAS GATEWAY</a>`,
+c2s:`SEEN IN — <a href="#p2">CONEXIIA</a>`,
 c3t:`AI SYSTEMS`,c3d:`AI-powered workflows, intelligent assistants, automation and decision-support systems.`,
 c3ul:`<li>LLM pipelines with evaluation — not vibes</li><li>Retrieval, tool use and structured outputs</li><li>Human-in-the-loop where the stakes require it</li>`,
 c3s:`SEEN IN — <a href="#p1">PRESCRITTOMED</a> · <a href="#p2">CONEXIIA</a>`,
 c4t:`AUTOMATION`,c4d:`Processes that eliminate repetitive manual work and connect different systems.`,
 c4ul:`<li>Event-driven pipelines over cron-and-hope</li><li>Idempotent handlers for unreliable third parties</li><li>Monitoring that says more than "it crashed"</li>`,
-c4s:`SEEN IN — <a href="#p2">CONEXIIA</a> · <a href="#p5">SIGNAL</a>`,
+c4s:`SEEN IN — <a href="#p2">CONEXIIA</a>`,
 c5t:`MOBILE APPLICATIONS`,c5d:`Functional mobile experiences integrated with modern backend infrastructure.`,
 c5ul:`<li>Offline-first where the network can't be trusted</li><li>Native-feel interactions without a native team</li><li>Push, sync and background work done right</li>`,
-c5s:`SEEN IN — <a href="#p4">IRON BEAR</a>`,
+c5s:`SEEN IN — <a href="#p3">IRON BEAR</a>`,
 c6t:`SYSTEM ARCHITECTURE`,c6d:`Designing how different technologies, services and components work together.`,
 c6ul:`<li>Diagrams before dependencies</li><li>Boundaries that let teams ship independently</li><li>Migration paths from the system you have to the one you need</li>`,
 c6s:`APPLIED IN — <a href="#p1">EVERY PROJECT ABOVE</a>`,
@@ -1674,7 +1534,7 @@ sC2:`Component architecture`,sC3:`Data-dense dashboards`,sC4:`Responsive systems
 sD1:`LLM integration`,sD2:`Agents`,sD3:`Structured outputs`,sD5:`Evaluation`,
 sF3:`API clients`,sF4:`Observability`,
 apA:`<b>APPLIED IN</b> — every project on this page`,
-apB:`<b>APPLIED IN</b> — Conexiia · Atlas Gateway`,
+apB:`<b>APPLIED IN</b> — Conexiia`,
 apC:`<b>APPLIED IN</b> — PrescrittoMed · Conexiia`,
 apD:`<b>APPLIED IN</b> — PrescrittoMed · Conexiia`,
 apE:`<b>APPLIED IN</b> — everything in production`,
@@ -1722,15 +1582,7 @@ t3r:`FULL-STACK DEVELOPER — <em>FIRST PRODUCTS</em>`,
 t3p:`First production products in the wild. Maintained them, too — which is where maintainability stopped being a buzzword.`,
 t4r:`FIRST SHIP — <em>AUTOMATION</em>`,
 t4p:`A small automation script that saved a team hours every week. The moment the job became obvious.`,
-vok:`<b>09</b>COLLABORATION`,vot:`IN THEIR WORDS<span class="dot">.</span>`,
-von:`Short, editorial, credible — <b>the way good feedback actually sounds.</b>`,
-q1:`She mapped how our operation actually worked before writing a line of code. The system she built replaced three tools and a lot of manual work.`,
-qf1:`<b>OPERATIONS LEAD</b> — LOGISTICS CLIENT`,
-q2:`The first developer who pushed back on our feature list — and was right. What shipped was smaller, and did more.`,
-qf2:`<b>FOUNDER</b> — B2B SAAS CLIENT`,
-q3:`Senior in the way that matters: you stop thinking about the software and start thinking about the business.`,
-qf3:`<b>CTO</b> — HEALTHTECH PILOT`,
-ctk:`<b>10</b>CONTACT`,
+ctk:`<b>09</b>CONTACT`,
 cth:`<span class="l"><i>HAVE A PROBLEM</i></span><span class="l"><i>WORTH BUILDING</i></span><span class="l"><i><span class="stroke">A SYSTEM</span> FOR<span class="q">?</span></i></span>`,
 ctp:`Let's talk about <b>the problem, the architecture, and what we can build.</b> I take on a small number of projects where engineering genuinely changes the outcome.`,
 ctb:`<span>START A CONVERSATION</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 10L10 2M10 2H4M10 2v6"/></svg>`
@@ -1741,14 +1593,14 @@ nStatus:`<i class="pulse"></i>AVAILABLE FOR SELECTED PROJECTS`,
 stk2:`EVERYTHING I USE<span class="dot">.</span>`,
 stk3:`The complete set, grouped by function — and <b>where each layer actually runs</b>. Every project has its own stack.`,
 apA:`<b>APPLIED IN</b> — Python: PrescrittoMED · Ruby: Conexiia · TypeScript: Iron Bear`,
-apB:`<b>APPLIED IN</b> — Rails: Conexiia · Python: PrescrittoMED · Atlas Gateway`,
+apB:`<b>APPLIED IN</b> — Rails: Conexiia · Python: PrescrittoMED`,
 gDb:`<i>C</i>DATA`,sDb5:`Data modeling`,apDb:`<b>APPLIED IN</b> — every project · RLS: Iron Bear`,
 apC:`<b>APPLIED IN</b> — Iron Bear · Conexiia · PrescrittoMED`,
 gM:`<i>E</i>MOBILE`,apM:`<b>APPLIED IN</b> — Iron Bear`,
 gD:`<i>F</i>AI`,apD:`<b>APPLIED IN</b> — PrescrittoMED · Iron Bear`,
 gE:`<i>G</i>INFRASTRUCTURE`,gF:`<i>H</i>TOOLS &amp; PRACTICE`,sF6:`Automated testing`,
-c3s:`SEEN IN — <a href="#p1">PRESCRITTOMED</a> · <a href="#p4">IRON BEAR</a>`,
-c5s:`SEEN IN — <a href="#p4">IRON BEAR</a>`,
+c3s:`SEEN IN — <a href="#p1">PRESCRITTOMED</a> · <a href="#p3">IRON BEAR</a>`,
+c5s:`SEEN IN — <a href="#p3">IRON BEAR</a>`,
 tMsg:`MESSAGING`,chipDev:`IN DEVELOPMENT`,lbScope:`SCOPE`,
 cxk:`<b>02</b> / OMNICHANNEL · SAAS · MESSAGING`,
 cxs:`Omnichannel messaging platform — the company's service and communication with its customers, across several channels, in a single environment.`,
@@ -1766,7 +1618,7 @@ cxFh:`<span>MESSAGING — LIVE EVENTS</span><span class="c-ok">● STREAMING</sp
 cxA1:`Conversation routing`,cxA2:`Automatic replies`,cxA3:`Smart queue routing`,cxA4:`Conversation follow-up`,
 cxIh:`CHANNELS &amp; INTEGRATIONS`,
 cxFig:`<b>FIG. 03</b> — OMNICHANNEL PLATFORM · CONVERSATIONS · CHANNELS · AUTOMATIONS · INTEGRATIONS`,
-p4k:`<b>04</b> / FITNESS · MOBILE · B2B2C`,
+p4k:`<b>03</b> / FITNESS · MOBILE · B2B2C`,
 p4s:`Social fitness platform: the student app — training, progress, AI coach and gamification — and the gym dashboard, on the same backend.`,
 p4d0:`Fitness · Mobile · B2B2C SaaS`,
 p4d1:`<b>IN DEVELOPMENT</b> · not yet published to the stores`,
@@ -2032,51 +1884,6 @@ if(!RM){
 
 /* ---------- aplica idioma salvo ---------- */
 if(LANG==='en')applyLang('en');
-
-/* ---------- log ao vivo do Atlas ---------- */
-const atLog=$('#atLog');
-const ROUTES=[
-  ['POST','/v1/webhooks/payment','204'],['POST','/v1/webhooks/shipment','204'],
-  ['GET','/v1/orders?limit=50','200'],['GET','/v1/shipments/CT-8841','200'],
-  ['GET','/v1/customers/8412','200'],['POST','/v1/webhooks/billing','202'],
-  ['GET','/v1/trackings/TR-2210','200']
-];
-function logRow(m,p,st,ms){
-  const d=document.createElement('div');
-  d.className='aline new';
-  d.innerHTML='<span class="lt">'+new Date().toTimeString().slice(0,8)+'</span>'+
-    '<span class="lm c-mut">'+m+'</span><span class="lp">'+p+'</span>'+
-    '<span class="'+(st==='WARN'?'c-acc':'c-ok')+'">'+st+'</span>'+
-    '<span class="lms">'+ms+'ms</span>';
-  atLog.appendChild(d);
-  requestAnimationFrame(()=>requestAnimationFrame(()=>d.classList.remove('new')));
-  while(atLog.children.length>9)atLog.removeChild(atLog.firstChild);
-}
-(function seedLog(){
-  for(let i=6;i>0;i--){
-    const r=ROUTES[Math.floor(Math.random()*ROUTES.length)];
-    const d=document.createElement('div');
-    d.className='aline';
-    const t=new Date(Date.now()-i*2100).toTimeString().slice(0,8);
-    d.innerHTML='<span class="lt">'+t+'</span><span class="lm c-mut">'+r[0]+'</span><span class="lp">'+r[1]+'</span><span class="c-ok">'+r[2]+'</span><span class="lms">'+(6+Math.floor(Math.random()*18))+'ms</span>';
-    atLog.appendChild(d);
-  }
-})();
-if(!RM){
-  let logVisible=false;
-  new IntersectionObserver(es=>es.forEach(e=>logVisible=e.isIntersecting),{threshold:.1}).observe(atLog);
-  (function pushLoop(){
-    setTimeout(()=>{
-      if(logVisible&&!document.hidden){
-        const S=TT[LANG];
-        const warn=Math.random()<0.12;
-        const src=warn?S.warns[Math.floor(Math.random()*S.warns.length)]:ROUTES[Math.floor(Math.random()*ROUTES.length)];
-        logRow(src[0],src[1],src[2],6+Math.floor(Math.random()*20));
-      }
-      pushLoop();
-    },900+Math.random()*1700);
-  })();
-}
 
 /* ---------- acordeão de capacidades ---------- */
  $$('.cap').forEach(cap=>{
