@@ -363,7 +363,11 @@ body.menu-open{overflow:hidden}
 .ph-sync b{color:var(--ok);font-weight:600}
 
 .ib{--acc:#B87333;--acc-hi:#C47A3D}
-.ib .pbtn.solid{color:#111}
+.phones.ib{flex-direction:column;align-items:center;gap:6px;min-height:0}
+.phone.pv{width:300px;transform:rotate(-2deg)}
+.phone.pv .ph-video{height:auto;aspect-ratio:528/980;background:#111}
+.phone.pv .ph-video video{display:block;width:100%;height:100%;object-fit:cover}
+.phones.ib .fig{margin-top:22px;text-align:center}
 
 /* — diagramas SVG (arquitetura do estudo de caso) — */
 .node{fill:#121216;stroke:#2E2E34}
@@ -563,6 +567,18 @@ body.menu-open{overflow:hidden}
   .hero h1 .ann{display:block;margin:10px 0 0}
 }
 
+/* ============ ZOOM (lightbox) ============ */
+.lb-ov{position:fixed;inset:0;z-index:4000;display:flex;align-items:center;justify-content:center;background:rgba(6,6,8,.5);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s;cursor:zoom-out}
+.lb-ov.on{opacity:1;visibility:visible}
+.lb-box{transform:scale(.86);opacity:0;transition:transform .5s cubic-bezier(.2,.7,.2,1),opacity .4s;position:relative}
+.lb-ov.on .lb-box{transform:none;opacity:1}
+.lb-box img,.lb-box video{display:block;max-width:92vw;max-height:88vh;width:auto;height:auto;border:1px solid var(--line2);box-shadow:0 40px 120px rgba(0,0,0,.65)}
+.lb-ui{overflow:hidden;border:1px solid var(--line2);box-shadow:0 40px 120px rgba(0,0,0,.65)}
+.lb-ui>*{transform-origin:0 0}
+.lb-hint{position:fixed;top:22px;right:28px;font:500 10px var(--fm);letter-spacing:.18em;color:var(--txt2)}
+html.cur-on .lb-ov{cursor:none}
+body.lb-open{overflow:hidden}
+
 /* ============ MOVIMENTO REDUZIDO ============ */
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -580,6 +596,7 @@ body.menu-open{overflow:hidden}
 <div class="cur-dot" id="cDot" aria-hidden="true"></div>
 <div class="cur-ring" id="cRing" aria-hidden="true"><span id="cLabel"></span></div>
 <div id="toast" role="status"></div>
+<div class="lb-ov" id="lbOv" aria-hidden="true"><div class="lb-box" id="lbBox"></div><span class="lb-hint">ESC · FECHAR</span></div>
 
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
@@ -674,7 +691,7 @@ body.menu-open{overflow:hidden}
     <div class="sec-head rv">
       <p class="kick" data-i18n="wk"><b>02</b>SELECTED WORK</p>
       <h2 class="sec-title" data-i18n="wt">O QUE JÁ CONSTRUÍ<span class="dot">.</span></h2>
-      <p class="sec-note" data-i18n="wn">Dois sistemas em produção e um produto próprio em desenvolvimento. <b>As interfaces são as protagonistas.</b></p>
+      <p class="sec-note" data-i18n="wn">Dois sistemas em produção e dois projetos próprios. <b>As interfaces são as protagonistas.</b></p>
     </div>
 
     <!-- índice — o que cada projeto demonstra -->
@@ -695,7 +712,13 @@ body.menu-open{overflow:hidden}
       <a class="widx-row" href="#p3">
         <span class="widx-num">03</span>
         <span class="widx-name">IRON BEAR</span>
-        <span class="widx-what" data-i18n="wi3w">PRODUTO PRÓPRIO — APP MOBILE E PAINEL, EM DESENVOLVIMENTO</span>
+        <span class="widx-what" data-i18n="wi3w">PRODUTO PRÓPRIO — APP MOBILE E PAINEL DA ACADEMIA</span>
+        <span class="widx-ar"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 6h10M7 2l4 4-4 4"/></svg></span>
+      </a>
+      <a class="widx-row" href="#p4">
+        <span class="widx-num">04</span>
+        <span class="widx-name">GESTÃO DE ESTOQUES</span>
+        <span class="widx-what" data-i18n="wi4w">SISTEMA WEB PARA LOJAS — RAILS, NÃO PUBLICADO</span>
         <span class="widx-ar"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 6h10M7 2l4 4-4 4"/></svg></span>
       </a>
     </div>
@@ -872,63 +895,66 @@ body.menu-open{overflow:hidden}
           <p class="proj-sub" data-i18n="p4s">Plataforma social fitness: o app do aluno — treino, evolução, coach com IA e gamificação — e o painel da academia, sobre o mesmo backend.</p>
           <dl class="spec">
             <div class="spec-row"><dt data-i18n="lbCat">CATEGORIA</dt><dd data-i18n="p4d0">Fitness · Mobile · SaaS B2B2C</dd></div>
-            <div class="spec-row"><dt data-i18n="lbStat">STATUS</dt><dd data-i18n="p4d1"><b>EM DESENVOLVIMENTO</b> · ainda não publicado nas lojas</dd></div>
+            <div class="spec-row"><dt data-i18n="lbStat">STATUS</dt><dd data-i18n="p4d1"><b>DESENVOLVIDO</b> · app do aluno e painel da academia</dd></div>
             <div class="spec-row"><dt data-i18n="lbRole">PAPEL</dt><dd data-i18n="p4d2"><b>Produto, arquitetura e desenvolvimento</b> — projeto pessoal</dd></div>
-            <div class="spec-row"><dt data-i18n="lbStack">STACK</dt><dd data-i18n="p4d3">React Native (Expo) · Next.js · TypeScript · Supabase (PostgreSQL)</dd></div>
+            <div class="spec-row"><dt data-i18n="lbStack">STACK</dt><dd data-i18n="p4d3">React Native (Expo) · Next.js · TypeScript · PostgreSQL</dd></div>
             <div class="spec-row"><dt data-i18n="lbScope">ESCOPO</dt><dd data-i18n="p4d5">App do aluno + painel da academia: alunos, planos, financeiro, catraca e estoque.</dd></div>
             <div class="spec-row"><dt data-i18n="lbCha">DESAFIO</dt><dd data-i18n="p4d4">Multi-tenant com privacidade por RLS: a academia enxerga agregados, nunca o treino bruto do aluno.</dd></div>
             <div class="spec-row"><dt data-i18n="lbAi">IA</dt><dd data-i18n="p4d6">Motor de regras decide; o LLM só fraseia o feedback na persona escolhida.</dd></div>
           </dl>
-          <div class="proj-tags"><span class="chip">MOBILE</span><span class="chip">REACT NATIVE</span><span class="chip">NEXT.JS</span><span class="chip">SUPABASE</span><span class="chip warn" data-i18n="chipDev">EM DESENVOLVIMENTO</span></div>
+          <div class="proj-tags"><span class="chip">MOBILE</span><span class="chip">REACT NATIVE</span><span class="chip">NEXT.JS</span><span class="chip">POSTGRESQL</span><span class="chip">COACH IA</span></div>
         </div>
         <div class="phones ib rv" data-d="1">
-          <div class="phone pa" data-cursor="VER">
-            <div class="ph-screen">
-              <div class="ph-notch"></div>
-              <div class="ph-status"><span>IRON BEAR</span><span data-i18n="ibS1">SEQ. 12</span></div>
-              <div class="ph-prog">
-                <svg class="ring" width="58" height="58" viewBox="0 0 58 58" aria-hidden="true">
-                  <circle class="rbg" cx="29" cy="29" r="26"/>
-                  <circle class="ringval" cx="29" cy="29" r="26"/>
-                </svg>
-                <div><strong data-i18n="ibLv">Nível 7</strong><span data-i18n="ibXp">62% para o nível 8</span></div>
-              </div>
-              <ul class="ph-list">
-                <li class="ck" data-i18n="ibL1">Segunda — Costas e bíceps</li>
-                <li class="ck" data-i18n="ibL2">Quarta — Pernas</li>
-                <li data-i18n="ibL3">Hoje — Peito e tríceps</li>
-              </ul>
-              <div class="ph-sheet">
-                <em data-i18n="ibE1">TREINO DE HOJE · ~55 MIN</em>
-                <strong data-i18n="ibT1">Peito e tríceps</strong>
-                <p data-i18n="ibP1">6 exercícios · cargas da última sessão</p>
-                <div class="ph-btns"><span class="pbtn solid" data-i18n="ibB1">Começar</span><span class="pbtn" data-i18n="ibB2">Trocar</span></div>
-              </div>
+          <div class="phone pv" data-cursor="VER">
+            <div class="ph-screen ph-video">
+              <video id="ibVid" poster="imagens/ironbear-capa.jpg" autoplay muted loop playsinline preload="auto">
+                <source src="imagens/ironbear-demo.mp4" type="video/mp4">
+              </video>
             </div>
           </div>
-          <div class="phone pb rv" data-d="2" data-cursor="VER">
-            <div class="ph-screen">
-              <div class="ph-notch"></div>
-              <div class="ph-status"><span data-i18n="ibS2">SESSÃO</span><span class="c-acc">00:24:10</span></div>
-              <ul class="ph-list">
-                <li class="ck" data-i18n="ibQ1">Supino reto — 4×8 · 60 kg</li>
-                <li class="ck" data-i18n="ibQ2">Supino inclinado — 3×10 · 24 kg</li>
-                <li data-i18n="ibQ3">Crucifixo — 3×12 · 16 kg</li>
-                <li data-i18n="ibQ4">Tríceps corda — 3×12 · 30 kg</li>
-                <li data-i18n="ibQ5">Tríceps testa — 3×10 · 25 kg</li>
-              </ul>
-              <div class="ph-sheet">
-                <em data-i18n="ibE2">NOVO RECORDE</em>
-                <strong data-i18n="ibT2">Supino reto · 62,5 kg</strong>
-                <p data-i18n="ibP2">+2,5 kg · conquista desbloqueada</p>
-              </div>
-              <div class="ph-sync" data-i18n="ibSy"><b>● COACH</b> CARGA SUGERIDA +2,5 KG</div>
-            </div>
-          </div>
+          <p class="fig" data-i18n="ibFig"><b>FIG. 04</b> — IRON BEAR · FLUXO DO APP DO ALUNO</p>
         </div>
       </div>
     </article>
 
+    <article class="proj" id="p4">
+      <span class="proj-idx" aria-hidden="true">04</span>
+      <div class="proj-grid pg-left">
+        <div class="shots rv" data-d="1">
+          <figure class="browser" data-cursor="VER">
+            <div class="shot">
+              <img src="imagens/estoque-estoques.png" alt="Sistema de Gestão de Estoques — tela de estoques com saldo, previsão e situação" loading="lazy" onerror="this.closest('.shot').classList.add('noimg')">
+              <div class="ph-msg"><strong>TELA · ESTOQUES</strong><p><b>imagens/estoque-estoques.png</b></p></div>
+              <figcaption data-i18n="es1">01 · Saldo, previsão de venda e situação por produto</figcaption>
+            </div>
+          </figure>
+          <figure class="browser" data-cursor="VER">
+            <div class="shot">
+              <img src="imagens/estoque-relatorios.png" alt="Sistema de Gestão de Estoques — relatórios de vendas, mais vendidos e pagamentos" loading="lazy" onerror="this.closest('.shot').classList.add('noimg')">
+              <div class="ph-msg"><strong>TELA · RELATÓRIOS</strong><p><b>imagens/estoque-relatorios.png</b></p></div>
+              <figcaption data-i18n="es2">02 · Relatórios de vendas, mais vendidos e pagamentos</figcaption>
+            </div>
+          </figure>
+          <p class="fig" data-i18n="esFig"><b>FIG. 05</b> — SISTEMA DE GESTÃO DE ESTOQUES</p>
+        </div>
+        <div class="rv" data-d="1">
+          <p class="proj-kick" data-i18n="p5k"><b>04</b> / VAREJO · ESTOQUE · WEB</p>
+          <h3 class="proj-name" data-i18n="p5n">SISTEMA DE GESTÃO DE ESTOQUES</h3>
+          <p class="proj-sub" data-i18n="p5s">Sistema web para gestão de estoques de lojas: produtos, saldo, previsão de venda, produção, contagem de estoque, compras, vendas e relatórios.</p>
+          <dl class="spec">
+            <div class="spec-row"><dt data-i18n="lbCat">CATEGORIA</dt><dd data-i18n="p5d0">Varejo · Gestão de estoque · Web</dd></div>
+            <div class="spec-row"><dt data-i18n="lbStat">STATUS</dt><dd data-i18n="p5d1"><b>DESENVOLVIDO</b> · sistema web para lojas</dd></div>
+            <div class="spec-row"><dt data-i18n="lbRole">PAPEL</dt><dd data-i18n="p5d2"><b>Desenvolvimento e adaptação</b> do sistema</dd></div>
+            <div class="spec-row"><dt data-i18n="lbBase">BASE</dt><dd data-i18n="p5d6">Open ERP — projeto de código aberto em Ruby on Rails</dd></div>
+            <div class="spec-row"><dt data-i18n="lbStack">STACK</dt><dd data-i18n="p5d3">Ruby on Rails 7 · Hotwire (Turbo, Stimulus) · PostgreSQL · Redis · GoodJob</dd></div>
+            <div class="spec-row"><dt data-i18n="lbScope">ESCOPO</dt><dd data-i18n="p5d4">Produtos e SKUs, estoque com previsão de venda, produção, contagem de estoque, compras e fornecedores, vendas, relatórios e etiquetas com QR code.</dd></div>
+            <div class="spec-row"><dt data-i18n="lbInt">INTEGRAÇÕES</dt><dd data-i18n="p5d5">ERP Bling via API.</dd></div>
+          </dl>
+          <div class="proj-tags"><span class="chip">RUBY ON RAILS</span><span class="chip" data-i18n="tEst">ESTOQUE</span><span class="chip" data-i18n="tVar">VAREJO</span><span class="chip">HOTWIRE</span><span class="chip">BLING</span></div>
+        </div>
+      </div>
+    </article>
+  
       </section>
 
   <!-- ============ 03 ESTUDO DE CASO (PRESCRITTOMED — REAL) ============ -->
@@ -1005,7 +1031,7 @@ body.menu-open{overflow:hidden}
                 <circle class="sdot-o" cx="718" cy="240" r="3"/>
                 <text class="wl" x="20" y="296" data-i18n="sgB2">100% DO DESENVOLVIMENTO TÉCNICO · EM PRODUÇÃO · USUÁRIOS ATIVOS</text>
               </svg>
-              <p class="fig" style="margin:8px 4px 6px" data-i18n="fig3"><b>FIG. 04</b> — ARQUITETURA DE MÓDULOS · UM AMBIENTE, CINCO ÁREAS CENTRAIS</p>
+              <p class="fig" style="margin:8px 4px 6px" data-i18n="fig3"><b>FIG. 05</b> — ARQUITETURA DE MÓDULOS · UM AMBIENTE, CINCO ÁREAS CENTRAIS</p>
             </div>
             <ul class="deci">
               <li data-i18n="dc1"><span><b>Um ambiente só</b> — pesquisa clínica, protocolos, ferramentas e prescrição no mesmo fluxo.</span></li>
@@ -1140,9 +1166,9 @@ body.menu-open{overflow:hidden}
       <p class="sec-note" data-i18n="stk3">O conjunto completo, agrupado por função — e <b>onde cada camada roda de verdade</b>. Cada projeto tem a sua própria stack.</p>
     </div>
     <div class="stk rv"><div class="stk-g" data-i18n="gA"><i>A</i>LINGUAGENS</div><div class="stk-i"><span class="sit">Python</span><span class="sit">Ruby</span><span class="sit">JavaScript</span><span class="sit">TypeScript</span><span class="sit">PHP</span><span class="sit">Java</span><span class="sit">Dart</span><span class="sit">SQL</span></div><div class="stk-a" data-i18n="apA"><b>APLICADO EM</b> — Python: PrescrittoMED · Ruby: Conexiia · TypeScript: Iron Bear</div></div>
-    <div class="stk rv"><div class="stk-g"><i>B</i>BACKEND &amp; APIS</div><div class="stk-i"><span class="sit">Ruby on Rails</span><span class="sit">Python</span><span class="sit">PHP</span><span class="sit">Java</span><span class="sit" data-i18n="sB1">APIs REST</span><span class="sit">Webhooks</span><span class="sit" data-i18n="sB3">Autenticação</span><span class="sit" data-i18n="sB6">Filas &amp; workers</span></div><div class="stk-a" data-i18n="apB"><b>APLICADO EM</b> — Rails: Conexiia · Python: PrescrittoMED</div></div>
-    <div class="stk rv"><div class="stk-g" data-i18n="gDb"><i>C</i>DADOS</div><div class="stk-i"><span class="sit">PostgreSQL</span><span class="sit">Redis</span><span class="sit">Supabase</span><span class="sit" data-i18n="sDb5">Modelagem de dados</span><span class="sit">RLS</span></div><div class="stk-a" data-i18n="apDb"><b>APLICADO EM</b> — todos os projetos · RLS: Iron Bear</div></div>
-    <div class="stk rv"><div class="stk-g"><i>D</i>FRONTEND</div><div class="stk-i"><span class="sit">React</span><span class="sit">Next.js</span><span class="sit">Hotwire (Turbo · Stimulus)</span><span class="sit">Tailwind CSS</span><span class="sit">HTML · CSS</span><span class="sit" data-i18n="sC2">Arquitetura de componentes</span><span class="sit" data-i18n="sC3">Dashboards densos em dados</span><span class="sit" data-i18n="sC4">Sistemas responsivos</span></div><div class="stk-a" data-i18n="apC"><b>APLICADO EM</b> — Iron Bear · Conexiia · PrescrittoMED</div></div>
+    <div class="stk rv"><div class="stk-g"><i>B</i>BACKEND &amp; APIS</div><div class="stk-i"><span class="sit">Ruby on Rails</span><span class="sit">Python</span><span class="sit">PHP</span><span class="sit">Java</span><span class="sit" data-i18n="sB1">APIs REST</span><span class="sit">Webhooks</span><span class="sit" data-i18n="sB3">Autenticação</span><span class="sit" data-i18n="sB6">Filas &amp; workers</span></div><div class="stk-a" data-i18n="apB"><b>APLICADO EM</b> — Rails: Conexiia · Gestão de Estoques · Python: PrescrittoMED</div></div>
+    <div class="stk rv"><div class="stk-g" data-i18n="gDb"><i>C</i>DADOS</div><div class="stk-i"><span class="sit">PostgreSQL</span><span class="sit">Redis</span><span class="sit" data-i18n="sDb5">Modelagem de dados</span><span class="sit">RLS</span></div><div class="stk-a" data-i18n="apDb"><b>APLICADO EM</b> — todos os projetos · RLS: Iron Bear</div></div>
+    <div class="stk rv"><div class="stk-g"><i>D</i>FRONTEND</div><div class="stk-i"><span class="sit">React</span><span class="sit">Next.js</span><span class="sit">Hotwire (Turbo · Stimulus)</span><span class="sit">Tailwind CSS</span><span class="sit">HTML · CSS</span><span class="sit" data-i18n="sC2">Arquitetura de componentes</span><span class="sit" data-i18n="sC3">Dashboards densos em dados</span><span class="sit" data-i18n="sC4">Sistemas responsivos</span></div><div class="stk-a" data-i18n="apC"><b>APLICADO EM</b> — Iron Bear · Conexiia · Gestão de Estoques · PrescrittoMED</div></div>
     <div class="stk rv"><div class="stk-g" data-i18n="gM"><i>E</i>MOBILE</div><div class="stk-i"><span class="sit">React Native</span><span class="sit">Expo</span><span class="sit">Flutter</span></div><div class="stk-a" data-i18n="apM"><b>APLICADO EM</b> — Iron Bear</div></div>
     <div class="stk rv"><div class="stk-g" data-i18n="gD"><i>F</i>IA</div><div class="stk-i"><span class="sit" data-i18n="sD1">Integração de LLM</span><span class="sit" data-i18n="sD2">Agentes</span><span class="sit" data-i18n="sD3">Saídas estruturadas</span><span class="sit">Prompt engineering</span><span class="sit" data-i18n="sD5">Avaliação</span></div><div class="stk-a" data-i18n="apD"><b>APLICADO EM</b> — PrescrittoMED · Iron Bear</div></div>
     <div class="stk rv"><div class="stk-g" data-i18n="gE"><i>G</i>INFRAESTRUTURA</div><div class="stk-i"><span class="sit">Docker</span><span class="sit">Linux</span><span class="sit">CI / CD</span><span class="sit">Git</span><span class="sit">Cloud</span><span class="sit">Vercel</span></div><div class="stk-a" data-i18n="apE"><b>APLICADO EM</b> — tudo que está em produção</div></div>
@@ -1325,7 +1351,7 @@ wt:`WHAT I'VE BUILT<span class="dot">.</span>`,
 wn:`Two production systems and one product of my own in development. <b>The interfaces are the protagonists.</b>`,
 wxh:`WHAT EACH PROJECT DEMONSTRATES`,
 wi1w:`A PRODUCT BUILT END TO END BY ME`,
-wi3w:`A PRODUCT OF MY OWN — MOBILE APP AND DASHBOARD, IN DEVELOPMENT`,
+wi3w:`A PRODUCT OF MY OWN — MOBILE APP AND GYM DASHBOARD`,
 wi2w:`CONTINUOUS EVOLUTION OF AN ENTERPRISE SYSTEM IN PRODUCTION`,
 chipDemo:`DEMO`,
 
@@ -1571,12 +1597,13 @@ cxFig:`<b>FIG. 03</b> — OMNICHANNEL PLATFORM · CONVERSATIONS · CHANNELS · A
 p4k:`<b>03</b> / FITNESS · MOBILE · B2B2C`,
 p4s:`Social fitness platform: the student app — training, progress, AI coach and gamification — and the gym dashboard, on the same backend.`,
 p4d0:`Fitness · Mobile · B2B2C SaaS`,
-p4d1:`<b>IN DEVELOPMENT</b> · not yet published to the stores`,
+p4d1:`<b>BUILT</b> · student app and gym dashboard`,
 p4d2:`<b>Product, architecture and development</b> — personal project`,
-p4d3:`React Native (Expo) · Next.js · TypeScript · Supabase (PostgreSQL)`,
+p4d3:`React Native (Expo) · Next.js · TypeScript · PostgreSQL`,
 p4d5:`Student app + gym dashboard: members, plans, finance, turnstile and inventory.`,
 p4d4:`Multi-tenant with RLS-based privacy: the gym sees aggregates, never a student's raw workout data.`,
 p4d6:`A rules engine decides; the LLM only phrases the feedback in the chosen persona.`,
+ibFig:`<b>FIG. 04</b> — IRON BEAR · STUDENT APP FLOW`,
 ibS1:`STREAK 12`,ibLv:`Level 7`,ibXp:`62% to level 8`,
 ibL1:`Monday — Back and biceps`,ibL2:`Wednesday — Legs`,ibL3:`Today — Chest and triceps`,
 ibE1:`TODAY'S WORKOUT · ~55 MIN`,ibT1:`Chest and triceps`,ibP1:`6 exercises · weights from last session`,ibB1:`Start`,ibB2:`Swap`,
@@ -1584,6 +1611,24 @@ ibS2:`SESSION`,
 ibQ1:`Bench press — 4×8 · 60 kg`,ibQ2:`Incline press — 3×10 · 24 kg`,ibQ3:`Chest fly — 3×12 · 16 kg`,ibQ4:`Rope pushdown — 3×12 · 30 kg`,ibQ5:`Skull crusher — 3×10 · 25 kg`,
 ibE2:`NEW RECORD`,ibT2:`Bench press · 62.5 kg`,ibP2:`+2.5 kg · achievement unlocked`,
 ibSy:`<b>● COACH</b> SUGGESTED LOAD +2.5 KG`
+});
+
+Object.assign(EN,{
+wn:`Two production systems and two projects of my own. <b>The interfaces are the protagonists.</b>`,
+wi4w:`WEB INVENTORY SYSTEM FOR RETAIL STORES — RAILS`,
+apB:`<b>APPLIED IN</b> — Rails: Conexiia · Stock Management · Python: PrescrittoMED`,
+apC:`<b>APPLIED IN</b> — Iron Bear · Conexiia · Stock Management · PrescrittoMED`,
+es1:`01 · Balance, sales forecast and status per product`,es2:`02 · Sales reports, best sellers and payments`,
+esFig:`<b>FIG. 05</b> — STOCK MANAGEMENT SYSTEM`,
+p5k:`<b>04</b> / RETAIL · INVENTORY · WEB`,p5n:`STOCK MANAGEMENT SYSTEM`,
+p5s:`Web system for retail store inventory: products, balance, sales forecast, production, stock counts, purchasing, sales and reports.`,
+p5d0:`Retail · Inventory management · Web`,
+p5d1:`<b>BUILT</b> · web system for stores`,
+p5d2:`<b>Development and adaptation</b> of the system`,
+p5d3:`Ruby on Rails 7 · Hotwire (Turbo, Stimulus) · PostgreSQL · Redis · GoodJob`,
+p5d4:`Products and SKUs, stock with sales forecast, production, stock counts, purchasing and suppliers, sales, reports and QR-code labels.`,
+p5d5:`Bling ERP via API.`,p5d6:`Open ERP — an open-source Ruby on Rails project`,
+lbBase:`BASE`,tEst:`INVENTORY`,tVar:`RETAIL`,chipNP:`NOT PUBLISHED`
 });
 
 const DICTS={pt:{},en:EN};
@@ -1737,30 +1782,30 @@ setTimeout(()=>$('#heroH1').classList.add('on'),900);
 const ctio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');ctio.unobserve(e.target);}}),{threshold:.3});
 const ctH=$('#ctH'); if(ctH)ctio.observe(ctH);
 
-/* ---------- vídeo do PrescrittoMED (loop) ---------- */
-const pmVid=$('#pmVid');
-if(pmVid){
-  let vidDead=false;
-  function vidFail(){
-    if(vidDead)return; vidDead=true;
-    pmVid.style.display='none';
-    const img=$('#pmCapa'); if(img)img.style.display='block';
+/* ---------- vídeos em loop (pausam fora da tela) ---------- */
+function loopVideo(vid,fallbackSel){
+  if(!vid)return;
+  let dead=false;
+  function fail(){
+    if(dead)return; dead=true;
+    vid.style.display='none';
+    const img=fallbackSel&&$(fallbackSel); if(img)img.style.display='block';
+    else if(vid.closest('.shot'))vid.closest('.shot').classList.add('noimg');
   }
-  const vsrc=pmVid.querySelector('source');
-  if(vsrc)vsrc.addEventListener('error',vidFail);
-  pmVid.addEventListener('error',vidFail);
-  if(RM){
-    pmVid.removeAttribute('autoplay');
-  }else{
-    let vVis=false;
-    function vSync(){
-      if(vVis&&!document.hidden&&!vidDead){pmVid.play().catch(()=>{});}
-      else{pmVid.pause();}
-    }
-    new IntersectionObserver(es=>es.forEach(e=>{vVis=e.isIntersecting;vSync();}),{threshold:.15}).observe(pmVid);
-    document.addEventListener('visibilitychange',vSync);
+  const src=vid.querySelector('source');
+  if(src)src.addEventListener('error',fail);
+  vid.addEventListener('error',fail);
+  if(RM){vid.removeAttribute('autoplay');return;}
+  let vis=false;
+  function sync(){
+    if(vis&&!document.hidden&&!dead){vid.play().catch(()=>{});}
+    else{vid.pause();}
   }
+  new IntersectionObserver(es=>es.forEach(e=>{vis=e.isIntersecting;sync();}),{threshold:.15}).observe(vid);
+  document.addEventListener('visibilitychange',sync);
 }
+loopVideo($('#pmVid'),'#pmCapa');
+loopVideo($('#ibVid'));
 
 /* ---------- console de deploy do hero ---------- */
 const bootBody=$('#bootBody'),bootServ=$('#bootServ'),termStat=$('#termStat');
@@ -1844,6 +1889,48 @@ if(LANG==='en')applyLang('en');
     if(!open){cap.classList.add('open');head.setAttribute('aria-expanded','true');}
   });
 });
+
+/* ---------- zoom ao clicar (lightbox) ---------- */
+const lbOv=$('#lbOv'),lbBox=$('#lbBox');
+function closeLB(){
+  lbOv.classList.remove('on');lbOv.setAttribute('aria-hidden','true');
+  document.body.classList.remove('lb-open');
+  setTimeout(()=>{if(!lbOv.classList.contains('on'))lbBox.innerHTML='';},450);
+}
+function openLB(el){
+  lbBox.innerHTML='';
+  const vid=el.querySelector('video'),img=el.querySelector('img');
+  if(vid&&vid.style.display!=='none'&&!(vid.closest('.shot')||el).classList.contains('noimg')){
+    const v=document.createElement('video');
+    v.src=(vid.querySelector('source')||vid).getAttribute('src')||vid.currentSrc;
+    v.poster=vid.getAttribute('poster')||'';
+    v.muted=true;v.loop=true;v.playsInline=true;v.autoplay=true;
+    try{v.currentTime=vid.currentTime;}catch(_){}
+    lbBox.appendChild(v);v.play().catch(()=>{});
+  }else if(img&&img.naturalWidth){
+    const i=new Image();i.src=img.currentSrc||img.src;i.alt=img.alt;lbBox.appendChild(i);
+  }else{
+    const w=el.offsetWidth,h=el.offsetHeight;
+    if(!w||!h)return;
+    const k=Math.min(innerWidth*.92/w,innerHeight*.88/h);
+    const c=el.cloneNode(true);
+    c.removeAttribute('data-cursor');c.classList.remove('rv');
+    c.querySelectorAll('[id]').forEach(n=>n.removeAttribute('id'));
+    c.style.cssText='width:'+w+'px;transform:scale('+k+');margin:0;opacity:1';
+    const ui=document.createElement('div');ui.className='lb-ui';
+    ui.style.width=(w*k)+'px';ui.style.height=(h*k)+'px';
+    ui.appendChild(c);lbBox.appendChild(ui);
+  }
+  lbOv.classList.add('on');lbOv.setAttribute('aria-hidden','false');
+  document.body.classList.add('lb-open');
+}
+document.addEventListener('click',e=>{
+  if(lbOv.classList.contains('on')){closeLB();return;}
+  if(e.target.closest('a,button'))return;
+  const el=e.target.closest('[data-cursor]');
+  if(el)openLB(el);
+});
+addEventListener('keydown',e=>{if(e.key==='Escape'&&lbOv.classList.contains('on'))closeLB();});
 
 /* ---------- cursor personalizado ---------- */
 if(matchMedia('(hover:hover) and (pointer:fine)').matches&&!RM){
