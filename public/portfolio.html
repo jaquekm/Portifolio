@@ -23,7 +23,7 @@
      Degradação: sem vídeo → capa no lugar. Sem ambos → aviso.
      As versões "tela limpa" podem substituir depois — troque o src.
 
-  3. PROJETO 02 — CONEXIIA (real). 03–05 são EXEMPLOS
+  3. PROJETOS 01, 02 (Conexiia) e 04 (Iron Bear) são reais. 03 e 05 são EXEMPLOS
      (chip tracejado "EXEMPLO"). Troque ou remova antes de publicar.
 
   4. TRAJETÓRIA (seção 08): ✳ ajuste anos e marcos à sua história.
@@ -380,6 +380,9 @@ body.menu-open{overflow:hidden}
 .ph-sync{padding:10px 15px;border-top:1px solid var(--line);font:500 8.5px var(--fm);letter-spacing:.14em;color:var(--mut)}
 .ph-sync b{color:var(--ok);font-weight:600}
 
+.ib{--acc:#B87333;--acc-hi:#C47A3D}
+.ib .pbtn.solid{color:#111}
+
 /* — Signal — */
 .sig-wrap{padding:8px 10px}
 .node{fill:#121216;stroke:#2E2E34}
@@ -489,6 +492,8 @@ body.menu-open{overflow:hidden}
 .idrow b{font:500 9px/2.2 var(--fm);letter-spacing:.16em;color:var(--mut)}
 .idrow span{color:var(--txt2)}
 .idrow .c-ok{font-weight:600}
+.about-txt .abq{font:400 clamp(22px,2.4vw,30px)/1.25 var(--fd);text-transform:uppercase;border-left:2px solid var(--acc);padding-left:20px;margin-top:30px;color:var(--txt)}
+.abq .dot{color:var(--acc)}
 .principles{margin-top:36px;border-top:1px solid var(--line2)}
 .principles-h{font:500 10px var(--fm);letter-spacing:.18em;color:var(--mut);padding:16px 0 4px}
 .pric{display:flex;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px;color:var(--txt2)}
@@ -833,68 +838,70 @@ body.menu-open{overflow:hidden}
     <article class="proj" id="p2">
       <span class="proj-idx" aria-hidden="true">02</span>
       <div class="proj-grid pg-left">
-        <div class="mock-wrap mock rv" data-cursor="VER">
-          <div class="mock-bar"><i class="tdot"></i><i class="tdot"></i><i class="tdot"></i><span class="mock-url">app.conexiia.com/operacao</span><span class="mock-tag" data-i18n="tLive">AO VIVO</span></div>
+        <div class="mock-wrap rv">
+        <div class="mock" data-cursor="VER">
+          <div class="mock-bar"><i class="tdot"></i><i class="tdot"></i><i class="tdot"></i><span class="mock-url">conexiia.com.br</span><span class="mock-tag" data-i18n="tLive">AO VIVO</span></div>
           <div class="pm-strip">
-            <div data-i18n="cxS1"><em>PAPEL</em><strong>ÚNICA DESENVOLVEDORA</strong></div>
-            <div data-i18n="cxS2"><em>ESCOPO</em><strong>FULL-STACK · ARQUITETURA</strong></div>
+            <div data-i18n="cxS1"><em>PAPEL</em><strong>ARQUITETA &amp; DEV SÊNIOR</strong></div>
+            <div data-i18n="cxS2"><em>ESCOPO</em><strong>FULL-STACK · RUBY ON RAILS</strong></div>
             <div data-i18n="cxS3"><em>STATUS</em><strong class="c-ok">● PRODUÇÃO · EVOLUÇÃO CONTÍNUA</strong></div>
           </div>
           <div class="cx-top">
             <span class="cx-brand">CONEXIIA</span>
-            <nav data-i18n="cxtN"><span class="on">ATENDIMENTO</span><span>VENDAS</span><span>AUTOMAÇÕES</span><span>INTEGRAÇÕES</span></nav>
-            <span class="cx-env" data-i18n="cxEnv">OPERAÇÃO — TEMPO REAL</span>
+            <nav data-i18n="cxtN"><span class="on">CONVERSAS</span><span>CANAIS</span><span>AUTOMAÇÕES</span><span>INTEGRAÇÕES</span></nav>
+            <span class="cx-env" data-i18n="cxEnv">OMNICHANNEL — TEMPO REAL</span>
           </div>
           <div class="cx-kpis">
-            <div class="kpi" data-i18n="cxK1"><em>ATENDIMENTO</em><strong class="kval c-ok">● AO VIVO</strong><span>fila unificada</span></div>
-            <div class="kpi" data-i18n="cxK2"><em>VENDAS</em><strong class="kval">PIPELINE ATIVO</strong><span>follow-up automático</span></div>
+            <div class="kpi" data-i18n="cxK1"><em>CONVERSAS</em><strong class="kval c-ok">● AO VIVO</strong><span>caixa unificada</span></div>
+            <div class="kpi" data-i18n="cxK2"><em>CANAIS</em><strong class="kval">MULTICANAL</strong><span>tudo em um lugar</span></div>
             <div class="kpi" data-i18n="cxK3"><em>AUTOMAÇÕES</em><strong>4<small> EM EXECUÇÃO</small></strong><span>menos operação manual</span></div>
             <div class="kpi" data-i18n="cxK4"><em>INTEGRAÇÕES</em><strong>6<small>/6 ONLINE</small></strong><span>serviços conectados</span></div>
           </div>
           <div class="cx-grid">
             <div class="cx-feed">
-              <div class="cx-feed-h" data-i18n="cxFh"><span>ECOSSISTEMA — EVENTOS AO VIVO</span><span class="c-ok">● RECEBENDO</span></div>
+              <div class="cx-feed-h" data-i18n="cxFh"><span>MENSAGERIA — EVENTOS AO VIVO</span><span class="c-ok">● RECEBENDO</span></div>
               <div id="cxFeed" aria-live="off"></div>
             </div>
             <div class="cx-side">
               <div class="cx-auto">
                 <div class="cx-side-h" data-i18n="cxAh">AUTOMAÇÕES ATIVAS</div>
-                <div class="arow"><i class="pulse"></i><span data-i18n="cxA1">Triagem IA — atendimento</span></div>
-                <div class="arow"><i class="pulse"></i><span data-i18n="cxA2">Follow-up — vendas</span></div>
+                <div class="arow"><i class="pulse"></i><span data-i18n="cxA1">Roteamento de conversas</span></div>
+                <div class="arow"><i class="pulse"></i><span data-i18n="cxA2">Respostas automáticas</span></div>
                 <div class="arow"><i class="pulse"></i><span data-i18n="cxA3">Distribuição de fila</span></div>
-                <div class="arow"><i class="pulse"></i><span data-i18n="cxA4">Retomada de clientes</span></div>
+                <div class="arow"><i class="pulse"></i><span data-i18n="cxA4">Retomada de conversas</span></div>
               </div>
               <div class="cx-int">
-                <div class="cx-side-h" data-i18n="cxIh">INTEGRAÇÕES</div>
+                <div class="cx-side-h" data-i18n="cxIh">CANAIS &amp; INTEGRAÇÕES</div>
                 <div class="int-g">
+                  <span class="isrv"><i></i>WHATSAPP</span>
+                  <span class="isrv"><i></i>INSTAGRAM</span>
+                  <span class="isrv"><i></i>E-MAIL</span>
+                  <span class="isrv"><i></i>LIVE CHAT</span>
                   <span class="isrv"><i></i>CRM</span>
-                  <span class="isrv"><i></i><b data-i18n="cxI2">MENSAGENS</b></span>
-                  <span class="isrv"><i></i><b data-i18n="cxI3">PAGAMENTOS</b></span>
-                  <span class="isrv"><i></i><b data-i18n="cxI4">TELEFONIA</b></span>
-                  <span class="isrv"><i></i><b data-i18n="cxI5">E-MAIL</b></span>
-                  <span class="isrv"><i></i>ERP</span>
+                  <span class="isrv"><i></i>WEBHOOKS</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <p class="fig" data-i18n="cxFig" style="margin-top:14px"><b>FIG. 03</b> — ECOSSISTEMA EM OPERAÇÃO · ATENDIMENTO · VENDAS · AUTOMAÇÕES · INTEGRAÇÕES</p>
+        <p class="fig" data-i18n="cxFig"><b>FIG. 03</b> — PLATAFORMA OMNICHANNEL · CONVERSAS · CANAIS · AUTOMAÇÕES · INTEGRAÇÕES</p>
+        </div>
         <div class="rv" data-d="1">
-          <p class="proj-kick" data-i18n="cxk"><b>02</b> / TELECOM · SAAS · IA · AUTOMAÇÃO</p>
+          <p class="proj-kick" data-i18n="cxk"><b>02</b> / OMNICHANNEL · SAAS · MENSAGERIA</p>
           <h3 class="proj-name">CONEXIIA</h3>
-          <p class="proj-sub" data-i18n="cxs">Plataforma de atendimento, vendas e automação para operações de telecomunicações — um único ecossistema conectando atendimento, vendas, automações e integrações.</p>
+          <p class="proj-sub" data-i18n="cxs">Plataforma omnichannel de mensageria — o atendimento e a comunicação da empresa com seus clientes, em vários canais, reunidos em um único ambiente.</p>
           <dl class="spec">
-            <div class="spec-row"><dt data-i18n="lbCat">CATEGORIA</dt><dd data-i18n="cx1">SaaS · Telecom · AI · Automation</dd></div>
+            <div class="spec-row"><dt data-i18n="lbCat">CATEGORIA</dt><dd data-i18n="cx1">SaaS · Omnichannel · Mensageria</dd></div>
             <div class="spec-row"><dt data-i18n="lbStat">STATUS</dt><dd data-i18n="cx2"><b class="c-ok">● EM PRODUÇÃO</b> · Desenvolvimento contínuo</dd></div>
-            <div class="spec-row"><dt data-i18n="lbRole">PAPEL</dt><dd data-i18n="cx3"><b>Sole Developer · Systems Architecture</b> — única desenvolvedora no projeto</dd></div>
+            <div class="spec-row"><dt data-i18n="lbRole">PAPEL</dt><dd data-i18n="cx3"><b>Arquiteta e Desenvolvedora Sênior</b> — à frente do projeto, 100% do desenvolvimento</dd></div>
+            <div class="spec-row"><dt data-i18n="lbStack">STACK</dt><dd data-i18n="cx7">Ruby on Rails · Full-stack</dd></div>
             <div class="spec-row"><dt data-i18n="lbFull">FULL-STACK</dt><dd data-i18n="cx4">Implementação e evolução das funcionalidades da plataforma.</dd></div>
             <div class="spec-row"><dt data-i18n="lbArc">ARQUITETURA</dt><dd data-i18n="cx5">Estrutura técnica definida e evoluída conforme novas necessidades.</dd></div>
-            <div class="spec-row"><dt data-i18n="lbInt">INTEGRAÇÕES</dt><dd data-i18n="cx6">Serviços e sistemas externos conectados à operação.</dd></div>
-            <div class="spec-row"><dt data-i18n="lbAi">IA</dt><dd data-i18n="cx7">Recursos aplicados aos fluxos da plataforma.</dd></div>
+            <div class="spec-row"><dt data-i18n="lbInt">INTEGRAÇÕES</dt><dd data-i18n="cx6">Canais e sistemas externos conectados à operação.</dd></div>
             <div class="spec-row"><dt data-i18n="lbAut">AUTOMAÇÃO</dt><dd data-i18n="cx8">Processos que reduzem operações manuais e conectam etapas do negócio.</dd></div>
             <div class="spec-row"><dt data-i18n="lbInf">INFRA &amp; PROD</dt><dd data-i18n="cx9">Manutenção e evolução direta do ambiente de produção.</dd></div>
           </dl>
-          <div class="proj-tags"><span class="chip">SAAS</span><span class="chip">TELECOM</span><span class="chip" data-i18n="p1t2">IA</span><span class="chip" data-i18n="tAut">AUTOMAÇÃO</span><span class="chip" data-i18n="tInt">INTEGRAÇÕES</span></div>
+          <div class="proj-tags"><span class="chip">SAAS</span><span class="chip">OMNICHANNEL</span><span class="chip" data-i18n="tMsg">MENSAGERIA</span><span class="chip">RUBY ON RAILS</span><span class="chip" data-i18n="tAut">AUTOMAÇÃO</span><span class="chip" data-i18n="tInt">INTEGRAÇÕES</span></div>
         </div>
       </div>
     </article>
@@ -938,64 +945,66 @@ body.menu-open{overflow:hidden}
       </div>
     </article>
 
-    <!-- ✳ EXEMPLO — substitua pelo seu projeto real (mesma estrutura) -->
     <article class="proj" id="p4">
       <span class="proj-idx" aria-hidden="true">04</span>
       <div class="proj-grid pg-right">
         <div class="rv">
-          <p class="proj-kick" data-i18n="p4k"><b>04</b> / OPERAÇÕES DE CAMPO · MOBILE</p>
-          <h3 class="proj-name">ORBIT</h3>
-          <p class="proj-sub" data-i18n="p4s">App mobile para equipes de campo — rotas, checklists de tarefas e relatórios offline-first, sincronizados em tempo real com um dashboard de operações.</p>
+          <p class="proj-kick" data-i18n="p4k"><b>04</b> / FITNESS · MOBILE · B2B2C</p>
+          <h3 class="proj-name">IRON BEAR</h3>
+          <p class="proj-sub" data-i18n="p4s">Plataforma social fitness: o app do aluno — treino, evolução, coach com IA e gamificação — e o painel da academia, sobre o mesmo backend.</p>
           <dl class="spec">
-            <div class="spec-row"><dt data-i18n="lbProb">PROBLEMA</dt><dd data-i18n="p4d1">Equipes de campo reportavam em papel e apps de chat; a operação não tinha visão ao vivo do dia.</dd></div>
-            <div class="spec-row"><dt data-i18n="lbRole">PAPEL</dt><dd data-i18n="p4d2"><b>Design de produto, frontend mobile, backend de sincronização.</b></dd></div>
-            <div class="spec-row"><dt data-i18n="lbStack">STACK</dt><dd data-i18n="p4d3">React Native · Motor de sync offline · Node.js · WebSockets</dd></div>
-            <div class="spec-row"><dt data-i18n="lbCha">DESAFIO</dt><dd data-i18n="p4d4">Sync offline-first que nunca perde um relatório nem conta uma visita duas vezes.</dd></div>
-            <div class="spec-row"><dt data-i18n="lbOut">RESULTADO</dt><dd data-i18n="p4d5">Uma <b>visão operacional ao vivo</b> de cada equipe, com relatórios que sobrevivem a zonas mortas.</dd></div>
+            <div class="spec-row"><dt data-i18n="lbCat">CATEGORIA</dt><dd data-i18n="p4d0">Fitness · Mobile · SaaS B2B2C</dd></div>
+            <div class="spec-row"><dt data-i18n="lbStat">STATUS</dt><dd data-i18n="p4d1"><b>EM DESENVOLVIMENTO</b> · ainda não publicado nas lojas</dd></div>
+            <div class="spec-row"><dt data-i18n="lbRole">PAPEL</dt><dd data-i18n="p4d2"><b>Produto, arquitetura e desenvolvimento</b> — projeto pessoal</dd></div>
+            <div class="spec-row"><dt data-i18n="lbStack">STACK</dt><dd data-i18n="p4d3">React Native (Expo) · Next.js · TypeScript · Supabase (PostgreSQL)</dd></div>
+            <div class="spec-row"><dt data-i18n="lbScope">ESCOPO</dt><dd data-i18n="p4d5">App do aluno + painel da academia: alunos, planos, financeiro, catraca e estoque.</dd></div>
+            <div class="spec-row"><dt data-i18n="lbCha">DESAFIO</dt><dd data-i18n="p4d4">Multi-tenant com privacidade por RLS: a academia enxerga agregados, nunca o treino bruto do aluno.</dd></div>
+            <div class="spec-row"><dt data-i18n="lbAi">IA</dt><dd data-i18n="p4d6">Motor de regras decide; o LLM só fraseia o feedback na persona escolhida.</dd></div>
           </dl>
-          <div class="proj-tags"><span class="chip">MOBILE</span><span class="chip">OFFLINE-FIRST</span><span class="chip" data-i18n="tSync">SYNC EM TEMPO REAL</span><span class="chip">REACT NATIVE</span><span class="chip demo" data-i18n="chipDemo">EXEMPLO</span></div>
+          <div class="proj-tags"><span class="chip">MOBILE</span><span class="chip">REACT NATIVE</span><span class="chip">NEXT.JS</span><span class="chip">SUPABASE</span><span class="chip warn" data-i18n="chipDev">EM DESENVOLVIMENTO</span></div>
         </div>
-        <div class="phones rv" data-d="1">
+        <div class="phones ib rv" data-d="1">
           <div class="phone pa" data-cursor="VER">
             <div class="ph-screen">
               <div class="ph-notch"></div>
-              <div class="ph-status"><span data-i18n="ph1s">EM ROTA</span><span class="c-ok">GPS ●</span></div>
-              <div class="map">
-                <svg viewBox="0 0 210 240" preserveAspectRatio="none" aria-hidden="true">
-                  <path class="rt" d="M28,205 L28,150 L74,150 L74,92 L128,92 L128,46 L172,46"/>
-                  <path class="rt live" d="M128,92 L128,46 L172,46"/>
+              <div class="ph-status"><span>IRON BEAR</span><span data-i18n="ibS1">SEQ. 12</span></div>
+              <div class="ph-prog">
+                <svg class="ring" width="58" height="58" viewBox="0 0 58 58" aria-hidden="true">
+                  <circle class="rbg" cx="29" cy="29" r="26"/>
+                  <circle class="ringval" cx="29" cy="29" r="26"/>
                 </svg>
-                <i class="pin done" style="left:11%;top:82%"></i>
-                <i class="pin done" style="left:32%;top:60%"></i>
-                <i class="pin me" style="left:58%;top:34%"></i>
+                <div><strong data-i18n="ibLv">Nível 7</strong><span data-i18n="ibXp">62% para o nível 8</span></div>
               </div>
+              <ul class="ph-list">
+                <li class="ck" data-i18n="ibL1">Segunda — Costas e bíceps</li>
+                <li class="ck" data-i18n="ibL2">Quarta — Pernas</li>
+                <li data-i18n="ibL3">Hoje — Peito e tríceps</li>
+              </ul>
               <div class="ph-sheet">
-                <em data-i18n="ph1e">PARADA 02 · 1,2 KM</em>
-                <strong data-i18n="ph1t2">Depósito ACME — Entrega</strong>
-                <p data-i18n="ph1p2">2 volumes · assinatura obrigatória</p>
-                <div class="ph-btns"><span class="pbtn solid" data-i18n="ph1b1">Cheguei</span><span class="pbtn" data-i18n="ph1b2">Ocorrência</span></div>
+                <em data-i18n="ibE1">TREINO DE HOJE · ~55 MIN</em>
+                <strong data-i18n="ibT1">Peito e tríceps</strong>
+                <p data-i18n="ibP1">6 exercícios · cargas da última sessão</p>
+                <div class="ph-btns"><span class="pbtn solid" data-i18n="ibB1">Começar</span><span class="pbtn" data-i18n="ibB2">Trocar</span></div>
               </div>
             </div>
           </div>
           <div class="phone pb rv" data-d="2" data-cursor="VER">
             <div class="ph-screen">
               <div class="ph-notch"></div>
-              <div class="ph-status"><span data-i18n="ph2s">HOJE</span><span data-i18n="ph2f">FILA 2</span></div>
-              <div class="ph-prog">
-                <svg class="ring" width="58" height="58" viewBox="0 0 58 58" aria-hidden="true">
-                  <circle class="rbg" cx="29" cy="29" r="26"/>
-                  <circle class="ringval" cx="29" cy="29" r="26"/>
-                </svg>
-                <div><strong>3 / 5</strong><span data-i18n="ph2p">tarefas concluídas</span></div>
-              </div>
+              <div class="ph-status"><span data-i18n="ibS2">SESSÃO</span><span class="c-acc">00:24:10</span></div>
               <ul class="ph-list">
-                <li class="ck" data-i18n="pl1">Unidade A — leitura de medidor</li>
-                <li class="ck" data-i18n="pl2">Unidade B — entrega</li>
-                <li class="ck" data-i18n="pl3">Unidade C — inspeção</li>
-                <li data-i18n="pl4">Unidade D — leitura de medidor</li>
-                <li data-i18n="pl5">Unidade E — assinatura</li>
+                <li class="ck" data-i18n="ibQ1">Supino reto — 4×8 · 60 kg</li>
+                <li class="ck" data-i18n="ibQ2">Supino inclinado — 3×10 · 24 kg</li>
+                <li data-i18n="ibQ3">Crucifixo — 3×12 · 16 kg</li>
+                <li data-i18n="ibQ4">Tríceps corda — 3×12 · 30 kg</li>
+                <li data-i18n="ibQ5">Tríceps testa — 3×10 · 25 kg</li>
               </ul>
-              <div class="ph-sync" data-i18n="ph2sy"><b>● SINCRONIZADO</b> HÁ 12S · FILA OFFLINE</div>
+              <div class="ph-sheet">
+                <em data-i18n="ibE2">NOVO RECORDE</em>
+                <strong data-i18n="ibT2">Supino reto · 62,5 kg</strong>
+                <p data-i18n="ibP2">+2,5 kg · conquista desbloqueada</p>
+              </div>
+              <div class="ph-sync" data-i18n="ibSy"><b>● COACH</b> CARGA SUGERIDA +2,5 KG</div>
             </div>
           </div>
         </div>
@@ -1226,7 +1235,7 @@ body.menu-open{overflow:hidden}
           <li>Retrieval, tool use e saídas estruturadas</li>
           <li>Humano no loop onde o risco exige</li>
         </ul>
-        <div class="cap-seen" data-i18n="c3s">VISTO EM — <a href="#p1">PRESCRITTOMED</a> · <a href="#p2">CONEXIIA</a></div>
+        <div class="cap-seen" data-i18n="c3s">VISTO EM — <a href="#p1">PRESCRITTOMED</a> · <a href="#p4">IRON BEAR</a></div>
       </div></div></div>
     </div>
 
@@ -1250,7 +1259,7 @@ body.menu-open{overflow:hidden}
           <li>Interações com sensação nativa, sem time nativo</li>
           <li>Push, sync e trabalho em background feitos direito</li>
         </ul>
-        <div class="cap-seen" data-i18n="c5s">VISTO EM — <a href="#p4">ORBIT</a></div>
+        <div class="cap-seen" data-i18n="c5s">VISTO EM — <a href="#p4">IRON BEAR</a></div>
       </div></div></div>
     </div>
 
@@ -1271,15 +1280,17 @@ body.menu-open{overflow:hidden}
   <section class="sec" id="stack">
     <div class="sec-head rv">
       <p class="kick" data-i18n="stk1"><b>05</b>STACK TÉCNICA</p>
-      <h2 class="sec-title" data-i18n="stk2">PROFUNDIDADE EM VEZ DE LOGOS<span class="dot">.</span></h2>
-      <p class="sec-note" data-i18n="stk3">Agrupadas por função, anotadas com <b>onde cada camada roda de verdade</b> nos projetos acima.</p>
+      <h2 class="sec-title" data-i18n="stk2">TUDO QUE EU USO<span class="dot">.</span></h2>
+      <p class="sec-note" data-i18n="stk3">O conjunto completo, agrupado por função — e <b>onde cada camada roda de verdade</b>. Cada projeto tem a sua própria stack.</p>
     </div>
-    <div class="stk rv"><div class="stk-g" data-i18n="gA"><i>A</i>LINGUAGENS</div><div class="stk-i"><span class="sit">Python</span><span class="sit">JavaScript</span><span class="sit">TypeScript</span><span class="sit">SQL</span></div><div class="stk-a" data-i18n="apA"><b>APLICADO EM</b> — todos os projetos desta página</div></div>
-    <div class="stk rv"><div class="stk-g"><i>B</i>BACKEND &amp; APIS</div><div class="stk-i"><span class="sit" data-i18n="sB1">APIs REST</span><span class="sit">Webhooks</span><span class="sit" data-i18n="sB3">Autenticação</span><span class="sit">PostgreSQL</span><span class="sit">Redis</span><span class="sit" data-i18n="sB6">Filas &amp; workers</span></div><div class="stk-a" data-i18n="apB"><b>APLICADO EM</b> — Conexiia · Atlas Gateway</div></div>
-    <div class="stk rv"><div class="stk-g"><i>C</i>FRONTEND</div><div class="stk-i"><span class="sit">React</span><span class="sit" data-i18n="sC2">Arquitetura de componentes</span><span class="sit" data-i18n="sC3">Dashboards densos em dados</span><span class="sit" data-i18n="sC4">Sistemas responsivos</span></div><div class="stk-a" data-i18n="apC"><b>APLICADO EM</b> — PrescrittoMED · Conexiia</div></div>
-    <div class="stk rv"><div class="stk-g" data-i18n="gD"><i>D</i>IA</div><div class="stk-i"><span class="sit" data-i18n="sD1">Integração de LLM</span><span class="sit" data-i18n="sD2">Agentes</span><span class="sit" data-i18n="sD3">Saídas estruturadas</span><span class="sit">Prompt engineering</span><span class="sit" data-i18n="sD5">Avaliação</span></div><div class="stk-a" data-i18n="apD"><b>APLICADO EM</b> — PrescrittoMED · Conexiia</div></div>
-    <div class="stk rv"><div class="stk-g" data-i18n="gE"><i>E</i>INFRAESTRUTURA</div><div class="stk-i"><span class="sit">Docker</span><span class="sit">Linux</span><span class="sit">CI / CD</span><span class="sit">Git</span><span class="sit">Cloud</span></div><div class="stk-a" data-i18n="apE"><b>APLICADO EM</b> — tudo que está em produção</div></div>
-    <div class="stk rv"><div class="stk-g" data-i18n="gF"><i>F</i>FERRAMENTAS &amp; PRÁTICA</div><div class="stk-i"><span class="sit">GitHub</span><span class="sit">VS Code</span><span class="sit" data-i18n="sF3">Clientes de API</span><span class="sit" data-i18n="sF4">Observabilidade</span><span class="sit">Code review</span></div><div class="stk-a" data-i18n="apF"><b>APLICADO EM</b> — diariamente, sem negociação</div></div>
+    <div class="stk rv"><div class="stk-g" data-i18n="gA"><i>A</i>LINGUAGENS</div><div class="stk-i"><span class="sit">Python</span><span class="sit">Ruby</span><span class="sit">JavaScript</span><span class="sit">TypeScript</span><span class="sit">PHP</span><span class="sit">Java</span><span class="sit">Dart</span><span class="sit">SQL</span></div><div class="stk-a" data-i18n="apA"><b>APLICADO EM</b> — Python: PrescrittoMED · Ruby: Conexiia · TypeScript: Iron Bear</div></div>
+    <div class="stk rv"><div class="stk-g"><i>B</i>BACKEND &amp; APIS</div><div class="stk-i"><span class="sit">Ruby on Rails</span><span class="sit">Python</span><span class="sit">PHP</span><span class="sit">Java</span><span class="sit" data-i18n="sB1">APIs REST</span><span class="sit">Webhooks</span><span class="sit" data-i18n="sB3">Autenticação</span><span class="sit" data-i18n="sB6">Filas &amp; workers</span></div><div class="stk-a" data-i18n="apB"><b>APLICADO EM</b> — Rails: Conexiia · Python: PrescrittoMED · Atlas Gateway</div></div>
+    <div class="stk rv"><div class="stk-g" data-i18n="gDb"><i>C</i>DADOS</div><div class="stk-i"><span class="sit">PostgreSQL</span><span class="sit">Redis</span><span class="sit">Supabase</span><span class="sit" data-i18n="sDb5">Modelagem de dados</span><span class="sit">RLS</span></div><div class="stk-a" data-i18n="apDb"><b>APLICADO EM</b> — todos os projetos · RLS: Iron Bear</div></div>
+    <div class="stk rv"><div class="stk-g"><i>D</i>FRONTEND</div><div class="stk-i"><span class="sit">React</span><span class="sit">Next.js</span><span class="sit">Hotwire (Turbo · Stimulus)</span><span class="sit">Tailwind CSS</span><span class="sit">HTML · CSS</span><span class="sit" data-i18n="sC2">Arquitetura de componentes</span><span class="sit" data-i18n="sC3">Dashboards densos em dados</span><span class="sit" data-i18n="sC4">Sistemas responsivos</span></div><div class="stk-a" data-i18n="apC"><b>APLICADO EM</b> — Iron Bear · Conexiia · PrescrittoMED</div></div>
+    <div class="stk rv"><div class="stk-g" data-i18n="gM"><i>E</i>MOBILE</div><div class="stk-i"><span class="sit">React Native</span><span class="sit">Expo</span><span class="sit">Flutter</span></div><div class="stk-a" data-i18n="apM"><b>APLICADO EM</b> — Iron Bear</div></div>
+    <div class="stk rv"><div class="stk-g" data-i18n="gD"><i>F</i>IA</div><div class="stk-i"><span class="sit" data-i18n="sD1">Integração de LLM</span><span class="sit" data-i18n="sD2">Agentes</span><span class="sit" data-i18n="sD3">Saídas estruturadas</span><span class="sit">Prompt engineering</span><span class="sit" data-i18n="sD5">Avaliação</span></div><div class="stk-a" data-i18n="apD"><b>APLICADO EM</b> — PrescrittoMED · Iron Bear</div></div>
+    <div class="stk rv"><div class="stk-g" data-i18n="gE"><i>G</i>INFRAESTRUTURA</div><div class="stk-i"><span class="sit">Docker</span><span class="sit">Linux</span><span class="sit">CI / CD</span><span class="sit">Git</span><span class="sit">Cloud</span><span class="sit">Vercel</span></div><div class="stk-a" data-i18n="apE"><b>APLICADO EM</b> — tudo que está em produção</div></div>
+    <div class="stk rv"><div class="stk-g" data-i18n="gF"><i>H</i>FERRAMENTAS &amp; PRÁTICA</div><div class="stk-i"><span class="sit">GitHub</span><span class="sit">VS Code</span><span class="sit" data-i18n="sF3">Clientes de API</span><span class="sit" data-i18n="sF4">Observabilidade</span><span class="sit">Code review</span><span class="sit" data-i18n="sF6">Testes automatizados</span></div><div class="stk-a" data-i18n="apF"><b>APLICADO EM</b> — diariamente, sem negociação</div></div>
   </section>
 
   <!-- ============ 06 PROCESSO ============ -->
@@ -1311,7 +1322,8 @@ body.menu-open{overflow:hidden}
     <div class="about-grid">
       <div class="about-txt rv">
         <p data-i18n="ab1">Eu trabalho em <b>todo o ciclo de vida de produtos digitais</b> — da primeira conversa sobre um problema ao sistema rodando em produção. Aplicações web, APIs, mobile, automação, IA: a tecnologia muda; a disciplina, não.</p>
-        <p data-i18n="ab2">Sou uma desenvolvedora que pensa como arquiteta e entrega como product builder. Isso significa perguntar <b>"por quê" antes do "como"</b>, escolher tecnologia chata para produtos empolgantes e tratar manutenibilidade como funcionalidade — porque em todos os sistemas que mantive vivos, ela era.</p>
+        <p data-i18n="ab2">Sou uma desenvolvedora de perfil analítico: meu foco não é apenas implementar funcionalidades, mas <b>projetar estruturas que organizem a complexidade e sustentem crescimento</b>. Pensamento sistêmico, clareza estrutural e decisões técnicas fundamentadas — porque <b>maturidade técnica não está em usar mais tecnologia, mas em escolher com precisão</b>.</p>
+        <p class="abq" data-i18n="abQ">Complexidade não deve ser eliminada — deve ser organizada<span class="dot">.</span></p>
         <div class="principles">
           <p class="principles-h" data-i18n="prh">PRINCÍPIOS DE TRABALHO</p>
           <div class="pric"><b>P.01</b><span data-i18n="pr1"><i>Tecnologia chata, produtos empolgantes.</i> A empolgação pertence ao resultado.</span></div>
@@ -1448,24 +1460,24 @@ const TT={
 
 /* — feed ao vivo da Conexiia (por idioma) — */
 const CXEV={
-  pt:[['t-at','ATEND','#4193 · 2ª VIA DE FATURA','FILA','s-q'],
-      ['t-at','ATEND','#4194 · PORTABILIDADE','EM ATEND.','s-a'],
-      ['t-vd','VENDA','#2291 · PLANO EMPRESARIAL','PROPOSTA','s-a'],
-      ['t-au','AUTO','FOLLOW-UP DISP. · VENDA #2288','OK','s-ok'],
-      ['t-at','ATEND','#4195 · SUPORTE TÉCNICO','FILA','s-q'],
-      ['t-in','INT','SINCRONIZADO · CRM','OK','s-ok'],
+  pt:[['t-at','WHATS','#4193 · NOVA CONVERSA','FILA','s-q'],
+      ['t-at','WHATS','#4194 · EM ATENDIMENTO','EM ATEND.','s-a'],
+      ['t-vd','INSTA','#2291 · MENSAGEM DIRETA','FILA','s-q'],
+      ['t-au','AUTO','RESPOSTA AUTOMÁTICA · #2288','OK','s-ok'],
+      ['t-in','E-MAIL','#4195 · NOVO E-MAIL','FILA','s-q'],
+      ['t-au','AUTO','CONVERSA ROTEADA · EQUIPE','OK','s-ok'],
       ['t-au','AUTO','RETOMADA AGENDADA','OK','s-ok'],
-      ['t-vd','VENDA','#2292 · MIGRAÇÃO DE PLANO','QUALIF.','s-q'],
-      ['t-at','ATEND','#4196 · CANCELAMENTO','RETENÇÃO','s-a']],
-  en:[['t-at','ATEND','#4193 · 2ND INVOICE COPY','QUEUE','s-q'],
-      ['t-at','ATEND','#4194 · CARRIER SWITCH','IN SERVICE','s-a'],
-      ['t-vd','SALES','#2291 · BUSINESS PLAN','PROPOSAL','s-a'],
-      ['t-au','AUTO','FOLLOW-UP TRIGGERED · SALE #2288','OK','s-ok'],
-      ['t-at','ATEND','#4195 · TECH SUPPORT','QUEUE','s-q'],
-      ['t-in','INT','SYNC COMPLETED · CRM','OK','s-ok'],
-      ['t-au','AUTO','WIN-BACK SCHEDULED','OK','s-ok'],
-      ['t-vd','SALES','#2292 · PLAN MIGRATION','QUALIF.','s-q'],
-      ['t-at','ATEND','#4196 · CANCELLATION','RETENTION','s-a']]
+      ['t-vd','INSTA','#2292 · RESPONDIDA','RESOLVIDA','s-ok'],
+      ['t-at','WHATS','#4196 · TRANSFERIDA','EM ATEND.','s-a']],
+  en:[['t-at','WHATS','#4193 · NEW CONVERSATION','QUEUE','s-q'],
+      ['t-at','WHATS','#4194 · IN SERVICE','IN SERVICE','s-a'],
+      ['t-vd','INSTA','#2291 · DIRECT MESSAGE','QUEUE','s-q'],
+      ['t-au','AUTO','AUTO-REPLY SENT · #2288','OK','s-ok'],
+      ['t-in','EMAIL','#4195 · NEW EMAIL','QUEUE','s-q'],
+      ['t-au','AUTO','CONVERSATION ROUTED · TEAM','OK','s-ok'],
+      ['t-au','AUTO','FOLLOW-UP SCHEDULED','OK','s-ok'],
+      ['t-vd','INSTA','#2292 · ANSWERED','RESOLVED','s-ok'],
+      ['t-at','WHATS','#4196 · TRANSFERRED','IN SERVICE','s-a']]
 };
 
 /* — dicionário EN — */
@@ -1650,7 +1662,7 @@ c4ul:`<li>Event-driven pipelines over cron-and-hope</li><li>Idempotent handlers 
 c4s:`SEEN IN — <a href="#p2">CONEXIIA</a> · <a href="#p5">SIGNAL</a>`,
 c5t:`MOBILE APPLICATIONS`,c5d:`Functional mobile experiences integrated with modern backend infrastructure.`,
 c5ul:`<li>Offline-first where the network can't be trusted</li><li>Native-feel interactions without a native team</li><li>Push, sync and background work done right</li>`,
-c5s:`SEEN IN — <a href="#p4">ORBIT</a>`,
+c5s:`SEEN IN — <a href="#p4">IRON BEAR</a>`,
 c6t:`SYSTEM ARCHITECTURE`,c6d:`Designing how different technologies, services and components work together.`,
 c6ul:`<li>Diagrams before dependencies</li><li>Boundaries that let teams ship independently</li><li>Migration paths from the system you have to the one you need</li>`,
 c6s:`APPLIED IN — <a href="#p1">EVERY PROJECT ABOVE</a>`,
@@ -1685,7 +1697,8 @@ prN:`The difference between a coder and a builder: <b>a coder waits for tickets.
 abk:`<b>07</b>ABOUT`,abt:`SOFTWARE IS NOT JUST CODE<span class="dot">.</span>`,
 abn:`Developer · Systems Architect · Product Builder`,
 ab1:`I work across the <b>complete lifecycle of digital products</b> — from the first conversation about a problem to the system running in production. Web applications, APIs, mobile apps, automation, AI: the technology changes; the discipline doesn't.`,
-ab2:`I'm a developer who thinks like an architect and ships like a product builder. That means asking <b>"why" before "how"</b>, choosing boring technology for exciting products, and treating maintainability as a feature — because in every system I've kept alive, it was.`,
+ab2:`I'm an analytical developer: my focus isn't just implementing features, but <b>designing structures that organize complexity and sustain growth</b>. Systems thinking, structural clarity and well-founded technical decisions — because <b>technical maturity isn't about using more technology, it's about choosing with precision</b>.`,
+abQ:`Complexity shouldn't be eliminated — it should be organized<span class="dot">.</span>`,
 prh:`OPERATING PRINCIPLES`,
 pr1:`<i>Boring technology, exciting products.</i> The excitement belongs to the outcome.`,
 pr2:`<i>If it isn't tested, it isn't finished.</i> Confidence comes from evidence.`,
@@ -1722,6 +1735,54 @@ cth:`<span class="l"><i>HAVE A PROBLEM</i></span><span class="l"><i>WORTH BUILDI
 ctp:`Let's talk about <b>the problem, the architecture, and what we can build.</b> I take on a small number of projects where engineering genuinely changes the outcome.`,
 ctb:`<span>START A CONVERSATION</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 10L10 2M10 2H4M10 2v6"/></svg>`
 };
+
+Object.assign(EN,{
+nStatus:`<i class="pulse"></i>AVAILABLE FOR SELECTED PROJECTS`,
+stk2:`EVERYTHING I USE<span class="dot">.</span>`,
+stk3:`The complete set, grouped by function — and <b>where each layer actually runs</b>. Every project has its own stack.`,
+apA:`<b>APPLIED IN</b> — Python: PrescrittoMED · Ruby: Conexiia · TypeScript: Iron Bear`,
+apB:`<b>APPLIED IN</b> — Rails: Conexiia · Python: PrescrittoMED · Atlas Gateway`,
+gDb:`<i>C</i>DATA`,sDb5:`Data modeling`,apDb:`<b>APPLIED IN</b> — every project · RLS: Iron Bear`,
+apC:`<b>APPLIED IN</b> — Iron Bear · Conexiia · PrescrittoMED`,
+gM:`<i>E</i>MOBILE`,apM:`<b>APPLIED IN</b> — Iron Bear`,
+gD:`<i>F</i>AI`,apD:`<b>APPLIED IN</b> — PrescrittoMED · Iron Bear`,
+gE:`<i>G</i>INFRASTRUCTURE`,gF:`<i>H</i>TOOLS &amp; PRACTICE`,sF6:`Automated testing`,
+c3s:`SEEN IN — <a href="#p1">PRESCRITTOMED</a> · <a href="#p4">IRON BEAR</a>`,
+c5s:`SEEN IN — <a href="#p4">IRON BEAR</a>`,
+tMsg:`MESSAGING`,chipDev:`IN DEVELOPMENT`,lbScope:`SCOPE`,
+cxk:`<b>02</b> / OMNICHANNEL · SAAS · MESSAGING`,
+cxs:`Omnichannel messaging platform — the company's service and communication with its customers, across several channels, in a single environment.`,
+cx1:`SaaS · Omnichannel · Messaging`,
+cx3:`<b>Architect and Senior Developer</b> — leading the project, 100% of the development`,
+cx6:`Channels and external systems connected to the operation.`,
+cx7:`Ruby on Rails · Full-stack`,
+cxS1:`<em>ROLE</em><strong>ARCHITECT &amp; SENIOR DEV</strong>`,
+cxS2:`<em>SCOPE</em><strong>FULL-STACK · RUBY ON RAILS</strong>`,
+cxtN:`<span class="on">CONVERSATIONS</span><span>CHANNELS</span><span>AUTOMATIONS</span><span>INTEGRATIONS</span>`,
+cxEnv:`OMNICHANNEL — REAL TIME`,
+cxK1:`<em>CONVERSATIONS</em><strong class="kval c-ok">● LIVE</strong><span>unified inbox</span>`,
+cxK2:`<em>CHANNELS</em><strong class="kval">MULTICHANNEL</strong><span>everything in one place</span>`,
+cxFh:`<span>MESSAGING — LIVE EVENTS</span><span class="c-ok">● STREAMING</span>`,
+cxA1:`Conversation routing`,cxA2:`Automatic replies`,cxA3:`Smart queue routing`,cxA4:`Conversation follow-up`,
+cxIh:`CHANNELS &amp; INTEGRATIONS`,
+cxFig:`<b>FIG. 03</b> — OMNICHANNEL PLATFORM · CONVERSATIONS · CHANNELS · AUTOMATIONS · INTEGRATIONS`,
+p4k:`<b>04</b> / FITNESS · MOBILE · B2B2C`,
+p4s:`Social fitness platform: the student app — training, progress, AI coach and gamification — and the gym dashboard, on the same backend.`,
+p4d0:`Fitness · Mobile · B2B2C SaaS`,
+p4d1:`<b>IN DEVELOPMENT</b> · not yet published to the stores`,
+p4d2:`<b>Product, architecture and development</b> — personal project`,
+p4d3:`React Native (Expo) · Next.js · TypeScript · Supabase (PostgreSQL)`,
+p4d5:`Student app + gym dashboard: members, plans, finance, turnstile and inventory.`,
+p4d4:`Multi-tenant with RLS-based privacy: the gym sees aggregates, never a student's raw workout data.`,
+p4d6:`A rules engine decides; the LLM only phrases the feedback in the chosen persona.`,
+ibS1:`STREAK 12`,ibLv:`Level 7`,ibXp:`62% to level 8`,
+ibL1:`Monday — Back and biceps`,ibL2:`Wednesday — Legs`,ibL3:`Today — Chest and triceps`,
+ibE1:`TODAY'S WORKOUT · ~55 MIN`,ibT1:`Chest and triceps`,ibP1:`6 exercises · weights from last session`,ibB1:`Start`,ibB2:`Swap`,
+ibS2:`SESSION`,
+ibQ1:`Bench press — 4×8 · 60 kg`,ibQ2:`Incline press — 3×10 · 24 kg`,ibQ3:`Chest fly — 3×12 · 16 kg`,ibQ4:`Rope pushdown — 3×12 · 30 kg`,ibQ5:`Skull crusher — 3×10 · 25 kg`,
+ibE2:`NEW RECORD`,ibT2:`Bench press · 62.5 kg`,ibP2:`+2.5 kg · achievement unlocked`,
+ibSy:`<b>● COACH</b> SUGGESTED LOAD +2.5 KG`
+});
 
 const DICTS={pt:{},en:EN};
 const LOC=()=>LANG==='en'?'en-US':'pt-BR';
