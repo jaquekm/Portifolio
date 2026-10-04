@@ -15,9 +15,9 @@
   2. PRESCRITTOMED — MÍDIA (projeto real):
      Exporte do seu material como PNG (16:9) na pasta public/imagens/:
        imagens/prescrittomed-capa.png         (capa "case de produto")
-       imagens/prescrittomed-prescricao.png   (01 · Prescrição)
-       imagens/prescrittomed-ferramentas.png  (02 · Ferramentas)
-       imagens/prescrittomed-prontuario.png   (03 · Prontuário)
+       imagens/prescrittomed-ferramentas.png  (01 · Ferramentas)
+       imagens/prescrittomed-interacoes.png   (02 · Prontuário / histórico)
+       imagens/prescrittomed-prontuario.png   (estudo de caso)
      VÍDEO (opcional — roda em loop, mudo, pausa fora da tela):
        imagens/prescrittomed-demo.mp4
      Degradação: sem vídeo → capa no lugar. Sem ambos → aviso.
@@ -269,6 +269,8 @@ body.menu-open{overflow:hidden}
 .ph-msg strong{font:600 11px var(--fm);letter-spacing:.16em;color:var(--acc)}
 .ph-msg p{font:400 11px/1.7 var(--fm);color:var(--mut);max-width:36ch}
 .ph-msg b{color:var(--txt2);font-weight:500}
+.shot.shot-vid{aspect-ratio:1280/1046}
+.shot#pmMainShot img{object-fit:contain}
 .shot-duo{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 
 /* — faixa de identidade (PrescrittoMed · Conexiia) — */
@@ -773,9 +775,9 @@ body.menu-open{overflow:hidden}
               <div data-i18n="strip2"><em>OWNERSHIP</em><strong>100% DO TÉCNICO</strong></div>
               <div data-i18n="strip3"><em>STATUS</em><strong class="c-ok">● PRODUÇÃO · USUÁRIOS ATIVOS</strong></div>
             </div>
-            <div class="shot" id="pmMainShot">
+            <div class="shot shot-vid" id="pmMainShot">
               <!-- ✳ VÍDEO — salve como public/imagens/prescrittomed-demo.mp4
-                   (mudo · 10–30s · MP4 H.264) -->
+                   (mudo · MP4 H.264) -->
               <video id="pmVid" poster="imagens/prescrittomed-capa.png" autoplay muted loop playsinline preload="metadata">
                 <source src="imagens/prescrittomed-demo.mp4" type="video/mp4">
               </video>
@@ -797,30 +799,28 @@ body.menu-open{overflow:hidden}
           <!-- DETALHES · telas 01 e 02 -->
           <div class="shot-duo">
             <figure class="shot" data-cursor="VER">
-              <!-- ✳ TROQUE AQUI — tela 01 · Prescrição -->
-              <img src="imagens/prescrittomed-prescricao.png"
-                   alt="PrescrittoMED — prescrição clínica guiada"
+              <img src="imagens/prescrittomed-ferramentas.png"
+                   alt="PrescrittoMED — ferramentas clínicas de apoio à decisão"
                    loading="lazy"
                    onerror="this.closest('.shot').classList.add('noimg')">
               <div class="ph-msg">
                 <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="1.5"/><path d="M2 8h20M6 6.2h.01"/></svg>
-                <strong data-i18n="ph2t">TELA 01 · PRESCRIÇÃO</strong>
-                <p data-i18n="ph2p"><b>imagens/prescrittomed-prescricao.png</b> — prescrição clínica guiada.</p>
+                <strong data-i18n="ph2t">TELA 01 · FERRAMENTAS</strong>
+                <p data-i18n="ph2p"><b>imagens/prescrittomed-ferramentas.png</b></p>
               </div>
-              <figcaption data-i18n="fc1">01 · Prescrição clínica guiada</figcaption>
+              <figcaption data-i18n="fc1">01 · Ferramentas clínicas</figcaption>
             </figure>
             <figure class="shot" data-cursor="VER">
-              <!-- ✳ TROQUE AQUI — tela 02 · Ferramentas -->
-              <img src="imagens/prescrittomed-ferramentas.png"
-                   alt="PrescrittoMED — ferramentas de apoio à decisão"
+              <img src="imagens/prescrittomed-interacoes.png"
+                   alt="PrescrittoMED — prontuário e histórico de medicamentos do paciente"
                    loading="lazy"
                    onerror="this.closest('.shot').classList.add('noimg')">
               <div class="ph-msg">
                 <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="1.5"/><path d="M2 8h20M6 6.2h.01"/></svg>
-                <strong data-i18n="ph3t">TELA 02 · FERRAMENTAS</strong>
-                <p data-i18n="ph3p"><b>imagens/prescrittomed-ferramentas.png</b> — apoio à decisão na consulta.</p>
+                <strong data-i18n="ph3t">TELA 02 · PRONTUÁRIO</strong>
+                <p data-i18n="ph3p"><b>imagens/prescrittomed-interacoes.png</b></p>
               </div>
-              <figcaption data-i18n="fc2">02 · Apoio à decisão na consulta</figcaption>
+              <figcaption data-i18n="fc2">02 · Histórico de medicamentos do paciente</figcaption>
             </figure>
           </div>
         </div>
@@ -1516,11 +1516,11 @@ vidTag:`<i class="pulse"></i>VIDEO · PRODUCT IN USE`,
 ph1t:`VIDEO + PRODUCT COVER`,
 ph1p:`Save the video as <b>imagens/prescrittomed-demo.mp4</b> and the cover as <b>imagens/prescrittomed-capa.png</b>.`,
 fig2:`<b>FIG. 02</b> — PRODUCT IN USE · LOOPING VIDEO WITH CASE COVER`,
-ph2t:`SCREEN 01 · PRESCRIPTION`,
-ph2p:`<b>imagens/prescrittomed-prescricao.png</b> — guided clinical prescription.`,
-ph3t:`SCREEN 02 · TOOLS`,
-ph3p:`<b>imagens/prescrittomed-ferramentas.png</b> — decision support in the consultation.`,
-fc1:`01 · Guided clinical prescription`,fc2:`02 · Decision support in the consultation`,
+ph2t:`SCREEN 01 · TOOLS`,
+ph2p:`<b>imagens/prescrittomed-ferramentas.png</b>`,
+ph3t:`SCREEN 02 · MEDICAL RECORD`,
+ph3p:`<b>imagens/prescrittomed-interacoes.png</b>`,
+fc1:`01 · Clinical tools`,fc2:`02 · Patient medication history`,
 p1t2:`AI`,p1t3:`HEALTHCARE`,
 
 /* ── P2 · CONEXIIA (real) ── */
