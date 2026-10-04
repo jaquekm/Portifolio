@@ -364,6 +364,13 @@ body.menu-open{overflow:hidden}
 
 .ib{--acc:#B87333;--acc-hi:#C47A3D}
 .ib .pbtn.solid{color:#111}
+.ibcol{display:grid;gap:40px;justify-items:center}
+.ibvid{--acc:#B87333;--acc-hi:#C47A3D;display:grid;justify-items:center;gap:6px}
+.ib-frame{width:min(100%,430px);border:1px solid var(--line2);background:#0B0B0B;transition:transform .5s cubic-bezier(.2,.65,.2,1),border-color .4s}
+.ib-frame:hover{transform:translateY(-6px);border-color:#3E3E45}
+.shot.shot-ib{aspect-ratio:1080/1350}
+.shot-ib .vid-tag{top:auto;bottom:12px;right:12px}
+.shot.shot-ib video{object-fit:cover;object-position:center}
 
 /* — diagramas SVG (arquitetura do estudo de caso) — */
 .node{fill:#121216;stroke:#2E2E34}
@@ -881,7 +888,8 @@ body.menu-open{overflow:hidden}
           </dl>
           <div class="proj-tags"><span class="chip">MOBILE</span><span class="chip">REACT NATIVE</span><span class="chip">NEXT.JS</span><span class="chip">SUPABASE</span><span class="chip warn" data-i18n="chipDev">EM DESENVOLVIMENTO</span></div>
         </div>
-        <div class="phones ib rv" data-d="1">
+        <div class="ibcol rv" data-d="1">
+          <div class="phones ib">
           <div class="phone pa" data-cursor="VER">
             <div class="ph-screen">
               <div class="ph-notch"></div>
@@ -925,6 +933,18 @@ body.menu-open{overflow:hidden}
               <div class="ph-sync" data-i18n="ibSy"><b>● COACH</b> CARGA SUGERIDA +2,5 KG</div>
             </div>
           </div>
+        </div>
+          <div class="ibvid">
+          <figure class="ib-frame" data-cursor="VER">
+            <div class="shot shot-ib" id="ibShot">
+              <video id="ibVid" poster="imagens/ironbear-capa.jpg" autoplay muted loop playsinline preload="metadata">
+                <source src="imagens/ironbear-demo.mp4" type="video/mp4">
+              </video>
+              <span class="vid-tag" data-i18n="ibVidTag"><i class="pulse"></i>PROTÓTIPO · ANIMAÇÃO</span>
+            </div>
+          </figure>
+          <p class="fig" data-i18n="ibFig"><b>FIG. 04</b> — IRON BEAR · FLUXO DO APP DO ALUNO · DADOS FICTÍCIOS</p>
+        </div>
         </div>
       </div>
     </article>
@@ -1005,7 +1025,7 @@ body.menu-open{overflow:hidden}
                 <circle class="sdot-o" cx="718" cy="240" r="3"/>
                 <text class="wl" x="20" y="296" data-i18n="sgB2">100% DO DESENVOLVIMENTO TÉCNICO · EM PRODUÇÃO · USUÁRIOS ATIVOS</text>
               </svg>
-              <p class="fig" style="margin:8px 4px 6px" data-i18n="fig3"><b>FIG. 04</b> — ARQUITETURA DE MÓDULOS · UM AMBIENTE, CINCO ÁREAS CENTRAIS</p>
+              <p class="fig" style="margin:8px 4px 6px" data-i18n="fig3"><b>FIG. 05</b> — ARQUITETURA DE MÓDULOS · UM AMBIENTE, CINCO ÁREAS CENTRAIS</p>
             </div>
             <ul class="deci">
               <li data-i18n="dc1"><span><b>Um ambiente só</b> — pesquisa clínica, protocolos, ferramentas e prescrição no mesmo fluxo.</span></li>
@@ -1577,6 +1597,7 @@ p4d3:`React Native (Expo) · Next.js · TypeScript · Supabase (PostgreSQL)`,
 p4d5:`Student app + gym dashboard: members, plans, finance, turnstile and inventory.`,
 p4d4:`Multi-tenant with RLS-based privacy: the gym sees aggregates, never a student's raw workout data.`,
 p4d6:`A rules engine decides; the LLM only phrases the feedback in the chosen persona.`,
+ibVidTag:`<i class="pulse"></i>PROTOTYPE · ANIMATION`,ibFig:`<b>FIG. 04</b> — IRON BEAR · STUDENT APP FLOW · FICTIONAL DATA`,
 ibS1:`STREAK 12`,ibLv:`Level 7`,ibXp:`62% to level 8`,
 ibL1:`Monday — Back and biceps`,ibL2:`Wednesday — Legs`,ibL3:`Today — Chest and triceps`,
 ibE1:`TODAY'S WORKOUT · ~55 MIN`,ibT1:`Chest and triceps`,ibP1:`6 exercises · weights from last session`,ibB1:`Start`,ibB2:`Swap`,
@@ -1737,30 +1758,30 @@ setTimeout(()=>$('#heroH1').classList.add('on'),900);
 const ctio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');ctio.unobserve(e.target);}}),{threshold:.3});
 const ctH=$('#ctH'); if(ctH)ctio.observe(ctH);
 
-/* ---------- vídeo do PrescrittoMED (loop) ---------- */
-const pmVid=$('#pmVid');
-if(pmVid){
-  let vidDead=false;
-  function vidFail(){
-    if(vidDead)return; vidDead=true;
-    pmVid.style.display='none';
-    const img=$('#pmCapa'); if(img)img.style.display='block';
+/* ---------- vídeos em loop (pausam fora da tela) ---------- */
+function loopVideo(vid,fallbackSel){
+  if(!vid)return;
+  let dead=false;
+  function fail(){
+    if(dead)return; dead=true;
+    vid.style.display='none';
+    const img=fallbackSel&&$(fallbackSel); if(img)img.style.display='block';
+    else if(vid.closest('.shot'))vid.closest('.shot').classList.add('noimg');
   }
-  const vsrc=pmVid.querySelector('source');
-  if(vsrc)vsrc.addEventListener('error',vidFail);
-  pmVid.addEventListener('error',vidFail);
-  if(RM){
-    pmVid.removeAttribute('autoplay');
-  }else{
-    let vVis=false;
-    function vSync(){
-      if(vVis&&!document.hidden&&!vidDead){pmVid.play().catch(()=>{});}
-      else{pmVid.pause();}
-    }
-    new IntersectionObserver(es=>es.forEach(e=>{vVis=e.isIntersecting;vSync();}),{threshold:.15}).observe(pmVid);
-    document.addEventListener('visibilitychange',vSync);
+  const src=vid.querySelector('source');
+  if(src)src.addEventListener('error',fail);
+  vid.addEventListener('error',fail);
+  if(RM){vid.removeAttribute('autoplay');return;}
+  let vis=false;
+  function sync(){
+    if(vis&&!document.hidden&&!dead){vid.play().catch(()=>{});}
+    else{vid.pause();}
   }
+  new IntersectionObserver(es=>es.forEach(e=>{vis=e.isIntersecting;sync();}),{threshold:.15}).observe(vid);
+  document.addEventListener('visibilitychange',sync);
 }
+loopVideo($('#pmVid'),'#pmCapa');
+loopVideo($('#ibVid'));
 
 /* ---------- console de deploy do hero ---------- */
 const bootBody=$('#bootBody'),bootServ=$('#bootServ'),termStat=$('#termStat');
