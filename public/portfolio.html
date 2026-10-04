@@ -26,9 +26,8 @@
   3. PROJETOS 01, 02 (Conexiia) e 04 (Iron Bear) são reais. 03 e 05 são EXEMPLOS
      (chip tracejado "EXEMPLO"). Troque ou remova antes de publicar.
 
-  4. TRAJETÓRIA (seção 08): ✳ ajuste anos e marcos à sua história.
 
-  5. CONTATO: e-mail, WhatsApp, GitHub e LinkedIn já preenchidos na seção CONTATO.
+  4. CONTATO: e-mail, WhatsApp, GitHub e LinkedIn já preenchidos na seção CONTATO.
   ═══════════════════════════════════════════════════════════════
 -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0B'/%3E%3Crect x='6' y='6' width='20' height='20' fill='none' stroke='%23EDEDEA' stroke-width='2'/%3E%3Crect x='18' y='18' width='8' height='8' fill='%23F48FB1'/%3E%3C/svg%3E">
@@ -482,22 +481,6 @@ body.menu-open{overflow:hidden}
 .pric b{font:500 11px var(--fm);color:var(--acc);letter-spacing:.1em}
 .pric i{font-style:normal;color:var(--txt);font-weight:500;margin-right:6px}
 
-/* ============ TRAJETÓRIA ============ */
-.tl{position:relative;padding-left:46px}
-.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:1px;background:var(--line)}
-.tl-item{position:relative;padding:0 0 44px;display:grid;grid-template-columns:130px 1fr;gap:28px}
-.tl-item:last-child{padding-bottom:0}
-.tl-item::before{content:"";position:absolute;left:-42px;top:9px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:1px solid var(--line2);transition:.4s}
-.tl-item.on::before{border-color:var(--acc)}
-.tl-item.now::before{background:var(--acc);border-color:var(--acc)}
-.tl-item.now::after{content:"";position:absolute;left:-46px;top:5px;width:17px;height:17px;border:1px solid var(--acc);border-radius:50%;animation:pw 2s ease-out infinite}
-.tl-year{font:400 26px/1 var(--fd);letter-spacing:.02em;color:var(--txt)}
-.tl-year small{display:block;font:500 9px var(--fm);letter-spacing:.18em;color:var(--mut);margin-top:8px}
-.tl-item.now .tl-year{color:var(--acc)}
-.tl-role{font:600 13px var(--fm);letter-spacing:.14em;color:var(--txt);text-transform:uppercase;margin-bottom:10px}
-.tl-role em{font-style:normal;color:var(--mut);font-weight:500}
-.tl-item p{font-size:14px;line-height:1.7;color:var(--txt2);max-width:60ch}
-
 /* ============ CONTATO ============ */
 .contact{padding-bottom:90px}
 .contact h2{font:400 clamp(44px,7.4vw,104px)/1 var(--fd);text-transform:uppercase;margin:10px 0 34px}
@@ -627,7 +610,7 @@ body.menu-open{overflow:hidden}
   <a href="#stack" data-i18n="mS">STACK<em>05</em></a>
   <a href="#process" data-i18n="mP">PROCESSO<em>06</em></a>
   <a href="#about" data-i18n="mA">SOBRE<em>07</em></a>
-  <a href="#contact" data-i18n="mK">CONTATO<em>09</em></a>
+  <a href="#contact" data-i18n="mK">CONTATO<em>08</em></a>
   <div class="mnav-lang">
     <span data-i18n="langL">IDIOMA</span>
     <div class="lang-tog" role="group" aria-label="Idioma / Language">
@@ -1218,26 +1201,9 @@ body.menu-open{overflow:hidden}
     </div>
   </section>
 
-  <!-- ============ 08 TRAJETÓRIA ============ -->
-  <!-- ✳ TRAJETÓRIA — ajuste anos e marcos à sua história real -->
-  <section class="sec" id="path">
-    <div class="sec-head rv">
-      <p class="kick" data-i18n="tlk"><b>08</b>TRAJETÓRIA</p>
-      <h2 class="sec-title" data-i18n="tlt">MARCOS QUE IMPORTARAM<span class="dot">.</span></h2>
-      <p class="sec-note" data-i18n="tln">Conquistas concretas e evolução técnica — <b>não descrições de cargo.</b></p>
-    </div>
-    <div class="tl">
-      <div class="tl-item now rv"><div class="tl-year">2025<small><span data-i18n="tS0">AGORA</span></small></div><div><p class="tl-role" data-i18n="t0r">INDEPENDENTE — <em>PRODUCT BUILDER</em></p><p data-i18n="t0p">Entrega ponta a ponta para clientes que precisam de alguém dona do problema, não de tickets. Da arquitetura à produção em sistemas web, integrações com IA e automação.</p></div></div>
-      <div class="tl-item rv"><div class="tl-year">2023–25<small><span data-i18n="tS1">SÊNIOR</span></small></div><div><p class="tl-role" data-i18n="t1r">DESENVOLVEDORA SÊNIOR FULL-STACK — <em>SISTEMAS</em></p><p data-i18n="t1p">Responsável pela arquitetura e evolução técnica de uma plataforma SaaS em operação contínua — atuando como única desenvolvedora do produto.</p></div></div>
-      <div class="tl-item rv"><div class="tl-year">2021–23<small><span data-i18n="tS2">ENGENHARIA</span></small></div><div><p class="tl-role" data-i18n="t2r">DESENVOLVEDORA DE SOFTWARE — <em>SISTEMAS DE NEGÓCIO</em></p><p data-i18n="t2p">Construí sistemas internos, dashboards e APIs. Aprendi que a parte difícil raramente é o código — são as fronteiras.</p></div></div>
-      <div class="tl-item rv"><div class="tl-year">2019–21<small>FULL-STACK</small></div><div><p class="tl-role" data-i18n="t3r">DESENVOLVEDORA FULL-STACK — <em>PRIMEIROS PRODUTOS</em></p><p data-i18n="t3p">Primeiros produtos em produção. E a manutenção deles — onde "manutenibilidade" deixou de ser palavra de efeito.</p></div></div>
-      <div class="tl-item rv"><div class="tl-year">2017<small><span data-i18n="tS4">ORIGEM</span></small></div><div><p class="tl-role" data-i18n="t4r">PRIMEIRA AUTOMAÇÃO — <em>O COMEÇO</em></p><p data-i18n="t4p">Um script de automação que poupava horas de trabalho a uma equipe toda semana. O momento em que a profissão ficou óbvia.</p></div></div>
-    </div>
-  </section>
-
-  <!-- ============ 09 CONTATO ============ -->
+  <!-- ============ 08 CONTATO ============ -->
   <section class="sec contact" id="contact">
-    <p class="kick rv" data-i18n="ctk"><b>09</b>CONTATO</p>
+    <p class="kick rv" data-i18n="ctk"><b>08</b>CONTATO</p>
     <h2 class="lines" id="ctH" data-i18n="cth">
       <span class="l"><i>TEM UM PROBLEMA</i></span>
       <span class="l"><i>QUE MERECE</i></span>
@@ -1343,7 +1309,7 @@ skip:`Skip to content`,
 nW:`WORK`,nC:`CAPABILITIES`,nS:`STACK`,nP:`PROCESS`,nA:`ABOUT`,nK:`CONTACT`,
 nStatus:`<i class="pulse"></i>AVAILABLE FOR SELECTED PROJECTS`,
 nCta:`LET'S TALK`,
-mW:`WORK<em>02</em>`,mC:`CAPABILITIES<em>04</em>`,mS:`STACK<em>05</em>`,mP:`PROCESS<em>06</em>`,mA:`ABOUT<em>07</em>`,mK:`CONTACT<em>09</em>`,
+mW:`WORK<em>02</em>`,mC:`CAPABILITIES<em>04</em>`,mS:`STACK<em>05</em>`,mP:`PROCESS<em>06</em>`,mA:`ABOUT<em>07</em>`,mK:`CONTACT<em>08</em>`,
 langL:`LANGUAGE`,
 hRoles:`DEVELOPER<b>·</b>SYSTEMS ARCHITECT<b>·</b>PRODUCT BUILDER`,
 h1:`<span class="l"><i>I BUILD DIGITAL PRODUCTS</i></span><span class="l"><i>THAT WORK IN THE</i></span><span class="l"><i>REAL WORLD<span class="c-acc">.</span><span class="ann">// and keep them running</span></i></span>`,
@@ -1567,20 +1533,7 @@ id2b:`FOCUS`,id2v:`Web systems · APIs · AI · Automation · Architecture`,
 id3b:`EXPERIENCE`,id3v:`Full product lifecycle — idea to production and beyond`,
 id4b:`PROJECTS`,
 id5v:`<span class="c-ok">● AVAILABLE FOR SELECTED PROJECTS</span>`,
-tlk:`<b>08</b>TRAJECTORY`,tlt:`MILESTONES THAT MATTERED<span class="dot">.</span>`,
-tln:`Concrete accomplishments and technical evolution — <b>not job descriptions.</b>`,
-tS0:`NOW`,tS1:`SENIOR`,tS2:`ENGINEER`,tS4:`ORIGIN`,
-t0r:`INDEPENDENT — <em>PRODUCT BUILDER</em>`,
-t0p:`End-to-end delivery for clients who need ownership, not tickets. Architecture through production across web systems, AI integrations and automation.`,
-t1r:`SENIOR FULL-STACK — <em>SYSTEMS</em>`,
-t1p:`Owned the architecture and technical evolution of a SaaS platform in continuous operation — as the sole developer on the product.`,
-t2r:`SOFTWARE ENGINEER — <em>BUSINESS SYSTEMS</em>`,
-t2p:`Built internal business systems, dashboards and APIs. Learned that the hard part is rarely the code — it's the boundaries.`,
-t3r:`FULL-STACK DEVELOPER — <em>FIRST PRODUCTS</em>`,
-t3p:`First production products in the wild. Maintained them, too — which is where maintainability stopped being a buzzword.`,
-t4r:`FIRST SHIP — <em>AUTOMATION</em>`,
-t4p:`A small automation script that saved a team hours every week. The moment the job became obvious.`,
-ctk:`<b>09</b>CONTACT`,
+ctk:`<b>08</b>CONTACT`,
 cth:`<span class="l"><i>HAVE A PROBLEM</i></span><span class="l"><i>WORTH BUILDING</i></span><span class="l"><i><span class="stroke">A SYSTEM</span> FOR<span class="q">?</span></i></span>`,
 ctp:`Let's talk about <b>the problem, the architecture, and what we can build.</b> I take on a small number of projects where engineering genuinely changes the outcome.`,
 ctb:`<span>START A CONVERSATION</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 10L10 2M10 2H4M10 2v6"/></svg>`
