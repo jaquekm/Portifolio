@@ -363,14 +363,11 @@ body.menu-open{overflow:hidden}
 .ph-sync b{color:var(--ok);font-weight:600}
 
 .ib{--acc:#B87333;--acc-hi:#C47A3D}
-.ib .pbtn.solid{color:#111}
-.ibcol{display:grid;gap:40px;justify-items:center}
-.ibvid{--acc:#B87333;--acc-hi:#C47A3D;display:grid;justify-items:center;gap:6px}
-.ib-frame{width:min(100%,430px);border:1px solid var(--line2);background:#0B0B0B;transition:transform .5s cubic-bezier(.2,.65,.2,1),border-color .4s}
-.ib-frame:hover{transform:translateY(-6px);border-color:#3E3E45}
-.shot.shot-ib{aspect-ratio:1080/1350}
-.shot-ib .vid-tag{top:auto;bottom:12px;right:12px}
-.shot.shot-ib video{object-fit:cover;object-position:center}
+.phones.ib{flex-direction:column;align-items:center;gap:6px;min-height:0}
+.phone.pv{width:300px;transform:rotate(-2deg)}
+.phone.pv .ph-video{height:auto;aspect-ratio:528/980;background:#111}
+.phone.pv .ph-video video{display:block;width:100%;height:100%;object-fit:cover}
+.phones.ib .fig{margin-top:22px;text-align:center}
 
 /* — diagramas SVG (arquitetura do estudo de caso) — */
 .node{fill:#121216;stroke:#2E2E34}
@@ -888,63 +885,15 @@ body.menu-open{overflow:hidden}
           </dl>
           <div class="proj-tags"><span class="chip">MOBILE</span><span class="chip">REACT NATIVE</span><span class="chip">NEXT.JS</span><span class="chip">SUPABASE</span><span class="chip warn" data-i18n="chipDev">EM DESENVOLVIMENTO</span></div>
         </div>
-        <div class="ibcol rv" data-d="1">
-          <div class="phones ib">
-          <div class="phone pa" data-cursor="VER">
-            <div class="ph-screen">
-              <div class="ph-notch"></div>
-              <div class="ph-status"><span>IRON BEAR</span><span data-i18n="ibS1">SEQ. 12</span></div>
-              <div class="ph-prog">
-                <svg class="ring" width="58" height="58" viewBox="0 0 58 58" aria-hidden="true">
-                  <circle class="rbg" cx="29" cy="29" r="26"/>
-                  <circle class="ringval" cx="29" cy="29" r="26"/>
-                </svg>
-                <div><strong data-i18n="ibLv">Nível 7</strong><span data-i18n="ibXp">62% para o nível 8</span></div>
-              </div>
-              <ul class="ph-list">
-                <li class="ck" data-i18n="ibL1">Segunda — Costas e bíceps</li>
-                <li class="ck" data-i18n="ibL2">Quarta — Pernas</li>
-                <li data-i18n="ibL3">Hoje — Peito e tríceps</li>
-              </ul>
-              <div class="ph-sheet">
-                <em data-i18n="ibE1">TREINO DE HOJE · ~55 MIN</em>
-                <strong data-i18n="ibT1">Peito e tríceps</strong>
-                <p data-i18n="ibP1">6 exercícios · cargas da última sessão</p>
-                <div class="ph-btns"><span class="pbtn solid" data-i18n="ibB1">Começar</span><span class="pbtn" data-i18n="ibB2">Trocar</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="phone pb rv" data-d="2" data-cursor="VER">
-            <div class="ph-screen">
-              <div class="ph-notch"></div>
-              <div class="ph-status"><span data-i18n="ibS2">SESSÃO</span><span class="c-acc">00:24:10</span></div>
-              <ul class="ph-list">
-                <li class="ck" data-i18n="ibQ1">Supino reto — 4×8 · 60 kg</li>
-                <li class="ck" data-i18n="ibQ2">Supino inclinado — 3×10 · 24 kg</li>
-                <li data-i18n="ibQ3">Crucifixo — 3×12 · 16 kg</li>
-                <li data-i18n="ibQ4">Tríceps corda — 3×12 · 30 kg</li>
-                <li data-i18n="ibQ5">Tríceps testa — 3×10 · 25 kg</li>
-              </ul>
-              <div class="ph-sheet">
-                <em data-i18n="ibE2">NOVO RECORDE</em>
-                <strong data-i18n="ibT2">Supino reto · 62,5 kg</strong>
-                <p data-i18n="ibP2">+2,5 kg · conquista desbloqueada</p>
-              </div>
-              <div class="ph-sync" data-i18n="ibSy"><b>● COACH</b> CARGA SUGERIDA +2,5 KG</div>
-            </div>
-          </div>
-        </div>
-          <div class="ibvid">
-          <figure class="ib-frame" data-cursor="VER">
-            <div class="shot shot-ib" id="ibShot">
+        <div class="phones ib rv" data-d="1">
+          <div class="phone pv" data-cursor="VER">
+            <div class="ph-screen ph-video">
               <video id="ibVid" poster="imagens/ironbear-capa.jpg" autoplay muted loop playsinline preload="metadata">
                 <source src="imagens/ironbear-demo.mp4" type="video/mp4">
               </video>
-              <span class="vid-tag" data-i18n="ibVidTag"><i class="pulse"></i>PROTÓTIPO · ANIMAÇÃO</span>
             </div>
-          </figure>
-          <p class="fig" data-i18n="ibFig"><b>FIG. 04</b> — IRON BEAR · FLUXO DO APP DO ALUNO · DADOS FICTÍCIOS</p>
-        </div>
+          </div>
+          <p class="fig" data-i18n="ibFig"><b>FIG. 04</b> — IRON BEAR · FLUXO DO APP DO ALUNO · PROTÓTIPO · DADOS FICTÍCIOS</p>
         </div>
       </div>
     </article>
@@ -1597,7 +1546,7 @@ p4d3:`React Native (Expo) · Next.js · TypeScript · Supabase (PostgreSQL)`,
 p4d5:`Student app + gym dashboard: members, plans, finance, turnstile and inventory.`,
 p4d4:`Multi-tenant with RLS-based privacy: the gym sees aggregates, never a student's raw workout data.`,
 p4d6:`A rules engine decides; the LLM only phrases the feedback in the chosen persona.`,
-ibVidTag:`<i class="pulse"></i>PROTOTYPE · ANIMATION`,ibFig:`<b>FIG. 04</b> — IRON BEAR · STUDENT APP FLOW · FICTIONAL DATA`,
+ibVidTag:`<i class="pulse"></i>PROTOTYPE · ANIMATION`,ibFig:`<b>FIG. 04</b> — IRON BEAR · STUDENT APP FLOW · PROTOTYPE · FICTIONAL DATA`,
 ibS1:`STREAK 12`,ibLv:`Level 7`,ibXp:`62% to level 8`,
 ibL1:`Monday — Back and biceps`,ibL2:`Wednesday — Legs`,ibL3:`Today — Chest and triceps`,
 ibE1:`TODAY'S WORKOUT · ~55 MIN`,ibT1:`Chest and triceps`,ibP1:`6 exercises · weights from last session`,ibB1:`Start`,ibB2:`Swap`,
