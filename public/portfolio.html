@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaqueline Kogh — Desenvolvedora · Arquiteta de Sistemas · Product Builder</title>
+<meta name="description" content="Construo produtos digitais que funcionam no mundo real — sistemas web, APIs, apps mobile, automação e produtos com IA. Da ideia à produção.">
+<!--
+  ═══════════════════════════════════════════════════════════════
+  PORTFÓLIO — JAQUELINE KOGH · GUIA RÁPIDO
+  ───────────────────────────────────────────────────────────────
+  1. IDIOMA (PT/EN): seletor na nav + menu mobile. Salvo no
+     navegador. PT = HTML · EN = objeto `EN` no <script> final.
+
+  2. PRESCRITTOMED — MÍDIA (projeto real):
+     Exporte do seu material como PNG (16:9) na pasta public/imagens/:
+       imagens/prescrittomed-capa.png         (capa "case de produto")
+       imagens/prescrittomed-prescricao.png   (01 · Prescrição)
+       imagens/prescrittomed-ferramentas.png  (02 · Ferramentas)
+       imagens/prescrittomed-prontuario.png   (03 · Prontuário)
+     VÍDEO (opcional — roda em loop, mudo, pausa fora da tela):
+       imagens/prescrittomed-demo.mp4
+     Degradação: sem vídeo → capa no lugar. Sem ambos → aviso.
+     As versões "tela limpa" podem substituir depois — troque o src.
+
+  3. PROJETO 02 — CONEXIIA (real). 03–05 são EXEMPLOS
+     (chip tracejado "EXEMPLO"). Troque ou remova antes de publicar.
+
+  4. TRAJETÓRIA (seção 08): ✳ ajuste anos e marcos à sua história.
+
+  5. CONTATO: procure por "✳ TROQUE AQUI" na seção CONTATO.
+  ═══════════════════════════════════════════════════════════════
+-->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0B'/%3E%3Crect x='6' y='6' width='20' height='20' fill='none' stroke='%23EDEDEA' stroke-width='2'/%3E%3Crect x='18' y='18' width='8' height='8' fill='%23F48FB1'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS & RESET ============ */
+:root{
+  --bg:#0A0A0B; --bg2:#0D0D0F; --surface:#111114; --surface2:#151518;
+  --line:#1E1E22; --line2:#2B2B30;
+  --txt:#EDEDEA; --txt2:#A6A69E; --mut:#63635C;
+  --acc:#F48FB1; --acc-hi:#F9AECB; --acc-dim:rgba(244,143,177,.14);
+  --ok:#3FB68B;
+  --fd:'Anton',sans-serif; --fb:'Archivo',sans-serif; --fm:'JetBrains Mono',monospace;
+  --gx:56px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--bg);color:var(--txt);font:400 16px/1.6 var(--fb);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--acc);color:#0A0A0B}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:#232328;border:3px solid var(--bg);border-radius:6px}
+::-webkit-scrollbar-thumb:hover{background:#3A3A40}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none}
+ul,ol{list-style:none}
+:focus-visible{outline:1px solid var(--acc);outline-offset:3px}
+h1,h2,h3{font-weight:400}
+.c-acc{color:var(--acc)} .c-ok{color:var(--ok)} .c-mut{color:var(--mut)}
+
+/* skip link */
+.skip{position:fixed;left:16px;top:-60px;z-index:3000;background:var(--acc);color:#0A0A0B;font:600 12px var(--fm);padding:10px 16px;transition:top .2s}
+.skip:focus{top:16px}
+
+/* ============ ATMOSFERA ============ */
+.grid-tex{position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(255,255,255,.026) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.026) 1px,transparent 1px);
+  background-size:72px 72px}
+.noise{position:fixed;inset:0;pointer-events:none;z-index:2000;opacity:.032;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ============ CURSOR ============ */
+.cur-dot,.cur-ring{position:fixed;top:0;left:0;pointer-events:none;border-radius:50%;z-index:5000;display:none}
+.cur-dot{width:5px;height:5px;background:var(--txt);transition:background .25s,opacity .3s}
+.cur-ring{width:34px;height:34px;border:1px solid rgba(237,237,234,.35);display:none;align-items:center;justify-content:center;transition:border-color .25s,opacity .3s}
+.cur-ring span{font:600 9px var(--fm);letter-spacing:.14em;color:var(--acc);opacity:0;transition:opacity .2s}
+html.cur-on body, html.cur-on a, html.cur-on button, html.cur-on .cap-head{cursor:none}
+html.cur-on .cur-dot{display:block}
+html.cur-on .cur-ring{display:flex}
+.cur-ring.hov{border-color:var(--acc)}
+.cur-ring.lbl{background:rgba(10,10,11,.82);border-color:var(--acc)}
+.cur-ring.lbl span{opacity:1}
+.cur-dot.hov{background:var(--acc)}
+
+/* ============ PROGRESSO / TOAST ============ */
+#pbar{position:fixed;top:0;left:0;height:2px;width:100%;background:var(--acc);transform:scaleX(0);transform-origin:left;z-index:1500}
+#toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,80px);z-index:3000;background:var(--surface2);border:1px solid var(--line2);color:var(--txt);font:500 11px var(--fm);letter-spacing:.1em;padding:14px 22px;opacity:0;transition:.35s cubic-bezier(.2,.7,.2,1)}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+#toast::before{content:"●";color:var(--acc);margin-right:10px;font-size:9px}
+
+/* ============ NAV ============ */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;border-bottom:1px solid var(--line);background:rgba(10,10,11,.82);backdrop-filter:blur(10px);transition:padding .3s}
+.nav-in{max-width:1360px;margin:0 auto;padding:0 var(--gx);height:72px;display:flex;align-items:center;gap:28px;transition:height .3s}
+.nav.scrolled .nav-in{height:60px}
+.logo{display:flex;align-items:center;gap:12px;font:600 12px var(--fm);letter-spacing:.12em}
+.logo-mark{width:15px;height:15px;border:1px solid var(--txt);position:relative;flex:none}
+.logo-mark::after{content:"";position:absolute;right:-1px;bottom:-1px;width:6px;height:6px;background:var(--acc)}
+.nav-links{display:flex;gap:26px;margin-left:auto}
+.nav-links a{font:500 11px var(--fm);letter-spacing:.12em;color:var(--txt2);position:relative;padding:6px 0;transition:color .25s}
+.nav-links a:hover{color:var(--txt)}
+.nav-links a.act{color:var(--txt)}
+.nav-links a.act::after{content:"";position:absolute;left:0;bottom:0;width:14px;height:2px;background:var(--acc)}
+.lang-tog{display:flex;border:1px solid var(--line2);flex:none}
+.lt-b{font:600 10px var(--fm);letter-spacing:.12em;padding:9px 12px;color:var(--mut);transition:.25s;cursor:pointer}
+.lt-b:hover{color:var(--txt)}
+.lt-b.on{background:var(--acc);color:#0A0A0B}
+.nav-status{display:flex;align-items:center;gap:8px;font:500 10px var(--fm);letter-spacing:.14em;color:var(--txt2);border:1px solid var(--line2);padding:8px 14px;white-space:nowrap}
+.nav-cta{font:600 11px var(--fm);letter-spacing:.12em;background:var(--acc);color:#0A0A0B;padding:11px 18px;transition:background .25s;white-space:nowrap}
+.nav-cta:hover{background:var(--acc-hi)}
+.pulse{width:6px;height:6px;background:var(--acc);border-radius:50%;position:relative;flex:none}
+.pulse::after{content:"";position:absolute;inset:-4px;border:1px solid var(--acc);border-radius:50%;animation:pw 2s ease-out infinite}
+@keyframes pw{0%{transform:scale(.4);opacity:1}100%{transform:scale(1.4);opacity:0}}
+.menu-btn{display:none;width:40px;height:40px;flex-direction:column;align-items:center;justify-content:center;gap:7px;margin-left:auto}
+.menu-btn i{display:block;width:22px;height:1.5px;background:var(--txt);transition:.3s}
+body.menu-open .menu-btn i:first-child{transform:translateY(4.5px) rotate(45deg)}
+body.menu-open .menu-btn i:last-child{transform:translateY(-4.5px) rotate(-45deg)}
+.mnav{position:fixed;inset:0;z-index:990;background:var(--bg);display:flex;flex-direction:column;justify-content:center;padding:0 28px;gap:6px;opacity:0;visibility:hidden;transition:.35s;overflow-y:auto}
+body.menu-open .mnav{opacity:1;visibility:visible}
+body.menu-open{overflow:hidden}
+.mnav a{font:400 clamp(34px,9vw,52px)/1.15 var(--fd);letter-spacing:.01em;border-bottom:1px solid var(--line);padding:14px 0;display:flex;justify-content:space-between;align-items:center}
+.mnav a em{font:400 10px var(--fm);color:var(--mut);letter-spacing:.14em;font-style:normal}
+.mnav a:hover{color:var(--acc)}
+.mnav-lang{display:none}
+
+/* ============ ESTRUTURA / SEÇÕES ============ */
+.frame{max-width:1360px;margin:0 auto;border-left:1px solid var(--line);border-right:1px solid var(--line);position:relative;z-index:1;background:rgba(10,10,11,.6)}
+.sec{padding:110px var(--gx);border-top:1px solid var(--line);position:relative}
+.sec::before,.sec::after{content:"+";position:absolute;top:-10px;color:#3E3E45;font:400 13px var(--fm);z-index:2}
+.sec::before{left:calc(-1*var(--gx) - 4px)}
+.sec::after{right:calc(-1*var(--gx) - 4px)}
+.sec-head{margin-bottom:64px}
+.kick{display:flex;align-items:center;gap:14px;font:500 11px var(--fm);letter-spacing:.18em;color:var(--txt2);margin-bottom:22px}
+.kick b{color:var(--acc);font-weight:500}
+.kick::after{content:"";height:1px;background:var(--line2);flex:1;max-width:180px}
+.sec-title{font:400 clamp(40px,5.4vw,72px)/1 var(--fd);letter-spacing:.005em;text-transform:uppercase}
+.sec-title .dot{color:var(--acc)}
+.sec-head{display:grid;grid-template-columns:1fr auto;grid-template-rows:auto auto;column-gap:40px}
+.sec-head .kick{grid-column:1/-1}
+.sec-note{align-self:end;font:400 11px/1.8 var(--fm);letter-spacing:.06em;color:var(--mut);max-width:300px;text-align:right}
+.sec-note b{color:var(--txt2);font-weight:500}
+
+/* sistema de revelação */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.65,.2,1),transform .9s cubic-bezier(.2,.65,.2,1)}
+.rv.on{opacity:1;transform:none}
+.rv[data-d="1"]{transition-delay:.08s}.rv[data-d="2"]{transition-delay:.16s}.rv[data-d="3"]{transition-delay:.24s}.rv[data-d="4"]{transition-delay:.32s}
+.lines .l{overflow:hidden;display:block}
+.lines i{display:block;font-style:normal;transform:translateY(112%);transition:transform 1s cubic-bezier(.76,0,.2,1)}
+.lines.on i{transform:none}
+.lines .l:nth-child(2) i{transition-delay:.1s}
+.lines .l:nth-child(3) i{transition-delay:.2s}
+
+/* ============ BOTÕES / CHIPS ============ */
+.btn{display:inline-flex;align-items:center;gap:12px;font:600 12px var(--fm);letter-spacing:.14em;padding:18px 30px;border:1px solid var(--line2);position:relative;overflow:hidden;transition:color .3s,border-color .3s}
+.btn svg{width:13px;height:13px;transition:transform .3s}
+.btn:hover svg{transform:translateX(4px)}
+.btn::before{content:"";position:absolute;inset:0;background:var(--acc);transform:scaleX(0);transform-origin:left;transition:transform .38s cubic-bezier(.7,0,.2,1);z-index:0}
+.btn:hover::before{transform:scaleX(1)}
+.btn span,.btn svg{position:relative;z-index:1}
+.btn:hover{color:#0A0A0B;border-color:var(--acc)}
+.btn-solid{background:var(--acc);border-color:var(--acc);color:#0A0A0B;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%)}
+.btn-solid::before{background:var(--acc-hi)}
+.chip{display:inline-block;font:500 9px var(--fm);letter-spacing:.12em;padding:4px 8px;border:1px solid var(--line2);color:var(--txt2);text-transform:uppercase;white-space:nowrap}
+.chip.warn{border-color:rgba(244,143,177,.55);color:var(--acc)}
+.chip.ok{border-color:rgba(63,182,139,.4);color:var(--ok)}
+.chip.demo{border-style:dashed;color:var(--mut)}
+
+/* ============ HERO ============ */
+.hero{min-height:100vh;display:flex;flex-direction:column;padding:130px var(--gx) 34px;position:relative;border-top:none}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:64px 64px}
+.hero-top{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:36px;position:relative}
+.roles{font:500 11px var(--fm);letter-spacing:.2em;color:var(--txt2)}
+.roles b{color:var(--acc);font-weight:500;margin:0 6px}
+.hero h1{font:400 clamp(52px,8.4vw,124px)/0.98 var(--fd);text-transform:uppercase;letter-spacing:.004em;position:relative;margin-bottom:48px}
+.hero h1 .ann{font:400 clamp(10px,1vw,13px) var(--fm);color:var(--mut);letter-spacing:.05em;text-transform:none;vertical-align:super;margin-left:18px}
+.hero-grid{display:grid;grid-template-columns:5fr 6fr;gap:56px;align-items:start;position:relative}
+.hero-p{font-size:17px;line-height:1.7;color:var(--txt2);max-width:46ch}
+.hero-p strong{color:var(--txt);font-weight:500}
+.hero-ctas{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
+.hero-meta{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-top:auto;padding-top:56px;font:500 10px var(--fm);letter-spacing:.16em;color:var(--mut);position:relative}
+.scroll-cue{display:flex;align-items:center;gap:12px}
+.scroll-cue i{display:block;width:44px;height:1px;background:var(--line2);position:relative;overflow:hidden}
+.scroll-cue i::after{content:"";position:absolute;inset:0;background:var(--acc);transform:translateX(-100%);animation:cue 2.2s cubic-bezier(.7,0,.2,1) infinite}
+@keyframes cue{40%{transform:translateX(0)}100%{transform:translateX(100%)}}
+
+/* terminal */
+.term{background:#0E0E11;border:1px solid var(--line2)}
+.term-bar{display:flex;align-items:center;gap:7px;padding:11px 14px;border-bottom:1px solid var(--line);font:500 10px var(--fm);letter-spacing:.14em;color:var(--mut)}
+.tdot{width:8px;height:8px;border-radius:50%;background:#2C2C32;flex:none}
+.term-bar .tt{margin-left:8px}
+.term-live{margin-left:auto;color:var(--mut)}
+.term-live.live{color:var(--ok)}
+.term-body{padding:18px 18px 8px;font:400 11.5px/2 var(--fm);min-height:172px}
+.tline{white-space:pre-wrap;word-break:break-word}
+.tline .res{color:var(--txt2)}
+.caret{display:inline-block;width:7px;height:13px;background:var(--acc);vertical-align:-2px;margin-left:2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.term-serv{display:flex;gap:22px;padding:12px 18px;border-top:1px solid var(--line);font:500 10px var(--fm);letter-spacing:.1em;color:var(--txt2);opacity:0;transform:translateY(6px);transition:.5s}
+.term-serv.show{opacity:1;transform:none}
+.sdot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--ok);margin-right:8px;vertical-align:1px}
+.fig{font:400 10px var(--fm);letter-spacing:.14em;color:var(--mut);margin-top:14px}
+.fig b{color:var(--acc);font-weight:500}
+
+/* ============ TICKER ============ */
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:16px 0;position:relative}
+.tick-track{display:flex;width:max-content;animation:tick 30s linear infinite}
+.ticker:hover .tick-track{animation-play-state:paused}
+@keyframes tick{to{transform:translateX(-50%)}}
+.tick-track span{font:500 12px var(--fm);letter-spacing:.22em;color:var(--txt2);padding:0 26px;white-space:nowrap}
+.tick-track em{color:var(--acc);font-style:normal}
+
+/* ============ PROJETOS ============ */
+.proj{border-top:1px solid var(--line);padding:88px 0;position:relative}
+.proj:first-of-type{border-top:none;padding-top:24px}
+.proj-idx{position:absolute;top:44px;right:var(--gx);font:400 clamp(90px,12vw,170px)/1 var(--fd);color:transparent;-webkit-text-stroke:1px #1D1D22;pointer-events:none;user-select:none}
+.proj-grid{display:grid;gap:56px;align-items:center}
+.pg-right{grid-template-columns:5fr 6.5fr}
+.pg-left{grid-template-columns:6.5fr 5fr}
+.proj-kick{font:500 10px var(--fm);letter-spacing:.2em;color:var(--mut);margin-bottom:14px}
+.proj-kick b{color:var(--acc);font-weight:500}
+.proj-name{font:400 clamp(30px,3.4vw,46px)/1 var(--fd);text-transform:uppercase;letter-spacing:.01em;margin-bottom:16px}
+.proj-sub{font-size:15.5px;line-height:1.65;color:var(--txt2);margin-bottom:28px;max-width:52ch}
+.spec{border-top:1px solid var(--line)}
+.spec-row{display:grid;grid-template-columns:104px 1fr;gap:16px;padding:11px 0;border-bottom:1px solid var(--line)}
+.spec-row dt{font:500 9.5px/1.9 var(--fm);letter-spacing:.16em;color:var(--mut)}
+.spec-row dd{font-size:13.5px;line-height:1.55;color:var(--txt2)}
+.spec-row dd b{color:var(--txt);font-weight:500}
+.proj-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+
+/* — índice SELECTED WORK — */
+.widx{border-top:1px solid var(--line2);margin-bottom:70px}
+.widx-h{font:500 10px var(--fm);letter-spacing:.18em;color:var(--mut);padding:14px 0 4px}
+.widx-row{display:grid;grid-template-columns:52px 230px 1fr 28px;gap:20px;align-items:center;padding:17px 0;border-bottom:1px solid var(--line)}
+.widx-num{font:500 11px var(--fm);letter-spacing:.1em;color:var(--mut)}
+.widx-name{font:400 20px/1 var(--fd);letter-spacing:.03em;text-transform:uppercase;transition:color .25s}
+.widx-what{font:500 9.5px/1.7 var(--fm);letter-spacing:.14em;color:var(--mut);text-transform:uppercase;transition:color .25s}
+.widx-ar{justify-self:end;color:var(--mut);transition:color .25s,transform .25s}
+.widx-ar svg{width:13px;height:13px;display:block}
+.widx-row:hover .widx-name{color:var(--acc)}
+.widx-row:hover .widx-what{color:var(--txt2)}
+.widx-row:hover .widx-ar{color:var(--acc);transform:translateX(4px)}
+
+/* shells de interface */
+.mock{background:#101014;border:1px solid var(--line2);transition:transform .5s cubic-bezier(.2,.65,.2,1),border-color .4s;position:relative}
+.mock:hover{transform:translateY(-6px);border-color:#3E3E45}
+.mock-bar{display:flex;align-items:center;gap:7px;padding:11px 14px;border-bottom:1px solid var(--line)}
+.mock-url{margin-left:10px;font:400 10px var(--fm);letter-spacing:.06em;color:var(--mut);background:#16161A;border:1px solid var(--line);padding:4px 12px;transition:color .3s}
+.mock:hover .mock-url,.browser:hover .mock-url{color:var(--txt2)}
+.mock-tag{margin-left:auto;font:500 9px var(--fm);letter-spacing:.14em;color:var(--acc)}
+
+/* — PrescrittoMed · mídia real (capa · vídeo · telas) — */
+.shots{display:grid;gap:12px;align-content:start}
+.browser{background:#101014;border:1px solid var(--line2);transition:transform .5s cubic-bezier(.2,.65,.2,1),border-color .4s}
+.browser:hover{transform:translateY(-6px);border-color:#3E3E45}
+.shot{position:relative;overflow:hidden;background:#0D0D10;aspect-ratio:16/9}
+.shot img,.shot video{display:block;width:100%;height:100%;object-fit:cover;object-position:top left}
+.shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:8px 12px;background:rgba(10,10,11,.8);border-top:1px solid var(--line);font:500 9.5px var(--fm);letter-spacing:.12em;color:var(--txt2);text-transform:uppercase}
+.shot .ph-msg{position:absolute;inset:10px;display:none;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px;text-align:center;border:1px dashed #33333A}
+.shot.noimg img,.shot.noimg video{display:none}
+.shot.noimg .ph-msg{display:flex}
+.vid-tag{position:absolute;top:12px;right:12px;z-index:3;display:inline-flex;align-items:center;gap:8px;font:600 9px var(--fm);letter-spacing:.14em;color:var(--txt);background:rgba(10,10,11,.78);border:1px solid var(--line2);padding:6px 10px;text-transform:uppercase}
+.shot.noimg .vid-tag{display:none}
+.ph-msg svg{width:30px;height:30px;stroke:var(--mut);fill:none;stroke-width:1.2}
+.ph-msg strong{font:600 11px var(--fm);letter-spacing:.16em;color:var(--acc)}
+.ph-msg p{font:400 11px/1.7 var(--fm);color:var(--mut);max-width:36ch}
+.ph-msg b{color:var(--txt2);font-weight:500}
+.shot-duo{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+/* — faixa de identidade (PrescrittoMed · Conexiia) — */
+.pm-strip{display:grid;grid-template-columns:1.1fr 1fr 1.35fr;border-bottom:1px solid var(--line)}
+.pm-strip>div{padding:10px 14px;border-right:1px solid var(--line)}
+.pm-strip>div:last-child{border-right:none}
+.pm-strip em{display:block;font:500 8px var(--fm);letter-spacing:.2em;color:var(--mut);font-style:normal;margin-bottom:3px}
+.pm-strip strong{font:600 9px var(--fm);letter-spacing:.08em;color:var(--txt)}
+
+/* — KPI (compartilhado) — */
+.kpi{padding:16px 18px;border-right:1px solid var(--line)}
+.kpi:last-child{border-right:none}
+.kpi em{display:block;font:500 8.5px var(--fm);letter-spacing:.18em;color:var(--mut);font-style:normal;margin-bottom:6px}
+.kpi strong{font:600 19px var(--fm);letter-spacing:.01em}
+.kpi strong small{font-size:11px;color:var(--mut)}
+.kpi strong.kval{font-size:12px;letter-spacing:.1em}
+.kpi span{display:block;font:400 9px var(--fm);color:var(--mut);margin-top:5px;letter-spacing:.08em}
+
+/* — Conexiia — */
+.cx-top{display:flex;align-items:center;gap:18px;padding:12px 18px;border-bottom:1px solid var(--line);font:500 10px var(--fm);letter-spacing:.12em;flex-wrap:wrap;row-gap:8px}
+.cx-brand{font-weight:700;letter-spacing:.18em;color:var(--txt)}
+.cx-top nav{display:flex;gap:16px;color:var(--mut)}
+.cx-top nav .on{color:var(--txt);border-bottom:2px solid var(--acc);padding-bottom:3px}
+.cx-env{margin-left:auto;color:var(--mut);border:1px solid var(--line2);padding:4px 10px;white-space:nowrap}
+.cx-kpis{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+.cx-grid{display:grid;grid-template-columns:1.5fr 1fr}
+.cx-feed{border-right:1px solid var(--line);padding:12px 16px 14px;min-height:250px}
+.cx-feed-h,.cx-side-h{display:flex;justify-content:space-between;font:500 8.5px var(--fm);letter-spacing:.18em;color:var(--mut);margin-bottom:10px}
+.cx-side{display:flex;flex-direction:column}
+.cx-auto{padding:12px 14px 6px;border-bottom:1px solid var(--line)}
+.arow{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font:400 10.5px var(--fm);color:var(--txt2)}
+.cx-auto .arow:last-child{border-bottom:none}
+.cx-int{padding:12px 14px 14px}
+.int-g{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.isrv{display:flex;align-items:center;gap:8px;font:400 9.5px var(--fm);letter-spacing:.08em;color:var(--txt2);border:1px solid var(--line);padding:7px 10px}
+.isrv i{width:6px;height:6px;border-radius:50%;background:var(--ok);flex:none}
+.isrv b{font-weight:400;letter-spacing:inherit}
+.evline{display:grid;grid-template-columns:58px 50px 1fr 74px;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font:400 10px var(--fm);color:var(--txt2);white-space:nowrap}
+.evline .et{color:#4A4A50}
+.evline .etp{font-weight:600;font-size:8.5px;letter-spacing:.08em;padding:2px 5px;border:1px solid var(--line2);text-align:center}
+.evline .etp.t-at{color:var(--txt2)}
+.evline .etp.t-vd{color:var(--acc);border-color:rgba(244,143,177,.4)}
+.evline .etp.t-au{color:var(--ok);border-color:rgba(63,182,139,.4)}
+.evline .etp.t-in{color:var(--mut)}
+.evline .ed{overflow:hidden;text-overflow:ellipsis}
+.evline .es{margin-left:auto;text-align:right;font-size:9px;letter-spacing:.06em}
+.evline .es.s-q{color:var(--mut)}
+.evline .es.s-a{color:var(--acc)}
+.evline .es.s-ok{color:var(--ok)}
+.evline.new{color:var(--txt)}
+
+/* — Atlas — */
+.at-tabs{display:flex;gap:20px;padding:11px 16px;border-bottom:1px solid var(--line);font:500 10px var(--fm);letter-spacing:.14em;color:var(--mut)}
+.at-tabs .on{color:var(--txt);border-bottom:2px solid var(--acc);padding-bottom:6px;margin-bottom:-12px}
+.at-tabs .at-stat{margin-left:auto;color:var(--mut)}
+.at-body{display:grid;grid-template-columns:250px 1fr;min-height:300px}
+.at-routes{border-right:1px solid var(--line);padding:12px 14px;font:400 10px var(--fm)}
+.at-r{display:flex;align-items:center;gap:8px;padding:8px 6px;border-bottom:1px solid var(--line);color:var(--txt2)}
+.at-r b{font-weight:600;font-size:8.5px;letter-spacing:.08em;padding:2px 6px;border:1px solid var(--line2);color:var(--txt2);flex:none}
+.at-r span{color:var(--mut);margin-left:auto}
+.at-log{padding:12px 16px;font:400 10.5px/2.1 var(--fm);overflow:hidden}
+.aline{display:grid;grid-template-columns:64px 44px 1fr 40px 52px;gap:10px;color:var(--txt2);white-space:nowrap}
+.aline .lt{color:#4A4A50}
+.aline .lm{font-weight:600}
+.aline .lp{overflow:hidden;text-overflow:ellipsis}
+.aline.new{color:var(--txt)}
+.aline .lms{color:#4A4A50;text-align:right}
+
+/* — Orbit — */
+.phones{display:flex;justify-content:center;gap:34px;padding:20px 0 8px;min-height:540px;align-items:flex-start}
+.phone{width:232px;flex:none;background:#0D0D10;border:1px solid var(--line2);border-radius:32px;padding:9px;transition:transform .5s cubic-bezier(.2,.65,.2,1),border-color .4s}
+.phone:hover{transform:translateY(-8px) rotate(0deg)!important;border-color:#3E3E45}
+.phone.pa{transform:rotate(-2deg)}
+.phone.pb{transform:rotate(2deg);margin-top:56px}
+.ph-screen{background:#0A0A0C;border:1px solid var(--line);border-radius:24px;overflow:hidden;position:relative;height:472px;display:flex;flex-direction:column}
+.ph-notch{position:absolute;top:9px;left:50%;transform:translateX(-50%);width:84px;height:17px;background:#0A0A0C;border:1px solid var(--line);border-radius:0 0 11px 11px;z-index:3}
+.ph-status{display:flex;justify-content:space-between;padding:34px 15px 10px;font:600 8.5px var(--fm);letter-spacing:.14em;color:var(--txt2)}
+.ph-status .c-ok{letter-spacing:.06em}
+.map{flex:1;position:relative;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:26px 26px;overflow:hidden}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.rt{stroke:#5A5A62;stroke-width:1.5;fill:none}
+.rt.live{stroke:var(--acc);stroke-dasharray:5 5;animation:dashm 1.4s linear infinite}
+@keyframes dashm{to{stroke-dashoffset:-20}}
+.pin{position:absolute;width:9px;height:9px;border-radius:50%;background:#4A4A52;border:1.5px solid #0A0A0C}
+.pin.done{background:var(--ok)}
+.pin.me{background:var(--acc)}
+.pin.me::after{content:"";position:absolute;inset:-5px;border:1px solid var(--acc);border-radius:50%;animation:pw 1.8s ease-out infinite}
+.ph-sheet{background:#101014;border-top:1px solid var(--line);padding:13px 15px}
+.ph-sheet em{font:600 8.5px var(--fm);letter-spacing:.14em;color:var(--acc);font-style:normal}
+.ph-sheet strong{display:block;font:600 11.5px var(--fm);letter-spacing:.03em;margin:5px 0 3px}
+.ph-sheet p{font:400 9.5px var(--fm);color:var(--mut)}
+.ph-btns{display:flex;gap:6px;margin-top:11px}
+.pbtn{flex:1;text-align:center;font:600 9px var(--fm);letter-spacing:.1em;padding:9px 4px;border:1px solid var(--line2);color:var(--txt2);text-transform:uppercase}
+.pbtn.solid{background:var(--acc);border-color:var(--acc);color:#0A0A0B}
+.ph-prog{display:flex;align-items:center;gap:16px;padding:14px 15px;border-bottom:1px solid var(--line)}
+.ring{transform:rotate(-90deg)}
+.ring .rbg{fill:none;stroke:#1D1D22;stroke-width:4}
+.ring .ringval{fill:none;stroke:var(--acc);stroke-width:4;stroke-linecap:butt;stroke-dasharray:163.4;stroke-dashoffset:163.4;transition:stroke-dashoffset 1.6s cubic-bezier(.2,.65,.2,1) .4s}
+.phone.on .ringval{stroke-dashoffset:62.1}
+.ph-prog strong{font:600 17px var(--fm)}
+.ph-prog span{display:block;font:400 9px var(--fm);color:var(--mut);letter-spacing:.08em}
+.ph-list{padding:8px 15px;font:400 10.5px/1.4 var(--fm);flex:1}
+.ph-list li{display:flex;align-items:center;gap:10px;padding:10px 2px;border-bottom:1px solid var(--line);color:var(--txt2)}
+.ph-list li::before{content:"";width:13px;height:13px;border:1px solid var(--line2);flex:none}
+.ph-list li.ck{color:var(--mut);text-decoration:line-through}
+.ph-list li.ck::before{background:var(--acc);border-color:var(--acc)}
+.ph-sync{padding:10px 15px;border-top:1px solid var(--line);font:500 8.5px var(--fm);letter-spacing:.14em;color:var(--mut)}
+.ph-sync b{color:var(--ok);font-weight:600}
+
+/* — Signal — */
+.sig-wrap{padding:8px 10px}
+.node{fill:#121216;stroke:#2E2E34}
+.node.hot{stroke:var(--acc)}
+.node-lb{fill:var(--txt);font:600 10px var(--fm);letter-spacing:.08em}
+.node-sb{fill:#5A5A62;font:400 8.5px var(--fm);letter-spacing:.05em}
+.wire{stroke:#33333A;stroke-width:1;fill:none}
+.wire.flow{stroke-dasharray:3 7;animation:flow 1.1s linear infinite}
+.wire.hot{stroke:var(--acc)}
+@keyframes flow{to{stroke-dashoffset:-20}}
+.sdot-g{fill:var(--ok)} .sdot-o{fill:var(--acc)}
+.wl{fill:#4A4A50;font:400 8px var(--fm);letter-spacing:.08em}
+
+/* ============ ESTUDO DE CASO ============ */
+.case-grid{display:grid;grid-template-columns:280px 1fr;gap:72px;align-items:start}
+.case-side{position:sticky;top:110px}
+.case-side .proj-name{font-size:34px;margin-bottom:20px}
+.case-tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:28px}
+.case-link{font:500 10px var(--fm);letter-spacing:.16em;color:var(--txt2);border-bottom:1px solid var(--line2);padding-bottom:4px;transition:color .25s,border-color .25s}
+.case-link:hover{color:var(--acc);border-color:var(--acc)}
+.phase{border-top:1px solid var(--line);padding:44px 0 48px;display:grid;grid-template-columns:180px 1fr;gap:32px}
+.phase:last-child{padding-bottom:0}
+.phase-k{font:500 10px/2 var(--fm);letter-spacing:.18em;color:var(--mut)}
+.phase-k b{color:var(--acc);font-weight:500;display:block;font-size:22px;letter-spacing:.04em}
+.phase h3{font:400 24px/1.1 var(--fd);text-transform:uppercase;letter-spacing:.02em;margin-bottom:18px}
+.phase p{font-size:14.5px;line-height:1.75;color:var(--txt2);max-width:62ch}
+.phase p+p{margin-top:14px}
+.phase p b{color:var(--txt);font-weight:500}
+.mods{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.mods-h{font:500 10px var(--fm);letter-spacing:.18em;color:var(--mut);margin:26px 0 12px}
+.mod{border:1px solid var(--line);background:#0D0D10;padding:14px 16px}
+.mod b{font:600 10px var(--fm);letter-spacing:.16em;color:var(--acc);display:block;margin-bottom:6px}
+.mod p{font:400 12.5px/1.6 var(--fb);color:var(--txt2)}
+.mod:last-child{grid-column:1/-1}
+.deci{margin-top:26px;border-top:1px solid var(--line)}
+.deci li{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--line);font:400 13px/1.6 var(--fb);color:var(--txt2)}
+.deci li::before{content:"▸";color:var(--acc);font:600 12px var(--fm);flex:none;padding-top:2px}
+.deci li b{color:var(--txt);font-weight:500}
+.arch{margin:30px 0 10px;border:1px solid var(--line);background:#0D0D10;padding:22px 16px 12px}
+.arch svg{width:100%;height:auto;display:block}
+.st-badges{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.st-b{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line2);padding:12px 18px;font:600 11px var(--fm);letter-spacing:.14em;color:var(--txt)}
+.case-quote{margin-top:34px;font:400 clamp(20px,2.4vw,30px)/1.25 var(--fd);text-transform:uppercase;letter-spacing:.01em;border-left:2px solid var(--acc);padding-left:20px}
+.case-quote .dot{color:var(--acc)}
+.res-rows{margin-top:26px}
+.res-rows .rr{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:14px 0;border-top:1px solid var(--line);font-size:14px;color:var(--txt2)}
+.res-rows .rr b{font:500 10px/2 var(--fm);letter-spacing:.16em;color:var(--acc)}
+
+/* ============ CAPACIDADES ============ */
+.cap{border-top:1px solid var(--line)}
+.cap:last-child{border-bottom:1px solid var(--line)}
+.cap-head{width:100%;display:grid;grid-template-columns:70px 1.1fr 1.3fr 44px;gap:20px;align-items:center;padding:30px 0;text-align:left;transition:padding .3s}
+.cap-num{font:500 12px var(--fm);letter-spacing:.1em;color:var(--mut);transition:color .3s}
+.cap-title{font:400 clamp(22px,2.4vw,32px)/1 var(--fd);text-transform:uppercase;letter-spacing:.015em;transition:transform .35s cubic-bezier(.2,.65,.2,1)}
+.cap-desc{font-size:13.5px;color:var(--txt2);line-height:1.55}
+.cap-x{justify-self:end;width:32px;height:32px;border:1px solid var(--line2);display:flex;align-items:center;justify-content:center;transition:.3s}
+.cap-x svg{width:12px;height:12px;transition:transform .35s}
+.cap-head:hover .cap-num{color:var(--acc)}
+.cap-head:hover .cap-title{transform:translateX(10px)}
+.cap.open .cap-x{background:var(--acc);border-color:var(--acc);color:#0A0A0B}
+.cap.open .cap-x svg{transform:rotate(45deg)}
+.cap-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s cubic-bezier(.2,.65,.2,1)}
+.cap.open .cap-body{grid-template-rows:1fr}
+.cap-body>div{overflow:hidden}
+.cap-inner{padding:0 0 36px 90px;display:grid;grid-template-columns:1.2fr 1fr;gap:32px}
+.cap-inner li{position:relative;padding:10px 0 10px 20px;border-bottom:1px solid var(--line);font-size:13.5px;color:var(--txt2)}
+.cap-inner li::before{content:"";position:absolute;left:0;top:19px;width:8px;height:1px;background:var(--acc)}
+.cap-seen{font:500 10px/2.4 var(--fm);letter-spacing:.14em;color:var(--mut);align-self:start;border:1px solid var(--line);padding:16px 18px}
+.cap-seen a{color:var(--txt2);border-bottom:1px solid var(--line2);transition:.25s}
+.cap-seen a:hover{color:var(--acc);border-color:var(--acc)}
+
+/* ============ STACK ============ */
+.stk{display:grid;grid-template-columns:230px 1fr 300px;gap:32px;padding:34px 0;border-top:1px solid var(--line);align-items:start}
+.stk:last-of-type{border-bottom:1px solid var(--line)}
+.stk-g{font:500 12px var(--fm);letter-spacing:.18em;color:var(--txt);display:flex;gap:14px}
+.stk-g i{font-style:normal;color:var(--mut)}
+.stk-i{display:flex;flex-wrap:wrap;gap:8px}
+.sit{font:400 11.5px var(--fm);letter-spacing:.05em;color:var(--txt2);border:1px solid var(--line);padding:7px 12px;transition:.25s}
+.sit:hover{border-color:var(--acc);color:var(--txt)}
+.stk-a{font:400 10px/1.9 var(--fm);letter-spacing:.08em;color:var(--mut);text-align:right}
+.stk-a b{color:var(--txt2);font-weight:500;letter-spacing:.14em}
+
+/* ============ PROCESSO ============ */
+.proc{position:relative;padding-left:80px}
+.proc-rail{position:absolute;left:28px;top:8px;bottom:8px;width:1px;background:var(--line)}
+.proc-rail i{position:absolute;top:0;left:0;width:1px;height:0;background:var(--acc)}
+.step{position:relative;display:grid;grid-template-columns:150px 1fr;gap:28px;padding:26px 0;border-bottom:1px solid var(--line)}
+.step::before{content:"";position:absolute;left:-57px;top:38px;width:9px;height:9px;background:var(--bg);border:1px solid var(--line2);transition:.4s}
+.step.lit::before{background:var(--acc);border-color:var(--acc)}
+.step-num{font:400 40px/1 var(--fd);color:transparent;-webkit-text-stroke:1px #33333A;transition:.4s;padding-top:4px}
+.step.lit .step-num{color:var(--acc);-webkit-text-stroke:1px var(--acc)}
+.step h3{font:400 21px/1.1 var(--fd);text-transform:uppercase;letter-spacing:.03em;margin-bottom:10px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.step h3 em{font:500 9px var(--fm);letter-spacing:.2em;color:var(--mut);font-style:normal}
+.step p{font-size:14px;line-height:1.7;color:var(--txt2);max-width:58ch}
+.proc-note{margin-top:40px;font:400 12px/1.9 var(--fm);letter-spacing:.06em;color:var(--mut);border-left:2px solid var(--acc);padding-left:18px;max-width:52ch}
+.proc-note b{color:var(--txt);font-weight:500}
+
+/* ============ SOBRE ============ */
+.about-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:80px;align-items:start}
+.about-txt p{font-size:16px;line-height:1.75;color:var(--txt2);max-width:56ch}
+.about-txt p+p{margin-top:18px}
+.about-txt b{color:var(--txt);font-weight:500}
+.idfile{border:1px solid var(--line2);background:var(--surface)}
+.idfile-h{display:flex;justify-content:space-between;padding:13px 20px;border-bottom:1px solid var(--line);font:600 10px var(--fm);letter-spacing:.18em;color:var(--mut)}
+.idrow{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:14px 20px;border-bottom:1px solid var(--line);font:400 12px/1.6 var(--fm);letter-spacing:.03em}
+.idrow:last-child{border-bottom:none}
+.idrow b{font:500 9px/2.2 var(--fm);letter-spacing:.16em;color:var(--mut)}
+.idrow span{color:var(--txt2)}
+.idrow .c-ok{font-weight:600}
+.principles{margin-top:36px;border-top:1px solid var(--line2)}
+.principles-h{font:500 10px var(--fm);letter-spacing:.18em;color:var(--mut);padding:16px 0 4px}
+.pric{display:flex;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px;color:var(--txt2)}
+.pric b{font:500 11px var(--fm);color:var(--acc);letter-spacing:.1em}
+.pric i{font-style:normal;color:var(--txt);font-weight:500;margin-right:6px}
+
+/* ============ TRAJETÓRIA ============ */
+.tl{position:relative;padding-left:46px}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:1px;background:var(--line)}
+.tl-item{position:relative;padding:0 0 44px;display:grid;grid-template-columns:130px 1fr;gap:28px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{content:"";position:absolute;left:-42px;top:9px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:1px solid var(--line2);transition:.4s}
+.tl-item.on::before{border-color:var(--acc)}
+.tl-item.now::before{background:var(--acc);border-color:var(--acc)}
+.tl-item.now::after{content:"";position:absolute;left:-46px;top:5px;width:17px;height:17px;border:1px solid var(--acc);border-radius:50%;animation:pw 2s ease-out infinite}
+.tl-year{font:400 26px/1 var(--fd);letter-spacing:.02em;color:var(--txt)}
+.tl-year small{display:block;font:500 9px var(--fm);letter-spacing:.18em;color:var(--mut);margin-top:8px}
+.tl-item.now .tl-year{color:var(--acc)}
+.tl-role{font:600 13px var(--fm);letter-spacing:.14em;color:var(--txt);text-transform:uppercase;margin-bottom:10px}
+.tl-role em{font-style:normal;color:var(--mut);font-weight:500}
+.tl-item p{font-size:14px;line-height:1.7;color:var(--txt2);max-width:60ch}
+
+/* ============ DEPOIMENTOS ============ */
+.voices-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+.quote{border-left:1px solid var(--line2);padding:6px 0 6px 30px;position:relative}
+.quote::before{content:"“";position:absolute;left:30px;top:-34px;font:400 64px/1 var(--fd);color:var(--acc);opacity:.9}
+.quote p{font:500 19px/1.55 var(--fb);color:var(--txt);max-width:44ch}
+.quote footer{font:500 10px var(--fm);letter-spacing:.16em;color:var(--mut);margin-top:18px}
+.quote footer b{color:var(--txt2);font-weight:500}
+.q1{grid-column:1/8;padding-top:38px}
+.q2{grid-column:7/13;margin-top:70px}
+.q3{grid-column:2/9;margin-top:56px}
+
+/* ============ CONTATO ============ */
+.contact{padding-bottom:90px}
+.contact h2{font:400 clamp(44px,7.4vw,104px)/1 var(--fd);text-transform:uppercase;margin:10px 0 34px}
+.contact h2 .stroke{color:transparent;-webkit-text-stroke:1.5px #55555C}
+.contact h2 .q{color:var(--acc)}
+.contact-p{font-size:16.5px;line-height:1.75;color:var(--txt2);max-width:52ch;margin-bottom:40px}
+.contact-p b{color:var(--txt);font-weight:500}
+.ct-row{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:16px 64px;border-top:1px solid var(--line);padding-top:38px}
+.ct-ch em{display:block;font:500 9.5px var(--fm);letter-spacing:.2em;color:var(--mut);font-style:normal;margin-bottom:10px}
+.ct-link{display:inline-flex;align-items:center;gap:10px;font:500 14px var(--fm);letter-spacing:.03em;color:var(--txt);border-bottom:1px solid transparent;padding-bottom:3px;transition:.25s;text-align:left}
+.ct-link svg{width:12px;height:12px;transition:transform .3s}
+.ct-link:hover{color:var(--acc);border-color:var(--acc)}
+.ct-link:hover svg{transform:translate(3px,-3px)}
+
+/* ============ FOOTER ============ */
+.footer{border-top:1px solid var(--line)}
+.footer-in{max-width:1360px;margin:0 auto;padding:26px var(--gx);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font:500 10px var(--fm);letter-spacing:.14em;color:var(--mut)}
+.footer-in .c-ok{font-weight:600}
+.to-top{display:inline-flex;align-items:center;gap:8px;color:var(--txt2);letter-spacing:.14em;transition:color .25s}
+.to-top:hover{color:var(--acc)}
+.to-top svg{width:11px;height:11px}
+
+/* ============ RESPONSIVO ============ */
+@media(max-width:1150px){
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .pg-right,.pg-left{grid-template-columns:1fr;gap:36px}
+  .pg-left .mock-wrap{order:-1}
+  .proj-idx{display:none}
+  .case-grid{grid-template-columns:1fr;gap:44px}
+  .case-side{position:static}
+  .cap-inner{grid-template-columns:1fr;padding-left:0}
+  .about-grid{grid-template-columns:1fr;gap:48px}
+  .voices-grid{display:block}
+  .quote{margin:0 0 48px!important;max-width:640px}
+}
+@media(max-width:900px){
+  :root{--gx:24px}
+  .nav-links,.nav-status,.nav-cta{display:none}
+  .nav-in .lang-tog{display:none}
+  .menu-btn{display:flex}
+  .mnav-lang{display:flex;align-items:center;gap:16px;margin-top:28px;font:500 10px var(--fm);letter-spacing:.18em;color:var(--mut)}
+  .frame{border-left:none;border-right:none}
+  .sec::before,.sec::after{display:none}
+  .sec{padding:80px var(--gx)}
+  .sec-head{grid-template-columns:1fr}
+  .sec-note{text-align:left;margin-top:16px}
+  .m-hide{display:none!important}
+  .at-body{grid-template-columns:1fr}
+  .stk{grid-template-columns:1fr;gap:14px}
+  .stk-a{text-align:left}
+  .phase{grid-template-columns:1fr;gap:16px}
+  .step{grid-template-columns:1fr;gap:8px}
+  .step-num{font-size:30px}
+  .tl-item{grid-template-columns:1fr;gap:10px}
+  .ct-row{grid-template-columns:1fr;gap:28px}
+  .proc{padding-left:44px}
+  .proc-rail{left:12px}
+  .step::before{left:-37px}
+  .cap-head{grid-template-columns:44px 1fr 40px;row-gap:8px}
+  .cap-desc{grid-column:2}
+}
+@media(max-width:620px){
+  .shot-duo{grid-template-columns:1fr}
+  .pm-strip{grid-template-columns:1fr}
+  .pm-strip>div{border-right:none;border-bottom:1px solid var(--line)}
+  .pm-strip>div:last-child{border-bottom:none}
+  .mods{grid-template-columns:1fr}
+  .cx-kpis{grid-template-columns:1fr 1fr}
+  .kpi:nth-child(2){border-right:none}
+  .kpi:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .cx-grid{grid-template-columns:1fr}
+  .cx-feed{border-right:none;border-bottom:1px solid var(--line)}
+  .cx-env{display:none}
+  .evline{grid-template-columns:46px 1fr 64px}
+  .evline .et{display:none}
+  .widx-row{grid-template-columns:34px 1fr 24px;row-gap:4px}
+  .widx-what{grid-column:2/3}
+  .phone{width:200px}
+  .phones{gap:16px;min-height:0;flex-wrap:wrap}
+  .hero-meta .hm-mid{display:none}
+  .aline{grid-template-columns:56px 1fr 36px 46px}
+  .aline .lm{display:none}
+  .hero h1 .ann{display:block;margin:10px 0 0}
+}
+
+/* ============ MOVIMENTO REDUZIDO ============ */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important}
+  .rv{opacity:1;transform:none}
+  .lines i{transform:none}
+}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#work" data-i18n="skip">Pular para o conteúdo</a>
+<div class="grid-tex" aria-hidden="true"></div>
+<div class="noise" aria-hidden="true"></div>
+<div id="pbar" aria-hidden="true"></div>
+<div class="cur-dot" id="cDot" aria-hidden="true"></div>
+<div class="cur-ring" id="cRing" aria-hidden="true"><span id="cLabel"></span></div>
+<div id="toast" role="status"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="logo" href="#top"><span class="logo-mark"></span>J.KOGH</a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#work" data-i18n="nW">TRABALHOS</a>
+      <a href="#capabilities" data-i18n="nC">CAPACIDADES</a>
+      <a href="#stack" data-i18n="nS">STACK</a>
+      <a href="#process" data-i18n="nP">PROCESSO</a>
+      <a href="#about" data-i18n="nA">SOBRE</a>
+      <a href="#contact" data-i18n="nK">CONTATO</a>
+    </nav>
+    <div class="lang-tog" role="group" aria-label="Idioma / Language">
+      <button class="lt-b on" data-l="pt" aria-pressed="true">PT</button><button class="lt-b" data-l="en" aria-pressed="false">EN</button>
+    </div>
+    <span class="nav-status" data-i18n="nStatus"><i class="pulse"></i>DISPONÍVEL PARA PROJETOS SELECIONADOS</span>
+    <a class="nav-cta" href="#contact" data-i18n="nCta">VAMOS CONVERSAR</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</header>
+
+<!-- menu mobile -->
+<nav class="mnav" aria-label="Menu mobile">
+  <a href="#work" data-i18n="mW">TRABALHOS<em>02</em></a>
+  <a href="#capabilities" data-i18n="mC">CAPACIDADES<em>04</em></a>
+  <a href="#stack" data-i18n="mS">STACK<em>05</em></a>
+  <a href="#process" data-i18n="mP">PROCESSO<em>06</em></a>
+  <a href="#about" data-i18n="mA">SOBRE<em>07</em></a>
+  <a href="#contact" data-i18n="mK">CONTATO<em>10</em></a>
+  <div class="mnav-lang">
+    <span data-i18n="langL">IDIOMA</span>
+    <div class="lang-tog" role="group" aria-label="Idioma / Language">
+      <button class="lt-b on" data-l="pt" aria-pressed="true">PT</button><button class="lt-b" data-l="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</nav>
+
+<div class="frame">
+<main>
+
+  <!-- ============ 01 HERO ============ -->
+  <section class="hero" id="heroSec" aria-label="Introdução">
+    <div class="hero-top">
+      <p class="roles rv" data-i18n="hRoles">DESENVOLVEDORA<b>·</b>ARQUITETA DE SISTEMAS<b>·</b>PRODUCT BUILDER</p>
+      <span class="nav-status rv" data-d="1" data-i18n="nStatus"><i class="pulse"></i>DISPONÍVEL PARA PROJETOS SELECIONADOS</span>
+    </div>
+
+    <h1 class="lines" id="heroH1" data-i18n="h1">
+      <span class="l"><i>EU CONSTRUO PRODUTOS</i></span>
+      <span class="l"><i>DIGITAIS QUE FUNCIONAM</i></span>
+      <span class="l"><i>NO MUNDO REAL<span class="c-acc">.</span><span class="ann">// e mantenho tudo rodando</span></i></span>
+    </h1>
+
+    <div class="hero-grid">
+      <div class="rv" data-d="2">
+        <p class="hero-p" data-i18n="hP">Eu projeto e entrego <strong>software completo</strong> — plataformas web, sistemas de negócio sob medida, APIs, apps mobile, automação e <strong>produtos com IA</strong>. Da primeira decisão de arquitetura à produção, eu cuido de todo o caminho: entender o problema, desenhar o sistema, construir e manter rodando.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-solid" href="#work" data-i18n="hB1"><span>VER PROJETOS</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 6h10M7 2l4 4-4 4"/></svg></a>
+          <a class="btn" href="#contact" data-i18n="hB2"><span>VAMOS CONVERSAR</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 10L10 2M10 2H4M10 2v6"/></svg></a>
+        </div>
+      </div>
+
+      <div class="rv" data-d="3">
+        <div class="term">
+          <div class="term-bar"><i class="tdot"></i><i class="tdot"></i><i class="tdot"></i><span class="tt" data-i18n="tTitle">OPS — CONSOLE DE DEPLOY</span><span class="term-live" id="termStat">INICIANDO</span></div>
+          <div class="term-body" id="bootBody"></div>
+          <div class="term-serv" id="bootServ" data-i18n="tServ">
+            <span><i class="sdot"></i>api · ativo</span>
+            <span><i class="sdot"></i>worker · ativo</span>
+            <span><i class="sdot"></i>db · saudável</span>
+          </div>
+        </div>
+        <p class="fig" data-i18n="fig1"><b>FIG. 01</b> — DEPLOY CONTÍNUO · CADA PUSH PASSA POR AQUI</p>
+      </div>
+    </div>
+
+    <div class="hero-meta rv" data-d="4">
+      <span data-i18n="hm1">CONSTRUINDO SOFTWARE · IA · SISTEMAS</span>
+      <span class="scroll-cue hm-mid"><span data-i18n="hm2">ROLE</span><i></i></span>
+      <span><span data-i18n="hm3a">HORA LOCAL</span> — <span id="clock1">--:--:--</span></span>
+    </div>
+  </section>
+
+  <!-- ticker -->
+  <div class="ticker" aria-hidden="true">
+    <div class="tick-track" id="tickTrack"></div>
+  </div>
+
+  <!-- ============ 02 SELECTED WORK ============ -->
+  <section class="sec" id="work" style="border-top:none">
+    <div class="sec-head rv">
+      <p class="kick" data-i18n="wk"><b>02</b>SELECTED WORK</p>
+      <h2 class="sec-title" data-i18n="wt">DOIS MODOS DE CONSTRUIR<span class="dot">.</span></h2>
+      <p class="sec-note" data-i18n="wn">Dois sistemas em produção, dois modos de construção. <b>As interfaces são as protagonistas.</b></p>
+    </div>
+
+    <!-- índice — o que cada projeto demonstra -->
+    <div class="widx rv">
+      <p class="widx-h" data-i18n="wxh">O QUE CADA PROJETO DEMONSTRA</p>
+      <a class="widx-row" href="#p1">
+        <span class="widx-num">01</span>
+        <span class="widx-name">PRESCRITTOMED</span>
+        <span class="widx-what" data-i18n="wi1w">PRODUTO CONSTRUÍDO INTEGRALMENTE POR MIM</span>
+        <span class="widx-ar"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 6h10M7 2l4 4-4 4"/></svg></span>
+      </a>
+      <a class="widx-row" href="#p2">
+        <span class="widx-num">02</span>
+        <span class="widx-name">CONEXIIA</span>
+        <span class="widx-what" data-i18n="wi2w">EVOLUÇÃO CONTÍNUA DE UM SISTEMA EMPRESARIAL EM PRODUÇÃO</span>
+        <span class="widx-ar"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 6h10M7 2l4 4-4 4"/></svg></span>
+      </a>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         P1 — PRESCRITTOMED · PROJETO REAL
+         Vídeo em loop (poster = capa) + telas do produto
+         ══════════════════════════════════════════════ -->
+    <article class="proj" id="p1">
+      <span class="proj-idx" aria-hidden="true">01</span>
+      <div class="proj-grid pg-right">
+        <div class="rv">
+          <p class="proj-kick" data-i18n="p1k"><b>01</b> / SAÚDE · SAAS · IA</p>
+          <h3 class="proj-name">PRESCRITTOMED</h3>
+          <p class="proj-sub" data-i18n="p1s">Plataforma web de apoio à decisão clínica com IA — pesquisa de diagnósticos, protocolos, ferramentas clínicas e prescrição digital em um único ambiente.</p>
+          <dl class="spec">
+            <div class="spec-row"><dt data-i18n="lbCat">CATEGORIA</dt><dd data-i18n="p1d1">Healthcare · SaaS · AI</dd></div>
+            <div class="spec-row"><dt data-i18n="lbStat">STATUS</dt><dd data-i18n="p1d9"><b class="c-ok">● EM PRODUÇÃO</b> · Usuários ativos</dd></div>
+            <div class="spec-row"><dt data-i18n="lbRole">PAPEL</dt><dd data-i18n="p1d2"><b>Full Product Development</b> — 100% do desenvolvimento técnico</dd></div>
+            <div class="spec-row"><dt data-i18n="lbFro">FRONTEND</dt><dd data-i18n="p1d3">Interface clínica · Fluxos de uso</dd></div>
+            <div class="spec-row"><dt data-i18n="lbBac">BACKEND</dt><dd data-i18n="p1d4">Regras de negócio · APIs · Dados</dd></div>
+            <div class="spec-row"><dt data-i18n="lbArc">ARQUITETURA</dt><dd data-i18n="p1d5">Módulos e serviços estruturados para operar como um único sistema</dd></div>
+            <div class="spec-row"><dt data-i18n="lbAi">IA</dt><dd data-i18n="p1d6">Funcionalidades de IA integradas ao produto</dd></div>
+            <div class="spec-row"><dt data-i18n="lbCore">CORE</dt><dd data-i18n="p1d7">Pesquisa clínica · Protocolos · Ferramentas clínicas · Prescrição</dd></div>
+            <div class="spec-row"><dt data-i18n="lbOutp">OUTPUT</dt><dd data-i18n="p1d8">Receita digital · Documento em PDF</dd></div>
+          </dl>
+          <div class="proj-tags">
+            <span class="chip">WEB APP</span><span class="chip">SAAS</span><span class="chip" data-i18n="p1t2">IA</span><span class="chip" data-i18n="p1t3">SAÚDE</span><span class="chip">PDF</span>
+            <!-- ✳ TECHS — adicione aqui as tecnologias reais do PrescrittoMED
+                 (ex.: <span class="chip">React</span><span class="chip">Node.js</span>) -->
+          </div>
+        </div>
+
+        <div class="shots rv" data-d="1">
+          <!-- MÍDIA PRINCIPAL · vídeo em loop com capa como poster -->
+          <figure class="browser" data-cursor="VER">
+            <div class="pm-strip">
+              <div data-i18n="strip1"><em>PAPEL</em><strong>DESENVOLVIMENTO COMPLETO</strong></div>
+              <div data-i18n="strip2"><em>OWNERSHIP</em><strong>100% DO TÉCNICO</strong></div>
+              <div data-i18n="strip3"><em>STATUS</em><strong class="c-ok">● PRODUÇÃO · USUÁRIOS ATIVOS</strong></div>
+            </div>
+            <div class="shot" id="pmMainShot">
+              <!-- ✳ VÍDEO — salve como public/imagens/prescrittomed-demo.mp4
+                   (mudo · 10–30s · MP4 H.264) -->
+              <video id="pmVid" poster="imagens/prescrittomed-capa.png" autoplay muted loop playsinline preload="metadata">
+                <source src="imagens/prescrittomed-demo.mp4" type="video/mp4">
+              </video>
+              <!-- ✳ CAPA — fallback se o vídeo não existir -->
+              <img id="pmCapa" src="imagens/prescrittomed-capa.png"
+                   alt="PrescrittoMED — visão do produto"
+                   loading="lazy" style="display:none"
+                   onerror="this.closest('.shot').classList.add('noimg')">
+              <span class="vid-tag" data-i18n="vidTag"><i class="pulse"></i>VÍDEO · PRODUTO EM USO</span>
+              <div class="ph-msg">
+                <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M10 9.5l5 2.5-5 2.5z"/></svg>
+                <strong data-i18n="ph1t">VÍDEO E CAPA DO PRODUTO</strong>
+                <p data-i18n="ph1p">Salve o vídeo como <b>imagens/prescrittomed-demo.mp4</b> e a capa como <b>imagens/prescrittomed-capa.png</b>.</p>
+              </div>
+            </div>
+          </figure>
+          <p class="fig" data-i18n="fig2"><b>FIG. 02</b> — PRODUTO EM USO · VÍDEO EM LOOP COM CAPA DO CASE</p>
+
+          <!-- DETALHES · telas 01 e 02 -->
+          <div class="shot-duo">
+            <figure class="shot" data-cursor="VER">
+              <!-- ✳ TROQUE AQUI — tela 01 · Prescrição -->
+              <img src="imagens/prescrittomed-prescricao.png"
+                   alt="PrescrittoMED — prescrição clínica guiada"
+                   loading="lazy"
+                   onerror="this.closest('.shot').classList.add('noimg')">
+              <div class="ph-msg">
+                <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="1.5"/><path d="M2 8h20M6 6.2h.01"/></svg>
+                <strong data-i18n="ph2t">TELA 01 · PRESCRIÇÃO</strong>
+                <p data-i18n="ph2p"><b>imagens/prescrittomed-prescricao.png</b> — prescrição clínica guiada.</p>
+              </div>
+              <figcaption data-i18n="fc1">01 · Prescrição clínica guiada</figcaption>
+            </figure>
+            <figure class="shot" data-cursor="VER">
+              <!-- ✳ TROQUE AQUI — tela 02 · Ferramentas -->
+              <img src="imagens/prescrittomed-ferramentas.png"
+                   alt="PrescrittoMED — ferramentas de apoio à decisão"
+                   loading="lazy"
+                   onerror="this.closest('.shot').classList.add('noimg')">
+              <div class="ph-msg">
+                <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="1.5"/><path d="M2 8h20M6 6.2h.01"/></svg>
+                <strong data-i18n="ph3t">TELA 02 · FERRAMENTAS</strong>
+                <p data-i18n="ph3p"><b>imagens/prescrittomed-ferramentas.png</b> — apoio à decisão na consulta.</p>
+              </div>
+              <figcaption data-i18n="fc2">02 · Apoio à decisão na consulta</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════════════════════
+         P2 — CONEXIIA · PROJETO REAL
+         ══════════════════════════════════════════════ -->
+    <article class="proj" id="p2">
+      <span class="proj-idx" aria-hidden="true">02</span>
+      <div class="proj-grid pg-left">
+        <div class="mock-wrap mock rv" data-cursor="VER">
+          <div class="mock-bar"><i class="tdot"></i><i class="tdot"></i><i class="tdot"></i><span class="mock-url">app.conexiia.com/operacao</span><span class="mock-tag" data-i18n="tLive">AO VIVO</span></div>
+          <div class="pm-strip">
+            <div data-i18n="cxS1"><em>PAPEL</em><strong>ÚNICA DESENVOLVEDORA</strong></div>
+            <div data-i18n="cxS2"><em>ESCOPO</em><strong>FULL-STACK · ARQUITETURA</strong></div>
+            <div data-i18n="cxS3"><em>STATUS</em><strong class="c-ok">● PRODUÇÃO · EVOLUÇÃO CONTÍNUA</strong></div>
+          </div>
+          <div class="cx-top">
+            <span class="cx-brand">CONEXIIA</span>
+            <nav data-i18n="cxtN"><span class="on">ATENDIMENTO</span><span>VENDAS</span><span>AUTOMAÇÕES</span><span>INTEGRAÇÕES</span></nav>
+            <span class="cx-env" data-i18n="cxEnv">OPERAÇÃO — TEMPO REAL</span>
+          </div>
+          <div class="cx-kpis">
+            <div class="kpi" data-i18n="cxK1"><em>ATENDIMENTO</em><strong class="kval c-ok">● AO VIVO</strong><span>fila unificada</span></div>
+            <div class="kpi" data-i18n="cxK2"><em>VENDAS</em><strong class="kval">PIPELINE ATIVO</strong><span>follow-up automático</span></div>
+            <div class="kpi" data-i18n="cxK3"><em>AUTOMAÇÕES</em><strong>4<small> EM EXECUÇÃO</small></strong><span>menos operação manual</span></div>
+            <div class="kpi" data-i18n="cxK4"><em>INTEGRAÇÕES</em><strong>6<small>/6 ONLINE</small></strong><span>serviços conectados</span></div>
+          </div>
+          <div class="cx-grid">
+            <div class="cx-feed">
+              <div class="cx-feed-h" data-i18n="cxFh"><span>ECOSSISTEMA — EVENTOS AO VIVO</span><span class="c-ok">● RECEBENDO</span></div>
+              <div id="cxFeed" aria-live="off"></div>
+            </div>
+            <div class="cx-side">
+              <div class="cx-auto">
+                <div class="cx-side-h" data-i18n="cxAh">AUTOMAÇÕES ATIVAS</div>
+                <div class="arow"><i class="pulse"></i><span data-i18n="cxA1">Triagem IA — atendimento</span></div>
+                <div class="arow"><i class="pulse"></i><span data-i18n="cxA2">Follow-up — vendas</span></div>
+                <div class="arow"><i class="pulse"></i><span data-i18n="cxA3">Distribuição de fila</span></div>
+                <div class="arow"><i class="pulse"></i><span data-i18n="cxA4">Retomada de clientes</span></div>
+              </div>
+              <div class="cx-int">
+                <div class="cx-side-h" data-i18n="cxIh">INTEGRAÇÕES</div>
+                <div class="int-g">
+                  <span class="isrv"><i></i>CRM</span>
+                  <span class="isrv"><i></i><b data-i18n="cxI2">MENSAGENS</b></span>
+                  <span class="isrv"><i></i><b data-i18n="cxI3">PAGAMENTOS</b></span>
+                  <span class="isrv"><i></i><b data-i18n="cxI4">TELEFONIA</b></span>
+                  <span class="isrv"><i></i><b data-i18n="cxI5">E-MAIL</b></span>
+                  <span class="isrv"><i></i>ERP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="fig" data-i18n="cxFig" style="margin-top:14px"><b>FIG. 03</b> — ECOSSISTEMA EM OPERAÇÃO · ATENDIMENTO · VENDAS · AUTOMAÇÕES · INTEGRAÇÕES</p>
+        <div class="rv" data-d="1">
+          <p class="proj-kick" data-i18n="cxk"><b>02</b> / TELECOM · SAAS · IA · AUTOMAÇÃO</p>
+          <h3 class="proj-name">CONEXIIA</h3>
+          <p class="proj-sub" data-i18n="cxs">Plataforma de atendimento, vendas e automação para operações de telecomunicações — um único ecossistema conectando atendimento, vendas, automações e integrações.</p>
+          <dl class="spec">
+            <div class="spec-row"><dt data-i18n="lbCat">CATEGORIA</dt><dd data-i18n="cx1">SaaS · Telecom · AI · Automation</dd></div>
+            <div class="spec-row"><dt data-i18n="lbStat">STATUS</dt><dd data-i18n="cx2"><b class="c-ok">● EM PRODUÇÃO</b> · Desenvolvimento contínuo</dd></div>
+            <div class="spec-row"><dt data-i18n="lbRole">PAPEL</dt><dd data-i18n="cx3"><b>Sole Developer · Systems Architecture</b> — única desenvolvedora no projeto</dd></div>
+            <div class="spec-row"><dt data-i18n="lbFull">FULL-STACK</dt><dd data-i18n="cx4">Implementação e evolução das funcionalidades da plataforma.</dd></div>
+            <div class="spec-row"><dt data-i18n="lbArc">ARQUITETURA</dt><dd data-i18n="cx5">Estrutura técnica definida e evoluída conforme novas necessidades.</dd></div>
+            <div class="spec-row"><dt data-i18n="lbInt">INTEGRAÇÕES</dt><dd data-i18n="cx6">Serviços e sistemas externos conectados à operação.</dd></div>
+            <div class="spec-row"><dt data-i18n="lbAi">IA</dt><dd data-i18n="cx7">Recursos aplicados aos fluxos da plataforma.</dd></div>
+            <div class="spec-row"><dt data-i18n="lbAut">AUTOMAÇÃO</dt><dd data-i18n="cx8">Processos que reduzem operações manuais e conectam etapas do negócio.</dd></div>
+            <div class="spec-row"><dt data-i18n="lbInf">INFRA &amp; PROD</dt><dd data-i18n="cx9">Manutenção e evolução direta do ambiente de produção.</dd></div>
+          </dl>
+          <div class="proj-tags"><span class="chip">SAAS</span><span class="chip">TELECOM</span><span class="chip" data-i18n="p1t2">IA</span><span class="chip" data-i18n="tAut">AUTOMAÇÃO</span><span class="chip" data-i18n="tInt">INTEGRAÇÕES</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ✳ EXEMPLO — substitua pelo seu projeto real (mesma estrutura) -->
+    <article class="proj" id="p3">
+      <span class="proj-idx" aria-hidden="true">03</span>
+      <div class="proj-grid" style="grid-template-columns:1fr">
+        <div class="rv" style="max-width:640px">
+          <p class="proj-kick" data-i18n="p3k"><b>03</b> / HUB DE APIS &amp; INTEGRAÇÕES</p>
+          <h3 class="proj-name">ATLAS GATEWAY</h3>
+          <p class="proj-sub" data-i18n="p3s">Uma camada de API unificada conectando e-commerce, logística e cobrança atrás de uma interface autenticada e observável — com retries, idempotência e rate limits resolvidos uma vez, no centro.</p>
+        </div>
+        <div class="proj-grid pg-left" style="margin-top:44px;align-items:stretch">
+          <div class="mock term rv" data-cursor="VER">
+            <div class="term-bar"><i class="tdot"></i><i class="tdot"></i><i class="tdot"></i><span class="tt">atlas-gateway — prod</span><span class="term-live live" data-i18n="tLive">AO VIVO</span></div>
+            <div class="at-tabs" data-i18n="atT"><span class="on">LOG AO VIVO</span><span>ROTAS</span><span>SCHEMA</span><span class="at-stat">p95 <b class="c-ok">14ms</b></span></div>
+            <div class="at-body">
+              <div class="at-routes m-hide">
+                <div class="at-r"><b>GET</b>/v1/orders<span>9ms</span></div>
+                <div class="at-r"><b>POST</b>/v1/webhooks/payment<span>11ms</span></div>
+                <div class="at-r"><b>GET</b>/v1/shipments/:id<span>14ms</span></div>
+                <div class="at-r"><b>POST</b>/v1/webhooks/shipment<span>18ms</span></div>
+                <div class="at-r"><b>GET</b>/v1/customers/:id<span>7ms</span></div>
+                <div class="at-r"><b>DEL</b>/v1/cache/:key<span>6ms</span></div>
+              </div>
+              <div class="at-log" id="atLog" aria-live="off"></div>
+            </div>
+          </div>
+          <div class="rv" data-d="1">
+            <dl class="spec">
+              <div class="spec-row"><dt data-i18n="lbProb">PROBLEMA</dt><dd data-i18n="p3d1">Cada nova integração significava código novo, credenciais novas, modos de falha novos.</dd></div>
+              <div class="spec-row"><dt data-i18n="lbRole">PAPEL</dt><dd data-i18n="p3d2"><b>Arquitetura de backend, design de API, observabilidade.</b></dd></div>
+              <div class="spec-row"><dt data-i18n="lbStack">STACK</dt><dd data-i18n="p3d3">Python · REST · Webhooks · Redis · Docker</dd></div>
+              <div class="spec-row"><dt data-i18n="lbCha">DESAFIO</dt><dd data-i18n="p3d4">Normalizar webhooks de provedores que reenviam, reordenam e ocasionalmente mentem — idempotência em tudo.</dd></div>
+              <div class="spec-row"><dt data-i18n="lbOut">RESULTADO</dt><dd data-i18n="p3d5">Novas integrações entram <b>em dias via configuração</b>, não em código novo.</dd></div>
+            </dl>
+            <div class="proj-tags"><span class="chip">APIS</span><span class="chip">WEBHOOKS</span><span class="chip" data-i18n="tInt">INTEGRAÇÕES</span><span class="chip" data-i18n="tObs">OBSERVABILIDADE</span><span class="chip demo" data-i18n="chipDemo">EXEMPLO</span></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ✳ EXEMPLO — substitua pelo seu projeto real (mesma estrutura) -->
+    <article class="proj" id="p4">
+      <span class="proj-idx" aria-hidden="true">04</span>
+      <div class="proj-grid pg-right">
+        <div class="rv">
+          <p class="proj-kick" data-i18n="p4k"><b>04</b> / OPERAÇÕES DE CAMPO · MOBILE</p>
+          <h3 class="proj-name">ORBIT</h3>
+          <p class="proj-sub" data-i18n="p4s">App mobile para equipes de campo — rotas, checklists de tarefas e relatórios offline-first, sincronizados em tempo real com um dashboard de operações.</p>
+          <dl class="spec">
+            <div class="spec-row"><dt data-i18n="lbProb">PROBLEMA</dt><dd data-i18n="p4d1">Equipes de campo reportavam em papel e apps de chat; a operação não tinha visão ao vivo do dia.</dd></div>
+            <div class="spec-row"><dt data-i18n="lbRole">PAPEL</dt><dd data-i18n="p4d2"><b>Design de produto, frontend mobile, backend de sincronização.</b></dd></div>
+            <div class="spec-row"><dt data-i18n="lbStack">STACK</dt><dd data-i18n="p4d3">React Native · Motor de sync offline · Node.js · WebSockets</dd></div>
+            <div class="spec-row"><dt data-i18n="lbCha">DESAFIO</dt><dd data-i18n="p4d4">Sync offline-first que nunca perde um relatório nem conta uma visita duas vezes.</dd></div>
+            <div class="spec-row"><dt data-i18n="lbOut">RESULTADO</dt><dd data-i18n="p4d5">Uma <b>visão operacional ao vivo</b> de cada equipe, com relatórios que sobrevivem a zonas mortas.</dd></div>
+          </dl>
+          <div class="proj-tags"><span class="chip">MOBILE</span><span class="chip">OFFLINE-FIRST</span><span class="chip" data-i18n="tSync">SYNC EM TEMPO REAL</span><span class="chip">REACT NATIVE</span><span class="chip demo" data-i18n="chipDemo">EXEMPLO</span></div>
+        </div>
+        <div class="phones rv" data-d="1">
+          <div class="phone pa" data-cursor="VER">
+            <div class="ph-screen">
+              <div class="ph-notch"></div>
+              <div class="ph-status"><span data-i18n="ph1s">EM ROTA</span><span class="c-ok">GPS ●</span></div>
+              <div class="map">
+                <svg viewBox="0 0 210 240" preserveAspectRatio="none" aria-hidden="true">
+                  <path class="rt" d="M28,205 L28,150 L74,150 L74,92 L128,92 L128,46 L172,46"/>
+                  <path class="rt live" d="M128,92 L128,46 L172,46"/>
+                </svg>
+                <i class="pin done" style="left:11%;top:82%"></i>
+                <i class="pin done" style="left:32%;top:60%"></i>
+                <i class="pin me" style="left:58%;top:34%"></i>
+              </div>
+              <div class="ph-sheet">
+                <em data-i18n="ph1e">PARADA 02 · 1,2 KM</em>
+                <strong data-i18n="ph1t2">Depósito ACME — Entrega</strong>
+                <p data-i18n="ph1p2">2 volumes · assinatura obrigatória</p>
+                <div class="ph-btns"><span class="pbtn solid" data-i18n="ph1b1">Cheguei</span><span class="pbtn" data-i18n="ph1b2">Ocorrência</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="phone pb rv" data-d="2" data-cursor="VER">
+            <div class="ph-screen">
+              <div class="ph-notch"></div>
+              <div class="ph-status"><span data-i18n="ph2s">HOJE</span><span data-i18n="ph2f">FILA 2</span></div>
+              <div class="ph-prog">
+                <svg class="ring" width="58" height="58" viewBox="0 0 58 58" aria-hidden="true">
+                  <circle class="rbg" cx="29" cy="29" r="26"/>
+                  <circle class="ringval" cx="29" cy="29" r="26"/>
+                </svg>
+                <div><strong>3 / 5</strong><span data-i18n="ph2p">tarefas concluídas</span></div>
+              </div>
+              <ul class="ph-list">
+                <li class="ck" data-i18n="pl1">Unidade A — leitura de medidor</li>
+                <li class="ck" data-i18n="pl2">Unidade B — entrega</li>
+                <li class="ck" data-i18n="pl3">Unidade C — inspeção</li>
+                <li data-i18n="pl4">Unidade D — leitura de medidor</li>
+                <li data-i18n="pl5">Unidade E — assinatura</li>
+              </ul>
+              <div class="ph-sync" data-i18n="ph2sy"><b>● SINCRONIZADO</b> HÁ 12S · FILA OFFLINE</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ✳ EXEMPLO — substitua pelo seu projeto real (mesma estrutura) -->
+    <article class="proj" id="p5">
+      <span class="proj-idx" aria-hidden="true">05</span>
+      <div class="proj-grid pg-left">
+        <div class="mock rv" data-cursor="VER">
+          <div class="mock-bar"><i class="tdot"></i><i class="tdot"></i><i class="tdot"></i><span class="mock-url" data-i18n="uSg">signal.interno/pipelines/intake</span><span class="mock-tag" data-i18n="tagOn">ATIVO</span></div>
+          <div class="sig-wrap">
+            <svg viewBox="0 0 680 430" aria-hidden="true">
+              <path class="wire flow" d="M170,67 L230,67"/>
+              <path class="wire flow" d="M380,67 L440,67"/>
+              <path class="wire flow" d="M520,94 L520,170"/>
+              <path class="wire flow" d="M500,224 L500,262 L215,262 L215,300"/>
+              <path class="wire flow" d="M520,224 L520,262 L415,262 L415,300"/>
+              <path class="wire flow hot" d="M560,224 L560,300"/>
+              <rect class="node" x="30" y="40" width="140" height="54" rx="3"/>
+              <text class="node-lb" x="46" y="62">WEBHOOK IN</text>
+              <text class="node-sb" x="46" y="78">POST /inbound</text>
+              <circle class="sdot-g" cx="158" cy="50" r="3"/>
+              <rect class="node" x="230" y="40" width="150" height="54" rx="3"/>
+              <text class="node-lb" x="246" y="62" data-i18n="sg1">PARSE + VALIDAÇÃO</text>
+              <text class="node-sb" x="246" y="78" data-i18n="sg2">schema · idempotência</text>
+              <circle class="sdot-g" cx="368" cy="50" r="3"/>
+              <rect class="node hot" x="440" y="40" width="160" height="54" rx="3"/>
+              <text class="node-lb" x="456" y="62" data-i18n="sg3">CLASSIFICADOR LLM</text>
+              <text class="node-sb" x="456" y="78" data-i18n="sg4">saída estruturada</text>
+              <circle class="sdot-o" cx="588" cy="50" r="3"/>
+              <rect class="node" x="440" y="170" width="160" height="54" rx="3"/>
+              <text class="node-lb" x="456" y="192" data-i18n="sg5">ROTEADOR</text>
+              <text class="node-sb" x="456" y="208" data-i18n="sg6">por confiança</text>
+              <circle class="sdot-g" cx="588" cy="180" r="3"/>
+              <rect class="node" x="140" y="300" width="150" height="54" rx="3"/>
+              <text class="node-lb" x="156" y="322" data-i18n="sg7">ATUALIZA CRM</text>
+              <text class="node-sb" x="156" y="338" data-i18n="sg8">worker de fila</text>
+              <circle class="sdot-g" cx="278" cy="310" r="3"/>
+              <rect class="node" x="340" y="300" width="150" height="54" rx="3"/>
+              <text class="node-lb" x="356" y="322" data-i18n="sg9">NOTIFICA SLACK</text>
+              <text class="node-sb" x="356" y="338" data-i18n="sg10">webhook de saída</text>
+              <circle class="sdot-g" cx="478" cy="310" r="3"/>
+              <rect class="node hot" x="540" y="300" width="130" height="54" rx="3"/>
+              <text class="node-lb" x="554" y="322" data-i18n="sg11">REVISÃO HUMANA</text>
+              <text class="node-sb" x="554" y="338" data-i18n="sg12">casos difíceis</text>
+              <circle class="sdot-o" cx="658" cy="310" r="3"/>
+              <text class="wl" x="568" y="266" data-i18n="sg13">conf &lt; 0,8</text>
+              <text class="wl" x="30" y="400" data-i18n="sgB">UPTIME 99,97% · PIPELINE MÉDIO 1,8S · TAXA DE ESCALAÇÃO 9%</text>
+            </svg>
+          </div>
+        </div>
+        <div class="rv" data-d="1">
+          <p class="proj-kick" data-i18n="p5k"><b>05</b> / SISTEMA DE AUTOMAÇÃO COM IA</p>
+          <h3 class="proj-name">SIGNAL</h3>
+          <p class="proj-sub" data-i18n="p5s">Automação orientada a eventos que lê solicitações recebidas, classifica e enriquece com um LLM e roteia para o sistema certo — e a pessoa certa — automaticamente.</p>
+          <dl class="spec">
+            <div class="spec-row"><dt data-i18n="lbProb">PROBLEMA</dt><dd data-i18n="p5d1">Uma caixa de entrada de suporte e três ferramentas desconectadas; cada solicitação era redigitada à mão.</dd></div>
+            <div class="spec-row"><dt data-i18n="lbRole">PAPEL</dt><dd data-i18n="p5d2"><b>Ponta a ponta — design do pipeline, integração de LLM, lógica de automação.</b></dd></div>
+            <div class="spec-row"><dt data-i18n="lbStack">STACK</dt><dd data-i18n="p5d3">Python · Agentes de LLM · Webhooks · Workers de fila</dd></div>
+            <div class="spec-row"><dt data-i18n="lbCha">DESAFIO</dt><dd data-i18n="p5d4">Confiança — o sistema escala para revisão humana em baixa confiança em vez de adivinhar; o time só vê os casos difíceis.</dd></div>
+            <div class="spec-row"><dt data-i18n="lbOut">RESULTADO</dt><dd data-i18n="p5d5">Solicitações rotineiras resolvem <b>sem toque humano</b>; o time trabalha a fila que importa.</dd></div>
+          </dl>
+          <div class="proj-tags"><span class="chip" data-i18n="tAg">AGENTES DE IA</span><span class="chip" data-i18n="tLlm">PIPELINE DE LLM</span><span class="chip" data-i18n="tAut">AUTOMAÇÃO</span><span class="chip" data-i18n="tQ">FILAS</span><span class="chip demo" data-i18n="chipDemo">EXEMPLO</span></div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ 03 ESTUDO DE CASO (PRESCRITTOMED — REAL) ============ -->
+  <section class="sec" id="case">
+    <div class="sec-head rv">
+      <p class="kick" data-i18n="csk"><b>03</b>ESTUDO DE CASO — 001</p>
+      <h2 class="sec-title" data-i18n="cst">DENTRO DO PROJETO<span class="dot">.</span></h2>
+      <p class="sec-note" data-i18n="csn">Como o <b>PrescrittoMED</b> saiu de um problema real da rotina clínica para um produto em produção com usuários ativos. Decisões de engenharia, sem linguagem de marketing.</p>
+    </div>
+    <div class="case-grid">
+      <aside class="case-side rv">
+        <p class="proj-kick" data-i18n="csSk"><b>001</b> / SAÚDE · SAAS · IA</p>
+        <h3 class="proj-name">PRESCRITTOMED</h3>
+        <div class="case-tags"><span class="chip">SAAS</span><span class="chip" data-i18n="p1t2">IA</span><span class="chip" data-i18n="p1t3">SAÚDE</span><span class="chip">WEB APP</span><span class="chip">PDF</span></div>
+        <a class="case-link" href="#p1" data-i18n="csL">VOLTAR AO PROJETO ↑</a>
+      </aside>
+      <div>
+        <div class="phase rv">
+          <p class="phase-k"><b>01</b><span data-i18n="lbPhase">FASE</span></p>
+          <div>
+            <h3 data-i18n="ph1h">O Problema</h3>
+            <p data-i18n="ph1a">O desafio: construir uma plataforma de saúde capaz de reunir diferentes etapas da rotina clínica em uma única aplicação — mantendo uma experiência simples para o profissional enquanto o sistema gerencia regras de negócio, dados, integrações e funcionalidades de IA.</p>
+            <p data-i18n="ph1b">O produto precisava servir o trabalho real de quem pesquisa e prescreve — não o contrário. Cada fluxo foi pensado para reduzir etapas, não para exibir tecnologia.</p>
+          </div>
+        </div>
+        <div class="phase rv">
+          <p class="phase-k"><b>02</b><span data-i18n="lbPhase">FASE</span></p>
+          <div>
+            <h3 data-i18n="ph2h">A Abordagem</h3>
+            <p data-i18n="ph2a">Antes de escrever código, defini a arquitetura: como a aplicação seria estruturada e como os diferentes módulos e serviços se comunicariam. O produto foi organizado em cinco áreas centrais — cada uma com um papel claro na rotina clínica.</p>
+            <p data-i18n="ph2b">A régua do produto: o profissional de saúde nunca deveria precisar sair da aplicação durante o trabalho. Essa decisão guiou o frontend, os fluxos de navegação e a forma como a IA foi integrada ao uso real.</p>
+            <p class="mods-h" data-i18n="mH">MÓDULOS DO PRODUTO</p>
+            <div class="mods">
+              <div class="mod" data-i18n="m1"><b>PESQUISA CLÍNICA</b><p>Pesquisa de diagnósticos e consulta às informações clínicas relacionadas.</p></div>
+              <div class="mod" data-i18n="m2"><b>PROTOCOLOS</b><p>Acesso organizado a protocolos e condutas clínicas.</p></div>
+              <div class="mod" data-i18n="m3"><b>FERRAMENTAS CLÍNICAS</b><p>Recursos de apoio utilizados durante a rotina de prescrição.</p></div>
+              <div class="mod" data-i18n="m4"><b>PRESCRIÇÃO</b><p>Fluxo digital para elaboração da prescrição e geração do documento em PDF.</p></div>
+              <div class="mod" data-i18n="m5"><b>INTELIGÊNCIA ARTIFICIAL</b><p>Funcionalidades de IA integradas diretamente ao sistema.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="phase rv">
+          <p class="phase-k"><b>03</b><span data-i18n="lbPhase">FASE</span></p>
+          <div>
+            <h3 data-i18n="ph3h">O Desenvolvimento</h3>
+            <p data-i18n="ph3a">O produto foi desenvolvido integralmente por mim — da definição da estrutura técnica e arquitetura à implementação do frontend, backend, integrações e funcionalidades de IA. Cada decisão técnica passou pelo mesmo lugar, e a evolução continua em produção.</p>
+            <div class="arch">
+              <svg viewBox="0 0 760 300" aria-hidden="true">
+                <defs><marker id="ar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L8,4L0,8" fill="none" stroke="#4A4A52" stroke-width="1.2"/></marker></defs>
+                <path class="wire flow" d="M385,86 L385,126" marker-end="url(#ar)"/>
+                <path class="wire flow" d="M330,192 L330,207 L100,207 L100,226" marker-end="url(#ar)"/>
+                <path class="wire flow" d="M385,192 L385,226" marker-end="url(#ar)"/>
+                <path class="wire flow" d="M420,192 L420,207 L445,207 L445,226" marker-end="url(#ar)"/>
+                <path class="wire flow" d="M470,192 L470,207 L637,207 L637,226" marker-end="url(#ar)"/>
+                <rect class="node" x="290" y="32" width="190" height="54" rx="3"/>
+                <text class="node-lb" x="306" y="54" data-i18n="arA1">INTERFACE CLÍNICA</text>
+                <text class="node-sb" x="306" y="70" data-i18n="arA2">frontend · fluxos de uso</text>
+                <rect class="node hot" x="270" y="132" width="230" height="58" rx="3"/>
+                <text class="node-lb" x="286" y="155" data-i18n="arB1">NÚCLEO DA APLICAÇÃO</text>
+                <text class="node-sb" x="286" y="172" data-i18n="arB2">regras de negócio · APIs · dados</text>
+                <circle class="sdot-o" cx="488" cy="142" r="3"/>
+                <rect class="node" x="20" y="230" width="160" height="54" rx="3"/>
+                <text class="node-lb" x="34" y="252" data-i18n="arC1">PESQUISA CLÍNICA</text>
+                <text class="node-sb" x="34" y="268" data-i18n="arC2">diagnósticos · informações</text>
+                <rect class="node" x="200" y="230" width="150" height="54" rx="3"/>
+                <text class="node-lb" x="214" y="252" data-i18n="arC3">PROTOCOLOS</text>
+                <text class="node-sb" x="214" y="268" data-i18n="arC4">condutas clínicas</text>
+                <rect class="node" x="370" y="230" width="150" height="54" rx="3"/>
+                <text class="node-lb" x="384" y="252" data-i18n="arC5">PRESCRIÇÃO</text>
+                <text class="node-sb" x="384" y="268" data-i18n="arC6">fluxo digital · PDF</text>
+                <rect class="node" x="545" y="230" width="185" height="54" rx="3"/>
+                <text class="node-lb" x="559" y="252" data-i18n="arC7">SERVIÇOS DE IA</text>
+                <text class="node-sb" x="559" y="268" data-i18n="arC8">funcionalidades do produto</text>
+                <circle class="sdot-o" cx="718" cy="240" r="3"/>
+                <text class="wl" x="20" y="296" data-i18n="sgB2">100% DO DESENVOLVIMENTO TÉCNICO · EM PRODUÇÃO · USUÁRIOS ATIVOS</text>
+              </svg>
+              <p class="fig" style="margin:8px 4px 6px" data-i18n="fig3"><b>FIG. 04</b> — ARQUITETURA DE MÓDULOS · UM AMBIENTE, CINCO ÁREAS CENTRAIS</p>
+            </div>
+            <ul class="deci">
+              <li data-i18n="dc1"><span><b>Um ambiente só</b> — pesquisa clínica, protocolos, ferramentas e prescrição no mesmo fluxo.</span></li>
+              <li data-i18n="dc2"><span><b>Arquitetura antes do código</b> — módulos e comunicação definidos desde o início.</span></li>
+              <li data-i18n="dc3"><span><b>IA dentro do produto</b> — funcionalidades reais em uso diário, não demonstração.</span></li>
+              <li data-i18n="dc4"><span><b>Evolução contínua</b> — cada iteração parte do uso real em produção.</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="phase rv">
+          <p class="phase-k"><b>04</b><span data-i18n="lbPhase">FASE</span></p>
+          <div>
+            <h3 data-i18n="ph4h">O Resultado</h3>
+            <p data-i18n="ph4a">O resultado é um produto digital real: desenvolvido de ponta a ponta, em produção e com usuários ativos. Não um protótipo, não uma demonstração — um sistema que as pessoas usam.</p>
+            <div class="st-badges">
+              <span class="st-b"><i class="pulse"></i><span data-i18n="sb1">EM PRODUÇÃO</span></span>
+              <span class="st-b"><i class="pulse"></i><span data-i18n="sb2">USUÁRIOS ATIVOS</span></span>
+            </div>
+            <figure class="browser" style="margin-top:34px" data-cursor="VER">
+              <div class="shot">
+                <!-- ✳ TROQUE AQUI — tela 03 · Prontuário -->
+                <img src="imagens/prescrittomed-prontuario.png"
+                     alt="PrescrittoMED — prontuário, histórico do paciente em uma tela"
+                     loading="lazy"
+                     onerror="this.closest('.shot').classList.add('noimg')">
+                <div class="ph-msg">
+                  <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="1.5"/><path d="M2 8h20M6 6.2h.01M8.5 6.2h.01"/></svg>
+                  <strong data-i18n="ph4t">TELA 03 · PRONTUÁRIO</strong>
+                  <p data-i18n="ph4p">Salve como <b>imagens/prescrittomed-prontuario.png</b> — histórico do paciente em uma tela.</p>
+                </div>
+              </div>
+            </figure>
+            <p class="fig" data-i18n="fig4"><b>FIG. 05</b> — EM PRODUÇÃO · PRONTUÁRIO — HISTÓRICO DO PACIENTE EM UMA TELA</p>
+            <p class="case-quote" data-i18n="cq">DA ARQUITETURA AO CÓDIGO<span class="dot">.</span> DO PRIMEIRO FLUXO AO PRODUTO EM USO<span class="dot">.</span></p>
+            <div class="res-rows">
+              <div class="rr"><b data-i18n="rr1b">PARTICIPAÇÃO</b><span data-i18n="rr1">100% do desenvolvimento técnico — frontend, backend, arquitetura, integrações e IA.</span></div>
+              <div class="rr"><b data-i18n="rr2b">STATUS</b><span data-i18n="rr2">Em produção, com usuários ativos.</span></div>
+              <div class="rr"><b data-i18n="rr3b">EVOLUÇÃO</b><span data-i18n="rr3">Produto vivo: cada melhoria parte do uso real dos profissionais.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 O QUE EU CONSTRUO ============ -->
+  <section class="sec" id="capabilities">
+    <div class="sec-head rv">
+      <p class="kick" data-i18n="cpk"><b>04</b>O QUE EU CONSTRUO</p>
+      <h2 class="sec-title" data-i18n="cpt">ÍNDICE DE CAPACIDADES<span class="dot">.</span></h2>
+      <p class="sec-note" data-i18n="cpn">Capacidades técnicas, não pacotes de serviços. <b>Clique numa linha para expandir.</b></p>
+    </div>
+
+    <div class="cap rv">
+      <button class="cap-head" aria-expanded="false"><span class="cap-num">01</span><span class="cap-title" data-i18n="c1t">APLICAÇÕES WEB</span><span class="cap-desc" data-i18n="c1d">Interfaces complexas, dashboards, plataformas SaaS e sistemas de negócio.</span><span class="cap-x"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 1v10M1 6h10"/></svg></span></button>
+      <div class="cap-body"><div><div class="cap-inner">
+        <ul data-i18n="c1ul">
+          <li>UIs densas em dados que continuam rápidas sob carga real</li>
+          <li>Design systems que sobrevivem à terceira versão</li>
+          <li>Controle de acesso por papel, trilhas de auditoria, i18n quando necessário</li>
+        </ul>
+        <div class="cap-seen" data-i18n="c1s">VISTO EM — <a href="#p1">PRESCRITTOMED</a> · <a href="#p2">CONEXIIA</a></div>
+      </div></div></div>
+    </div>
+
+    <div class="cap rv" data-d="1">
+      <button class="cap-head" aria-expanded="false"><span class="cap-num">02</span><span class="cap-title" data-i18n="c2t">BACKEND &amp; APIS</span><span class="cap-desc" data-i18n="c2d">Serviços escaláveis, integrações, autenticação, processamento de dados e regras de negócio.</span><span class="cap-x"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 1v10M1 6h10"/></svg></span></button>
+      <div class="cap-body"><div><div class="cap-inner">
+        <ul data-i18n="c2ul">
+          <li>APIs REST com contratos que merecem confiança</li>
+          <li>Auth, permissões e rate limiting feitos direito</li>
+          <li>Filas, workers e jobs agendados que se recuperam sozinhos</li>
+        </ul>
+        <div class="cap-seen" data-i18n="c2s">VISTO EM — <a href="#p2">CONEXIIA</a> · <a href="#p3">ATLAS GATEWAY</a></div>
+      </div></div></div>
+    </div>
+
+    <div class="cap rv" data-d="2">
+      <button class="cap-head" aria-expanded="false"><span class="cap-num">03</span><span class="cap-title" data-i18n="c3t">SISTEMAS COM IA</span><span class="cap-desc" data-i18n="c3d">Fluxos com IA, assistentes inteligentes, automação e sistemas de apoio à decisão.</span><span class="cap-x"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 1v10M1 6h10"/></svg></span></button>
+      <div class="cap-body"><div><div class="cap-inner">
+        <ul data-i18n="c3ul">
+          <li>Pipelines de LLM com avaliação — não achismo</li>
+          <li>Retrieval, tool use e saídas estruturadas</li>
+          <li>Humano no loop onde o risco exige</li>
+        </ul>
+        <div class="cap-seen" data-i18n="c3s">VISTO EM — <a href="#p1">PRESCRITTOMED</a> · <a href="#p2">CONEXIIA</a></div>
+      </div></div></div>
+    </div>
+
+    <div class="cap rv" data-d="3">
+      <button class="cap-head" aria-expanded="false"><span class="cap-num">04</span><span class="cap-title" data-i18n="c4t">AUTOMAÇÃO</span><span class="cap-desc" data-i18n="c4d">Processos que eliminam trabalho manual repetitivo e conectam sistemas diferentes.</span><span class="cap-x"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 1v10M1 6h10"/></svg></span></button>
+      <div class="cap-body"><div><div class="cap-inner">
+        <ul data-i18n="c4ul">
+          <li>Pipelines orientados a eventos em vez de cron-e-ora</li>
+          <li>Handlers idempotentes para terceiros instáveis</li>
+          <li>Monitoramento que diz mais do que "quebrou"</li>
+        </ul>
+        <div class="cap-seen" data-i18n="c4s">VISTO EM — <a href="#p2">CONEXIIA</a> · <a href="#p5">SIGNAL</a></div>
+      </div></div></div>
+    </div>
+
+    <div class="cap rv" data-d="4">
+      <button class="cap-head" aria-expanded="false"><span class="cap-num">05</span><span class="cap-title" data-i18n="c5t">APLICATIVOS MOBILE</span><span class="cap-desc" data-i18n="c5d">Experiências mobile funcionais integradas a infraestrutura moderna de backend.</span><span class="cap-x"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 1v10M1 6h10"/></svg></span></button>
+      <div class="cap-body"><div><div class="cap-inner">
+        <ul data-i18n="c5ul">
+          <li>Offline-first onde a rede não é confiável</li>
+          <li>Interações com sensação nativa, sem time nativo</li>
+          <li>Push, sync e trabalho em background feitos direito</li>
+        </ul>
+        <div class="cap-seen" data-i18n="c5s">VISTO EM — <a href="#p4">ORBIT</a></div>
+      </div></div></div>
+    </div>
+
+    <div class="cap rv" data-d="4">
+      <button class="cap-head" aria-expanded="false"><span class="cap-num">06</span><span class="cap-title" data-i18n="c6t">ARQUITETURA DE SISTEMAS</span><span class="cap-desc" data-i18n="c6d">Desenho de como tecnologias, serviços e componentes trabalham juntos.</span><span class="cap-x"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 1v10M1 6h10"/></svg></span></button>
+      <div class="cap-body"><div><div class="cap-inner">
+        <ul data-i18n="c6ul">
+          <li>Diagramas antes de dependências</li>
+          <li>Fronteiras que permitem aos times entregar de forma independente</li>
+          <li>Rotas de migração do sistema que você tem para o que você precisa</li>
+        </ul>
+        <div class="cap-seen" data-i18n="c6s">APLICADO EM — <a href="#p1">TODOS OS PROJETOS ACIMA</a></div>
+      </div></div></div>
+    </div>
+  </section>
+
+  <!-- ============ 05 STACK ============ -->
+  <section class="sec" id="stack">
+    <div class="sec-head rv">
+      <p class="kick" data-i18n="stk1"><b>05</b>STACK TÉCNICA</p>
+      <h2 class="sec-title" data-i18n="stk2">PROFUNDIDADE EM VEZ DE LOGOS<span class="dot">.</span></h2>
+      <p class="sec-note" data-i18n="stk3">Agrupadas por função, anotadas com <b>onde cada camada roda de verdade</b> nos projetos acima.</p>
+    </div>
+    <div class="stk rv"><div class="stk-g" data-i18n="gA"><i>A</i>LINGUAGENS</div><div class="stk-i"><span class="sit">Python</span><span class="sit">JavaScript</span><span class="sit">TypeScript</span><span class="sit">SQL</span></div><div class="stk-a" data-i18n="apA"><b>APLICADO EM</b> — todos os projetos desta página</div></div>
+    <div class="stk rv"><div class="stk-g"><i>B</i>BACKEND &amp; APIS</div><div class="stk-i"><span class="sit" data-i18n="sB1">APIs REST</span><span class="sit">Webhooks</span><span class="sit" data-i18n="sB3">Autenticação</span><span class="sit">PostgreSQL</span><span class="sit">Redis</span><span class="sit" data-i18n="sB6">Filas &amp; workers</span></div><div class="stk-a" data-i18n="apB"><b>APLICADO EM</b> — Conexiia · Atlas Gateway</div></div>
+    <div class="stk rv"><div class="stk-g"><i>C</i>FRONTEND</div><div class="stk-i"><span class="sit">React</span><span class="sit" data-i18n="sC2">Arquitetura de componentes</span><span class="sit" data-i18n="sC3">Dashboards densos em dados</span><span class="sit" data-i18n="sC4">Sistemas responsivos</span></div><div class="stk-a" data-i18n="apC"><b>APLICADO EM</b> — PrescrittoMED · Conexiia</div></div>
+    <div class="stk rv"><div class="stk-g" data-i18n="gD"><i>D</i>IA</div><div class="stk-i"><span class="sit" data-i18n="sD1">Integração de LLM</span><span class="sit" data-i18n="sD2">Agentes</span><span class="sit" data-i18n="sD3">Saídas estruturadas</span><span class="sit">Prompt engineering</span><span class="sit" data-i18n="sD5">Avaliação</span></div><div class="stk-a" data-i18n="apD"><b>APLICADO EM</b> — PrescrittoMED · Conexiia</div></div>
+    <div class="stk rv"><div class="stk-g" data-i18n="gE"><i>E</i>INFRAESTRUTURA</div><div class="stk-i"><span class="sit">Docker</span><span class="sit">Linux</span><span class="sit">CI / CD</span><span class="sit">Git</span><span class="sit">Cloud</span></div><div class="stk-a" data-i18n="apE"><b>APLICADO EM</b> — tudo que está em produção</div></div>
+    <div class="stk rv"><div class="stk-g" data-i18n="gF"><i>F</i>FERRAMENTAS &amp; PRÁTICA</div><div class="stk-i"><span class="sit">GitHub</span><span class="sit">VS Code</span><span class="sit" data-i18n="sF3">Clientes de API</span><span class="sit" data-i18n="sF4">Observabilidade</span><span class="sit">Code review</span></div><div class="stk-a" data-i18n="apF"><b>APLICADO EM</b> — diariamente, sem negociação</div></div>
+  </section>
+
+  <!-- ============ 06 PROCESSO ============ -->
+  <section class="sec" id="process">
+    <div class="sec-head rv">
+      <p class="kick" data-i18n="prk"><b>06</b>COMO EU TRABALHO</p>
+      <h2 class="sec-title" data-i18n="prt">ANTES DO CÓDIGO, O PROBLEMA<span class="dot">.</span></h2>
+      <p class="sec-note" data-i18n="prn">Eu não recebo apenas tarefas — <b>eu assumo problemas.</b></p>
+    </div>
+    <div class="proc" id="procSec">
+      <div class="proc-rail"><i id="procFill"></i></div>
+      <div class="step rv"><div class="step-num">01</div><div><h3 data-i18n="st1h">ENTENDER<em>ANTES DO CÓDIGO</em></h3><p data-i18n="st1p">O problema de negócio, antes de uma única linha de código. Se eu não consigo reformular o problema nos seus termos, ainda não estou pronta para construir.</p></div></div>
+      <div class="step rv"><div class="step-num">02</div><div><h3 data-i18n="st2h">ARQUITETAR<em>PRIMEIRO NO PAPEL</em></h3><p data-i18n="st2p">Modelos de dados, fronteiras de serviço, modos de falha. As decisões caras de mudar depois são tomadas deliberadamente — no papel primeiro.</p></div></div>
+      <div class="step rv"><div class="step-num">03</div><div><h3 data-i18n="st3h">CONSTRUIR<em>INCREMENTOS PEQUENOS</em></h3><p data-i18n="st3p">Incrementos pequenos e revisáveis, com manutenibilidade desenhada desde o início — não prometida para depois.</p></div></div>
+      <div class="step rv"><div class="step-num">04</div><div><h3 data-i18n="st4h">TESTAR<em>COMPORTAMENTO &amp; CASOS LIMITE</em></h3><p data-i18n="st4p">Comportamento, casos de borda, integrações. Se algo pode falhar em silêncio, existe um teste que teria pego isso.</p></div></div>
+      <div class="step rv"><div class="step-num">05</div><div><h3 data-i18n="st5h">IMPLANTAR<em>DE FORMA REPRODUZÍVEL</em></h3><p data-i18n="st5p">Ambientes reproduzíveis, observabilidade desde o primeiro dia, rollbacks que funcionam de verdade.</p></div></div>
+      <div class="step rv"><div class="step-num">06</div><div><h3 data-i18n="st6h">EVOLUIR<em>SISTEMAS SOBREVIVEM AO LANÇAMENTO</em></h3><p data-i18n="st6p">Monitorar, medir, melhorar — e aposentar tudo o que parou de justificar a própria complexidade.</p></div></div>
+      <p class="proc-note rv" data-i18n="prN">A diferença entre quem programa e quem constrói: <b>quem programa espera tarefas. Quem constrói pergunta por que a tarefa existe</b> — e às vezes a resposta é um sistema completamente diferente.</p>
+    </div>
+  </section>
+
+  <!-- ============ 07 SOBRE ============ -->
+  <section class="sec" id="about">
+    <div class="sec-head rv">
+      <p class="kick" data-i18n="abk"><b>07</b>SOBRE</p>
+      <h2 class="sec-title" data-i18n="abt">SOFTWARE NÃO É SÓ CÓDIGO<span class="dot">.</span></h2>
+      <p class="sec-note" data-i18n="abn">Desenvolvedora · Arquiteta de Sistemas · Product Builder</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-txt rv">
+        <p data-i18n="ab1">Eu trabalho em <b>todo o ciclo de vida de produtos digitais</b> — da primeira conversa sobre um problema ao sistema rodando em produção. Aplicações web, APIs, mobile, automação, IA: a tecnologia muda; a disciplina, não.</p>
+        <p data-i18n="ab2">Sou uma desenvolvedora que pensa como arquiteta e entrega como product builder. Isso significa perguntar <b>"por quê" antes do "como"</b>, escolher tecnologia chata para produtos empolgantes e tratar manutenibilidade como funcionalidade — porque em todos os sistemas que mantive vivos, ela era.</p>
+        <div class="principles">
+          <p class="principles-h" data-i18n="prh">PRINCÍPIOS DE TRABALHO</p>
+          <div class="pric"><b>P.01</b><span data-i18n="pr1"><i>Tecnologia chata, produtos empolgantes.</i> A empolgação pertence ao resultado.</span></div>
+          <div class="pric"><b>P.02</b><span data-i18n="pr2"><i>Se não foi testado, não está pronto.</i> Confiança vem de evidência.</span></div>
+          <div class="pric"><b>P.03</b><span data-i18n="pr3"><i>Toda abstração precisa pagar aluguel.</i> Complexidade é um custo, nunca um credential.</span></div>
+        </div>
+      </div>
+      <div class="rv" data-d="1">
+        <div class="idfile">
+          <div class="idfile-h"><span data-i18n="idfH">ARQUIVO DE IDENTIDADE</span><span>ID — 001</span></div>
+          <div class="idrow"><b data-i18n="id1b">FUNÇÃO</b><span data-i18n="id1v">Desenvolvedora · Arquiteta de Sistemas · Product Builder</span></div>
+          <div class="idrow"><b data-i18n="id2b">FOCO</b><span data-i18n="id2v">Sistemas web · APIs · IA · Automação · Arquitetura</span></div>
+          <div class="idrow"><b data-i18n="id3b">EXPERIÊNCIA</b><span data-i18n="id3v">Ciclo completo de produto — da ideia à produção e além</span></div>
+          <div class="idrow"><b data-i18n="id4b">PROJETOS</b><span>PrescrittoMED · Conexiia</span></div>
+          <div class="idrow"><b>STATUS</b><span data-i18n="id5v"><span class="c-ok">● DISPONÍVEL PARA PROJETOS SELECIONADOS</span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 08 TRAJETÓRIA ============ -->
+  <!-- ✳ TRAJETÓRIA — ajuste anos e marcos à sua história real -->
+  <section class="sec" id="path">
+    <div class="sec-head rv">
+      <p class="kick" data-i18n="tlk"><b>08</b>TRAJETÓRIA</p>
+      <h2 class="sec-title" data-i18n="tlt">MARCOS QUE IMPORTARAM<span class="dot">.</span></h2>
+      <p class="sec-note" data-i18n="tln">Conquistas concretas e evolução técnica — <b>não descrições de cargo.</b></p>
+    </div>
+    <div class="tl">
+      <div class="tl-item now rv"><div class="tl-year">2025<small><span data-i18n="tS0">AGORA</span></small></div><div><p class="tl-role" data-i18n="t0r">INDEPENDENTE — <em>PRODUCT BUILDER</em></p><p data-i18n="t0p">Entrega ponta a ponta para clientes que precisam de alguém dona do problema, não de tickets. Da arquitetura à produção em sistemas web, integrações com IA e automação.</p></div></div>
+      <div class="tl-item rv"><div class="tl-year">2023–25<small><span data-i18n="tS1">SÊNIOR</span></small></div><div><p class="tl-role" data-i18n="t1r">DESENVOLVEDORA SÊNIOR FULL-STACK — <em>SISTEMAS</em></p><p data-i18n="t1p">Responsável pela arquitetura e evolução técnica de uma plataforma SaaS em operação contínua — atuando como única desenvolvedora do produto.</p></div></div>
+      <div class="tl-item rv"><div class="tl-year">2021–23<small><span data-i18n="tS2">ENGENHARIA</span></small></div><div><p class="tl-role" data-i18n="t2r">DESENVOLVEDORA DE SOFTWARE — <em>SISTEMAS DE NEGÓCIO</em></p><p data-i18n="t2p">Construí sistemas internos, dashboards e APIs. Aprendi que a parte difícil raramente é o código — são as fronteiras.</p></div></div>
+      <div class="tl-item rv"><div class="tl-year">2019–21<small>FULL-STACK</small></div><div><p class="tl-role" data-i18n="t3r">DESENVOLVEDORA FULL-STACK — <em>PRIMEIROS PRODUTOS</em></p><p data-i18n="t3p">Primeiros produtos em produção. E a manutenção deles — onde "manutenibilidade" deixou de ser palavra de efeito.</p></div></div>
+      <div class="tl-item rv"><div class="tl-year">2017<small><span data-i18n="tS4">ORIGEM</span></small></div><div><p class="tl-role" data-i18n="t4r">PRIMEIRA AUTOMAÇÃO — <em>O COMEÇO</em></p><p data-i18n="t4p">Um script de automação que poupava horas de trabalho a uma equipe toda semana. O momento em que a profissão ficou óbvia.</p></div></div>
+    </div>
+  </section>
+
+  <!-- ============ 09 DEPOIMENTOS ============ -->
+  <!-- ✳ Substitua pelos depoimentos reais que você receber -->
+  <section class="sec" id="voices">
+    <div class="sec-head rv">
+      <p class="kick" data-i18n="vok"><b>09</b>COLABORAÇÃO</p>
+      <h2 class="sec-title" data-i18n="vot">NAS PALAVRAS DE QUEM CONTRATOU<span class="dot">.</span></h2>
+      <p class="sec-note" data-i18n="von">Curto, editorial, crível — <b>como um bom feedback soa de verdade.</b></p>
+    </div>
+    <div class="voices-grid">
+      <blockquote class="quote q1 rv"><p data-i18n="q1">Ela mapeou como nossa operação funcionava de verdade antes de escrever uma linha de código. O sistema que ela construiu substituiu três ferramentas e muito trabalho manual.</p><footer data-i18n="qf1"><b>LÍDER DE OPERAÇÕES</b> — CLIENTE DE LOGÍSTICA</footer></blockquote>
+      <blockquote class="quote q2 rv" data-d="1"><p data-i18n="q2">A primeira desenvolvedora que discordou da nossa lista de funcionalidades — e estava certa. O que entrou em produção era menor, e entregava mais.</p><footer data-i18n="qf2"><b>FUNDADORA</b> — CLIENTE SAAS B2B</footer></blockquote>
+      <blockquote class="quote q3 rv" data-d="2"><p data-i18n="q3">Sênior no sentido que importa: você para de pensar no software e passa a pensar no negócio.</p><footer data-i18n="qf3"><b>CTO</b> — PILOTO HEALTHTECH</footer></blockquote>
+    </div>
+  </section>
+
+  <!-- ============ 10 CONTATO ============ -->
+  <section class="sec contact" id="contact">
+    <p class="kick rv" data-i18n="ctk"><b>10</b>CONTATO</p>
+    <h2 class="lines" id="ctH" data-i18n="cth">
+      <span class="l"><i>TEM UM PROBLEMA</i></span>
+      <span class="l"><i>QUE MERECE</i></span>
+      <span class="l"><i><span class="stroke">UM SISTEMA</span><span class="q">?</span></i></span>
+    </h2>
+    <p class="contact-p rv" data-i18n="ctp">Vamos falar sobre <b>o problema, a arquitetura e o que podemos construir.</b> Aceito um número pequeno de projetos onde a engenharia muda de verdade o resultado.</p>
+    <div class="rv" data-d="1" style="margin-bottom:52px">
+      <a class="btn btn-solid" href="mailto:contato@jaquelinekogh.dev" data-i18n="ctb"><span>INICIAR UMA CONVERSA</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 10L10 2M10 2H4M10 2v6"/></svg></a>
+    </div>
+    <div class="ct-row rv" data-d="2">
+      <!-- ✳ TROQUE AQUI — seu e-mail real -->
+      <div class="ct-ch"><em>EMAIL</em><button class="ct-link" data-copy="contato@jaquelinekogh.dev">contato@jaquelinekogh.dev<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="4.5" y="4.5" width="8" height="8"/><path d="M9.5 4.5v-3h-8v8h3"/></svg></button></div>
+      <!-- ✳ TROQUE AQUI — seu GitHub real -->
+      <div class="ct-ch"><em>GITHUB</em><a class="ct-link" href="https://github.com/jaquelinekogh" target="_blank" rel="noopener">github.com/jaquelinekogh<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 10L10 2M10 2H4M10 2v6"/></svg></a></div>
+      <!-- ✳ TROQUE AQUI — seu LinkedIn real -->
+      <div class="ct-ch"><em>LINKEDIN</em><a class="ct-link" href="https://www.linkedin.com/in/jaquelinekogh" target="_blank" rel="noopener">linkedin.com/in/jaquelinekogh<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 10L10 2M10 2H4M10 2v6"/></svg></a></div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-in">
+    <span>© <span id="yr">2025</span> JAQUELINE KOGH — <span class="c-ok">●</span> <span data-i18n="fL">TODOS OS SISTEMAS OPERACIONAIS</span></span>
+    <span data-i18n="fM">DESENHADO E CONSTRUÍDO À MÃO — SEM TEMPLATES</span>
+    <span><span id="clock2">--:--:--</span> LOCAL · <a class="to-top" href="#top"><span data-i18n="toTop">TOPO</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 10V2M2 6l4-4 4 4"/></svg></a></span>
+  </div>
+</footer>
+</div>
+
+<script>
+(function(){
+"use strict";
+const $=(s,c)=>(c||document).querySelector(s);
+const $$=(s,c)=>[...(c||document).querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+
+/* ══════════════════════════════════════════════════
+   SISTEMA DE IDIOMA (PT / EN)
+   — PT: capturado do próprio HTML (fonte da verdade).
+   — EN: objeto abaixo. Ajuste traduções pelas chaves.
+══════════════════════════════════════════════════ */
+let LANG='pt';
+try{LANG=localStorage.getItem('jk_lang')||'pt';}catch(e){}
+if(LANG!=='en')LANG='pt';
+// Detecção automática (opcional): descomente para visitantes
+// de fora do Brasil caírem no inglês automaticamente:
+// if(!localStorage.getItem('jk_lang')) LANG = navigator.language.startsWith('pt') ? 'pt' : 'en';
+
+const META={
+  pt:{title:'Jaqueline Kogh — Desenvolvedora · Arquiteta de Sistemas · Product Builder',
+      desc:'Construo produtos digitais que funcionam no mundo real — sistemas web, APIs, apps mobile, automação e produtos com IA. Da ideia à produção.'},
+  en:{title:'Jaqueline Kogh — Developer · Systems Architect · Product Builder',
+      desc:'I build digital products that work in the real world — web systems, APIs, mobile apps, automation and AI-powered products.'}
+};
+
+const TICK={
+  pt:['SISTEMAS WEB','PLATAFORMAS SAAS','APIS & INTEGRAÇÕES','PRODUTOS COM IA','AUTOMAÇÃO','APLICATIVOS MOBILE','ARQUITETURA DE SISTEMAS','DASHBOARDS DENSOS EM DADOS'],
+  en:['WEB SYSTEMS','SAAS PLATFORMS','APIS & INTEGRATIONS','AI-POWERED PRODUCTS','AUTOMATION','MOBILE APPS','SYSTEM ARCHITECTURE','DATA-DENSE DASHBOARDS']
+};
+
+const TT={
+  pt:{boot:'INICIANDO',idle:'OCIOSO',live:'AO VIVO',cmd:'deploy --env producao',
+      steps:[['compilando bundle',900,'<span class="c-ok">ok</span> <span class="c-mut">2,1s</span>'],
+             ['executando suíte de testes',1200,'<span class="c-ok">148 aprovados</span>'],
+             ['auditando dependências',650,'<span class="c-ok">0 críticas</span>'],
+             ['verificando /api/health',500,'<span class="c-ok">200 OK</span>']],
+      done:'3 serviços online — deploy concluído',
+      warns:[['WARN','timeout no provedor — retry 2/5','RETRY'],['WARN','drift de schema — mapeado','OK']]},
+  en:{boot:'BOOTING',idle:'IDLE',live:'LIVE',cmd:'deploy --env production',
+      steps:[['building bundle',900,'<span class="c-ok">ok</span> <span class="c-mut">2.1s</span>'],
+             ['running test suite',1200,'<span class="c-ok">148 passed</span>'],
+             ['auditing dependencies',650,'<span class="c-ok">0 critical</span>'],
+             ['checking /api/health',500,'<span class="c-ok">200 OK</span>']],
+      done:'3 services online — deploy complete',
+      warns:[['WARN','upstream timeout — retry 2/5','RETRY'],['WARN','schema drift detected — mapped','MAPPED']]}
+};
+
+/* — feed ao vivo da Conexiia (por idioma) — */
+const CXEV={
+  pt:[['t-at','ATEND','#4193 · 2ª VIA DE FATURA','FILA','s-q'],
+      ['t-at','ATEND','#4194 · PORTABILIDADE','EM ATEND.','s-a'],
+      ['t-vd','VENDA','#2291 · PLANO EMPRESARIAL','PROPOSTA','s-a'],
+      ['t-au','AUTO','FOLLOW-UP DISP. · VENDA #2288','OK','s-ok'],
+      ['t-at','ATEND','#4195 · SUPORTE TÉCNICO','FILA','s-q'],
+      ['t-in','INT','SINCRONIZADO · CRM','OK','s-ok'],
+      ['t-au','AUTO','RETOMADA AGENDADA','OK','s-ok'],
+      ['t-vd','VENDA','#2292 · MIGRAÇÃO DE PLANO','QUALIF.','s-q'],
+      ['t-at','ATEND','#4196 · CANCELAMENTO','RETENÇÃO','s-a']],
+  en:[['t-at','ATEND','#4193 · 2ND INVOICE COPY','QUEUE','s-q'],
+      ['t-at','ATEND','#4194 · CARRIER SWITCH','IN SERVICE','s-a'],
+      ['t-vd','SALES','#2291 · BUSINESS PLAN','PROPOSAL','s-a'],
+      ['t-au','AUTO','FOLLOW-UP TRIGGERED · SALE #2288','OK','s-ok'],
+      ['t-at','ATEND','#4195 · TECH SUPPORT','QUEUE','s-q'],
+      ['t-in','INT','SYNC COMPLETED · CRM','OK','s-ok'],
+      ['t-au','AUTO','WIN-BACK SCHEDULED','OK','s-ok'],
+      ['t-vd','SALES','#2292 · PLAN MIGRATION','QUALIF.','s-q'],
+      ['t-at','ATEND','#4196 · CANCELLATION','RETENTION','s-a']]
+};
+
+/* — dicionário EN — */
+const EN={
+skip:`Skip to content`,
+nW:`WORK`,nC:`CAPABILITIES`,nS:`STACK`,nP:`PROCESS`,nA:`ABOUT`,nK:`CONTACT`,
+nStatus:`<i class="pulse"></i>AVAILABLE FOR SELECTED PROJECTS`,
+nCta:`LET'S TALK`,
+mW:`WORK<em>02</em>`,mC:`CAPABILITIES<em>04</em>`,mS:`STACK<em>05</em>`,mP:`PROCESS<em>06</em>`,mA:`ABOUT<em>07</em>`,mK:`CONTACT<em>10</em>`,
+langL:`LANGUAGE`,
+hRoles:`DEVELOPER<b>·</b>SYSTEMS ARCHITECT<b>·</b>PRODUCT BUILDER`,
+h1:`<span class="l"><i>I BUILD DIGITAL PRODUCTS</i></span><span class="l"><i>THAT WORK IN THE</i></span><span class="l"><i>REAL WORLD<span class="c-acc">.</span><span class="ann">// and keep them running</span></i></span>`,
+hP:`I design and ship <strong>complete software</strong> — web platforms, custom business systems, APIs, mobile apps, automation and <strong>AI-powered products</strong>. From the first architecture decision to production, I own the whole path: understand the problem, design the system, build it, run it.`,
+hB1:`<span>VIEW PROJECTS</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 6h10M7 2l4 4-4 4"/></svg>`,
+hB2:`<span>LET'S TALK</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 10L10 2M10 2H4M10 2v6"/></svg>`,
+tTitle:`OPS — DEPLOY CONSOLE`,
+tServ:`<span><i class="sdot"></i>api · running</span><span><i class="sdot"></i>worker · running</span><span><i class="sdot"></i>db · healthy</span>`,
+fig1:`<b>FIG. 01</b> — CONTINUOUS DEPLOYMENT · EVERY PUSH GOES THROUGH THIS`,
+hm1:`BUILDING SOFTWARE · AI · SYSTEMS`,hm2:`SCROLL`,hm3a:`LOCAL TIME`,
+fL:`ALL SYSTEMS OPERATIONAL`,fM:`DESIGNED &amp; BUILT BY HAND — NO TEMPLATES`,toTop:`TOP`,
+wk:`<b>02</b>SELECTED WORK`,
+wt:`TWO WAYS OF BUILDING<span class="dot">.</span>`,
+wn:`Two production systems, two ways of building. <b>The interfaces are the protagonists.</b>`,
+wxh:`WHAT EACH PROJECT DEMONSTRATES`,
+wi1w:`A PRODUCT BUILT END TO END BY ME`,
+wi2w:`CONTINUOUS EVOLUTION OF AN ENTERPRISE SYSTEM IN PRODUCTION`,
+chipDemo:`DEMO`,
+
+/* ── P1 · PRESCRITTOMED (real) ── */
+p1k:`<b>01</b> / HEALTHCARE · SAAS · AI`,
+p1s:`Web platform for clinical decision support with AI — diagnosis search, protocols, clinical tools and digital prescription in a single environment.`,
+lbCat:`CATEGORY`,lbStat:`STATUS`,lbProb:`PROBLEM`,lbRole:`ROLE`,lbStack:`STACK`,lbCha:`CHALLENGE`,lbOut:`OUTCOME`,
+lbFro:`FRONTEND`,lbBac:`BACKEND`,lbArc:`ARCHITECTURE`,lbAi:`AI`,lbCore:`CORE`,lbOutp:`OUTPUT`,
+lbFull:`FULL-STACK`,lbInt:`INTEGRATIONS`,lbAut:`AUTOMATION`,lbInf:`INFRA &amp; PROD`,
+p1d1:`Healthcare · SaaS · AI`,
+p1d9:`<b class="c-ok">● IN PRODUCTION</b> · Active users`,
+p1d2:`<b>Full Product Development</b> — 100% of the technical development`,
+p1d3:`Clinical interface · User flows`,
+p1d4:`Business logic · APIs · Data`,
+p1d5:`Modules and services structured to operate as a single system`,
+p1d6:`AI features integrated into the product`,
+p1d7:`Clinical search · Protocols · Clinical tools · Prescription`,
+p1d8:`Digital prescription · PDF document`,
+strip1:`<em>ROLE</em><strong>FULL PRODUCT DEVELOPMENT</strong>`,
+strip2:`<em>OWNERSHIP</em><strong>100% TECHNICAL DEV</strong>`,
+strip3:`<em>STATUS</em><strong class="c-ok">● PRODUCTION · ACTIVE USERS</strong>`,
+vidTag:`<i class="pulse"></i>VIDEO · PRODUCT IN USE`,
+ph1t:`VIDEO + PRODUCT COVER`,
+ph1p:`Save the video as <b>imagens/prescrittomed-demo.mp4</b> and the cover as <b>imagens/prescrittomed-capa.png</b>.`,
+fig2:`<b>FIG. 02</b> — PRODUCT IN USE · LOOPING VIDEO WITH CASE COVER`,
+ph2t:`SCREEN 01 · PRESCRIPTION`,
+ph2p:`<b>imagens/prescrittomed-prescricao.png</b> — guided clinical prescription.`,
+ph3t:`SCREEN 02 · TOOLS`,
+ph3p:`<b>imagens/prescrittomed-ferramentas.png</b> — decision support in the consultation.`,
+fc1:`01 · Guided clinical prescription`,fc2:`02 · Decision support in the consultation`,
+p1t2:`AI`,p1t3:`HEALTHCARE`,
+
+/* ── P2 · CONEXIIA (real) ── */
+cxk:`<b>02</b> / TELECOM · SAAS · AI · AUTOMATION`,
+cxs:`Customer-service, sales and automation platform for telecom operations — one ecosystem connecting service, sales, automations and integrations.`,
+cx1:`SaaS · Telecom · AI · Automation`,
+cx2:`<b class="c-ok">● IN PRODUCTION</b> · Continuous development`,
+cx3:`<b>Sole Developer · Systems Architecture</b> — sole developer on the project`,
+cx4:`Implementation and evolution of the platform's features.`,
+cx5:`Technical structure defined and evolved as new needs arise.`,
+cx6:`External services and systems connected to the operation.`,
+cx7:`Capabilities applied to the platform flows.`,
+cx8:`Processes that reduce manual operations and connect stages of the business.`,
+cx9:`Direct maintenance and evolution of the production environment.`,
+cxS1:`<em>ROLE</em><strong>SOLE DEVELOPER</strong>`,
+cxS2:`<em>SCOPE</em><strong>FULL-STACK · ARCHITECTURE</strong>`,
+cxS3:`<em>STATUS</em><strong class="c-ok">● PRODUCTION · CONTINUOUS EVOLUTION</strong>`,
+cxtN:`<span class="on">SERVICE</span><span>SALES</span><span>AUTOMATIONS</span><span>INTEGRATIONS</span>`,
+cxEnv:`OPERATION — REAL TIME`,
+cxK1:`<em>SERVICE</em><strong class="kval c-ok">● LIVE</strong><span>unified queue</span>`,
+cxK2:`<em>SALES</em><strong class="kval">ACTIVE PIPELINE</strong><span>automatic follow-up</span>`,
+cxK3:`<em>AUTOMATIONS</em><strong>4<small> RUNNING</small></strong><span>less manual work</span>`,
+cxK4:`<em>INTEGRATIONS</em><strong>6<small>/6 ONLINE</small></strong><span>connected services</span>`,
+cxFh:`<span>ECOSYSTEM — LIVE EVENTS</span><span class="c-ok">● STREAMING</span>`,
+cxAh:`ACTIVE AUTOMATIONS`,
+cxA1:`AI triage — service`,cxA2:`Sales follow-up`,cxA3:`Smart queue routing`,cxA4:`Client win-back`,
+cxIh:`INTEGRATIONS`,
+cxI2:`MESSAGING`,cxI3:`PAYMENTS`,cxI4:`TELEPHONY`,cxI5:`EMAIL`,
+cxFig:`<b>FIG. 03</b> — ECOSYSTEM IN OPERATION · SERVICE · SALES · AUTOMATIONS · INTEGRATIONS`,
+tLive:`LIVE`,
+
+/* ── P3 exemplo ── */
+p3k:`<b>03</b> / API &amp; INTEGRATION HUB`,
+p3s:`A unified API layer connecting e-commerce, logistics and billing providers behind one authenticated, observable interface — with retries, idempotency and rate limits handled once, centrally.`,
+p3d1:`Every new client integration meant new glue code, new credentials, new failure modes.`,
+p3d2:`<b>Backend architecture, API design, observability.</b>`,
+p3d3:`Python · REST · Webhooks · Redis · Docker`,
+p3d4:`Normalizing provider webhooks that retry, reorder and occasionally lie — idempotency everywhere.`,
+p3d5:`New integrations onboard in <b>days through configuration</b>, not new code.`,
+tInt:`INTEGRATIONS`,tObs:`OBSERVABILITY`,
+atT:`<span class="on">LIVE LOG</span><span>ROUTES</span><span>SCHEMA</span><span class="at-stat">p95 <b class="c-ok">14ms</b></span>`,
+
+/* ── P4 exemplo ── */
+p4k:`<b>04</b> / FIELD OPERATIONS · MOBILE`,
+p4s:`Mobile app for field teams — routes, task checklists and offline-first reporting, synced live to an operations dashboard.`,
+p4d1:`Field teams reported on paper and chat apps; operations had no live picture of the day.`,
+p4d2:`<b>Product design, mobile frontend, sync backend.</b>`,
+p4d3:`React Native · Offline sync engine · Node.js · WebSockets`,
+p4d4:`Offline-first sync that never loses a task report or double-counts a visit.`,
+p4d5:`A <b>live operational view</b> of every field team, with reports that survive dead zones.`,
+tSync:`REALTIME SYNC`,
+ph1s:`ON ROUTE`,ph1e:`STOP 02 · 1.2 KM`,ph1t2:`ACME Warehouse — Delivery`,ph1p2:`2 packages · signature required`,ph1b1:`Arrived`,ph1b2:`Issue`,
+ph2s:`TODAY`,ph2f:`QUEUE 2`,ph2p:`tasks complete`,
+pl1:`Site A — meter read`,pl2:`Site B — delivery`,pl3:`Site C — inspection`,pl4:`Site D — meter read`,pl5:`Site E — signature`,
+ph2sy:`<b>● SYNCED</b> 12S AGO · STORE-AND-FORWARD`,
+
+/* ── P5 exemplo ── */
+p5k:`<b>05</b> / AI AUTOMATION SYSTEM`,
+p5s:`Event-driven automation that reads inbound requests, classifies and enriches them with an LLM, and routes them to the right system — and the right human — automatically.`,
+p5d1:`A support inbox and three disconnected tools; every request was retyped by hand.`,
+p5d2:`<b>End-to-end — pipeline design, LLM integration, automation logic.</b>`,
+p5d3:`Python · LLM agents · Webhooks · Queue workers`,
+p5d4:`Trust — the system escalates on low confidence instead of guessing, so humans only see the hard cases.`,
+p5d5:`Routine requests resolve <b>without a touch</b>; the team works the queue that matters.`,
+tAg:`AI AGENTS`,tLlm:`LLM PIPELINE`,tAut:`AUTOMATION`,tQ:`QUEUES`,
+tagOn:`ACTIVE`,uSg:`signal.internal/pipelines/intake`,
+sg1:`PARSE + VALIDATE`,sg2:`schema · idempotency`,sg3:`LLM · CLASSIFY`,sg4:`structured output`,sg5:`ROUTER`,sg6:`confidence-aware`,sg7:`UPDATE CRM`,sg8:`queue worker`,sg9:`NOTIFY SLACK`,sg10:`webhook out`,sg11:`ESCALATE`,sg12:`human review`,sg13:`conf &lt; 0.8`,
+sgB:`UPTIME 99.97% · AVG PIPELINE 1.8S · ESCALATION RATE 9%`,
+
+/* ── Estudo de caso · PrescrittoMED (real) ── */
+csk:`<b>03</b>CASE STUDY — 001`,cst:`INSIDE ONE BUILD<span class="dot">.</span>`,
+csn:`How <b>PrescrittoMED</b> went from a real clinical-routine problem to a product in production with active users. Engineering decisions, no marketing language.`,
+csSk:`<b>001</b> / HEALTHCARE · SAAS · AI`,
+csL:`BACK TO PROJECT OVERVIEW ↑`,
+lbPhase:`PHASE`,
+ph1h:`The Problem`,
+ph1a:`The challenge: build a healthcare platform able to bring different stages of the clinical routine into a single application — keeping the experience simple for the professional while the system handles business rules, data, integrations and AI features.`,
+ph1b:`The product had to serve the real work of researching and prescribing — not the other way around. Every flow was designed to remove steps, not to showcase technology.`,
+ph2h:`The Approach`,
+ph2a:`Before writing code, I defined the architecture: how the application would be structured and how the different modules and services would communicate. The product was organized into five core areas — each with a clear role in the clinical routine.`,
+ph2b:`The product's benchmark: a healthcare professional should never have to leave the application while working. That decision shaped the frontend, the user flows and how AI was integrated into real usage.`,
+mH:`PRODUCT MODULES`,
+m1:`<b>CLINICAL SEARCH</b><p>Diagnosis research and consultation of related clinical information.</p>`,
+m2:`<b>PROTOCOLS</b><p>Organized access to clinical protocols and guidelines.</p>`,
+m3:`<b>CLINICAL TOOLS</b><p>Support resources used throughout the prescription routine.</p>`,
+m4:`<b>PRESCRIPTION</b><p>Digital flow for building prescriptions and generating the PDF document.</p>`,
+m5:`<b>ARTIFICIAL INTELLIGENCE</b><p>AI features integrated directly into the system.</p>`,
+ph3h:`The Build`,
+ph3a:`The product was built entirely by me — from the technical structure and architecture to the implementation of the frontend, backend, integrations and AI features. Every technical decision went through the same hands, and the evolution continues in production.`,
+arA1:`CLINICAL INTERFACE`,arA2:`frontend · user flows`,
+arB1:`APPLICATION CORE`,arB2:`business logic · APIs · data`,
+arC1:`CLINICAL SEARCH`,arC2:`diagnoses · information`,
+arC3:`PROTOCOLS`,arC4:`clinical guidelines`,
+arC5:`PRESCRIPTION`,arC6:`digital flow · PDF`,
+arC7:`AI SERVICES`,arC8:`product features`,
+sgB2:`100% TECHNICAL DEVELOPMENT · IN PRODUCTION · ACTIVE USERS`,
+fig3:`<b>FIG. 04</b> — MODULE ARCHITECTURE · ONE ENVIRONMENT, FIVE CORE AREAS`,
+dc1:`<span><b>One environment</b> — clinical search, protocols, tools and prescription in the same flow.</span>`,
+dc2:`<span><b>Architecture before code</b> — modules and communication defined up front.</span>`,
+dc3:`<span><b>AI inside the product</b> — real features in daily use, not a demo.</span>`,
+dc4:`<span><b>Continuous evolution</b> — every iteration starts from real production use.</span>`,
+ph4h:`The Result`,
+ph4a:`The result is a real digital product: built end to end, in production and with active users. Not a prototype, not a demo — a system people actually use.`,
+sb1:`IN PRODUCTION`,sb2:`ACTIVE USERS`,
+ph4t:`SCREEN 03 · MEDICAL RECORD`,
+ph4p:`Save as <b>imagens/prescrittomed-prontuario.png</b> — patient history in a single screen.`,
+fig4:`<b>FIG. 05</b> — IN PRODUCTION · MEDICAL RECORD — PATIENT HISTORY IN ONE SCREEN`,
+cq:`FROM ARCHITECTURE TO CODE<span class="dot">.</span> FROM THE FIRST FLOW TO THE PRODUCT IN USE<span class="dot">.</span>`,
+rr1b:`OWNERSHIP`,rr1:`100% of the technical development — frontend, backend, architecture, integrations and AI.`,
+rr2b:`STATUS`,rr2:`In production, with active users.`,
+rr3b:`EVOLUTION`,rr3:`A living product: every improvement starts from real professional usage.`,
+
+/* ── seções fixas ── */
+cpk:`<b>04</b>WHAT I BUILD`,cpt:`CAPABILITY INDEX<span class="dot">.</span>`,
+cpn:`Concise technical capabilities, not service packages. <b>Click a row to expand.</b>`,
+c1t:`WEB APPLICATIONS`,c1d:`Complex interfaces, dashboards, SaaS platforms and business applications.`,
+c1ul:`<li>Data-dense UIs that stay fast under real load</li><li>Design systems that survive version three</li><li>Role-based access, audit trails, i18n when needed</li>`,
+c1s:`SEEN IN — <a href="#p1">PRESCRITTOMED</a> · <a href="#p2">CONEXIIA</a>`,
+c2t:`BACKEND &amp; APIS`,c2d:`Scalable services, integrations, authentication, data processing and business logic.`,
+c2ul:`<li>REST APIs with contracts worth trusting</li><li>Auth, permissions and rate limiting done properly</li><li>Queues, workers and scheduled jobs that recover on their own</li>`,
+c2s:`SEEN IN — <a href="#p2">CONEXIIA</a> · <a href="#p3">ATLAS GATEWAY</a>`,
+c3t:`AI SYSTEMS`,c3d:`AI-powered workflows, intelligent assistants, automation and decision-support systems.`,
+c3ul:`<li>LLM pipelines with evaluation — not vibes</li><li>Retrieval, tool use and structured outputs</li><li>Human-in-the-loop where the stakes require it</li>`,
+c3s:`SEEN IN — <a href="#p1">PRESCRITTOMED</a> · <a href="#p2">CONEXIIA</a>`,
+c4t:`AUTOMATION`,c4d:`Processes that eliminate repetitive manual work and connect different systems.`,
+c4ul:`<li>Event-driven pipelines over cron-and-hope</li><li>Idempotent handlers for unreliable third parties</li><li>Monitoring that says more than "it crashed"</li>`,
+c4s:`SEEN IN — <a href="#p2">CONEXIIA</a> · <a href="#p5">SIGNAL</a>`,
+c5t:`MOBILE APPLICATIONS`,c5d:`Functional mobile experiences integrated with modern backend infrastructure.`,
+c5ul:`<li>Offline-first where the network can't be trusted</li><li>Native-feel interactions without a native team</li><li>Push, sync and background work done right</li>`,
+c5s:`SEEN IN — <a href="#p4">ORBIT</a>`,
+c6t:`SYSTEM ARCHITECTURE`,c6d:`Designing how different technologies, services and components work together.`,
+c6ul:`<li>Diagrams before dependencies</li><li>Boundaries that let teams ship independently</li><li>Migration paths from the system you have to the one you need</li>`,
+c6s:`APPLIED IN — <a href="#p1">EVERY PROJECT ABOVE</a>`,
+stk1:`<b>05</b>TECHNICAL STACK`,stk2:`DEPTH OVER LOGOS<span class="dot">.</span>`,
+stk3:`Grouped by function, annotated with <b>where each layer actually runs</b> in the work above.`,
+gA:`<i>A</i>LANGUAGES`,gD:`<i>D</i>AI`,gE:`<i>E</i>INFRASTRUCTURE`,gF:`<i>F</i>TOOLS &amp; PRACTICE`,
+sB1:`REST APIs`,sB3:`Authentication`,sB6:`Queues &amp; workers`,
+sC2:`Component architecture`,sC3:`Data-dense dashboards`,sC4:`Responsive systems`,
+sD1:`LLM integration`,sD2:`Agents`,sD3:`Structured outputs`,sD5:`Evaluation`,
+sF3:`API clients`,sF4:`Observability`,
+apA:`<b>APPLIED IN</b> — every project on this page`,
+apB:`<b>APPLIED IN</b> — Conexiia · Atlas Gateway`,
+apC:`<b>APPLIED IN</b> — PrescrittoMed · Conexiia`,
+apD:`<b>APPLIED IN</b> — PrescrittoMed · Conexiia`,
+apE:`<b>APPLIED IN</b> — everything in production`,
+apF:`<b>APPLIED IN</b> — daily, non-negotiably`,
+prk:`<b>06</b>HOW I WORK`,prt:`A PROCESS THAT STARTS<span class="dot">.</span>`,
+prn:`Before the code. I don't just receive tasks — <b>I take problems.</b>`,
+st1h:`UNDERSTAND<em>BEFORE CODE</em>`,
+st1p:`The business problem, before a single line of code. If I can't restate the problem in your terms, I'm not ready to build.`,
+st2h:`ARCHITECT<em>ON PAPER FIRST</em>`,
+st2p:`Data models, service boundaries, failure modes. The decisions that are expensive to change later get made deliberately — on paper first.`,
+st3h:`BUILD<em>SMALL INCREMENTS</em>`,
+st3p:`Small, reviewable increments with maintainability designed in — not promised for later.`,
+st4h:`TEST<em>BEHAVIOR &amp; EDGES</em>`,
+st4p:`Behavior, edge cases, integrations. If it can fail silently, there's a test that would have caught it.`,
+st5h:`DEPLOY<em>REPRODUCIBLY</em>`,
+st5p:`Reproducible environments, observability from day one, rollbacks that actually work.`,
+st6h:`EVOLVE<em>SYSTEMS OUTLIVE LAUNCH</em>`,
+st6p:`Monitor, measure, improve — and retire anything that stopped earning its complexity.`,
+prN:`The difference between a coder and a builder: <b>a coder waits for tickets. A builder asks why the ticket exists</b> — and sometimes the answer is a different system entirely.`,
+abk:`<b>07</b>ABOUT`,abt:`SOFTWARE IS NOT JUST CODE<span class="dot">.</span>`,
+abn:`Developer · Systems Architect · Product Builder`,
+ab1:`I work across the <b>complete lifecycle of digital products</b> — from the first conversation about a problem to the system running in production. Web applications, APIs, mobile apps, automation, AI: the technology changes; the discipline doesn't.`,
+ab2:`I'm a developer who thinks like an architect and ships like a product builder. That means asking <b>"why" before "how"</b>, choosing boring technology for exciting products, and treating maintainability as a feature — because in every system I've kept alive, it was.`,
+prh:`OPERATING PRINCIPLES`,
+pr1:`<i>Boring technology, exciting products.</i> The excitement belongs to the outcome.`,
+pr2:`<i>If it isn't tested, it isn't finished.</i> Confidence comes from evidence.`,
+pr3:`<i>Every abstraction must pay rent.</i> Complexity is a cost, never a credential.`,
+idfH:`IDENTITY FILE`,
+id1b:`ROLE`,id1v:`Developer · Systems Architect · Product Builder`,
+id2b:`FOCUS`,id2v:`Web systems · APIs · AI · Automation · Architecture`,
+id3b:`EXPERIENCE`,id3v:`Full product lifecycle — idea to production and beyond`,
+id4b:`PROJECTS`,
+id5v:`<span class="c-ok">● AVAILABLE FOR SELECTED PROJECTS</span>`,
+tlk:`<b>08</b>TRAJECTORY`,tlt:`MILESTONES THAT MATTERED<span class="dot">.</span>`,
+tln:`Concrete accomplishments and technical evolution — <b>not job descriptions.</b>`,
+tS0:`NOW`,tS1:`SENIOR`,tS2:`ENGINEER`,tS4:`ORIGIN`,
+t0r:`INDEPENDENT — <em>PRODUCT BUILDER</em>`,
+t0p:`End-to-end delivery for clients who need ownership, not tickets. Architecture through production across web systems, AI integrations and automation.`,
+t1r:`SENIOR FULL-STACK — <em>SYSTEMS</em>`,
+t1p:`Owned the architecture and technical evolution of a SaaS platform in continuous operation — as the sole developer on the product.`,
+t2r:`SOFTWARE ENGINEER — <em>BUSINESS SYSTEMS</em>`,
+t2p:`Built internal business systems, dashboards and APIs. Learned that the hard part is rarely the code — it's the boundaries.`,
+t3r:`FULL-STACK DEVELOPER — <em>FIRST PRODUCTS</em>`,
+t3p:`First production products in the wild. Maintained them, too — which is where maintainability stopped being a buzzword.`,
+t4r:`FIRST SHIP — <em>AUTOMATION</em>`,
+t4p:`A small automation script that saved a team hours every week. The moment the job became obvious.`,
+vok:`<b>09</b>COLLABORATION`,vot:`IN THEIR WORDS<span class="dot">.</span>`,
+von:`Short, editorial, credible — <b>the way good feedback actually sounds.</b>`,
+q1:`She mapped how our operation actually worked before writing a line of code. The system she built replaced three tools and a lot of manual work.`,
+qf1:`<b>OPERATIONS LEAD</b> — LOGISTICS CLIENT`,
+q2:`The first developer who pushed back on our feature list — and was right. What shipped was smaller, and did more.`,
+qf2:`<b>FOUNDER</b> — B2B SAAS CLIENT`,
+q3:`Senior in the way that matters: you stop thinking about the software and start thinking about the business.`,
+qf3:`<b>CTO</b> — HEALTHTECH PILOT`,
+ctk:`<b>10</b>CONTACT`,
+cth:`<span class="l"><i>HAVE A PROBLEM</i></span><span class="l"><i>WORTH BUILDING</i></span><span class="l"><i><span class="stroke">A SYSTEM</span> FOR<span class="q">?</span></i></span>`,
+ctp:`Let's talk about <b>the problem, the architecture, and what we can build.</b> I take on a small number of projects where engineering genuinely changes the outcome.`,
+ctb:`<span>START A CONVERSATION</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 10L10 2M10 2H4M10 2v6"/></svg>`
+};
+
+const DICTS={pt:{},en:EN};
+const LOC=()=>LANG==='en'?'en-US':'pt-BR';
+
+/* captura o PT direto do HTML */
+ $$('[data-i18n]').forEach(el=>{DICTS.pt[el.dataset.i18n]=el.innerHTML;});
+
+let cxReSeed=null;
+
+function buildTicker(){
+  const half=TICK[LANG].map(t=>'<span>'+t+' <em>·</em></span>').join('');
+  $('#tickTrack').innerHTML=half+half;
+}
+
+function updateLangUI(){
+  $$('.lt-b').forEach(b=>{
+    const on=b.dataset.l===LANG;
+    b.classList.toggle('on',on);
+    b.setAttribute('aria-pressed',on);
+  });
+}
+
+function applyLang(l){
+  LANG=l;
+  document.documentElement.lang=l==='en'?'en':'pt-BR';
+  document.title=META[l].title;
+  $('meta[name="description"]').setAttribute('content',META[l].desc);
+  $$('[data-i18n]').forEach(el=>{
+    const v=DICTS[l][el.dataset.i18n];
+    if(v!=null)el.innerHTML=v;
+  });
+  $('#menuBtn').setAttribute('aria-label',l==='en'?'Open menu':'Abrir menu');
+  $('#heroSec').setAttribute('aria-label',l==='en'?'Intro':'Introdução');
+  $$('[data-cursor]').forEach(el=>el.dataset.cursor=l==='en'?'VIEW':'VER');
+  buildTicker();
+  updateLangUI();
+  if(cxReSeed)cxReSeed();
+  try{localStorage.setItem('jk_lang',l);}catch(e){}
+}
+
+ $$('.lt-b').forEach(b=>b.addEventListener('click',()=>{
+  if(b.dataset.l!==LANG)applyLang(b.dataset.l);
+}));
+
+buildTicker();
+updateLangUI();
+
+/* ---------- relógios e ano ---------- */
+function tickClock(){
+  const t=new Date().toTimeString().slice(0,8);
+  const a=$('#clock1'),b=$('#clock2');
+  if(a)a.textContent=t; if(b)b.textContent=t;
+}
+tickClock(); setInterval(tickClock,1000);
+ $('#yr').textContent=new Date().getFullYear();
+
+/* ---------- toast ---------- */
+let toastT;
+function toast(msg){
+  const t=$('#toast'); t.textContent=msg; t.classList.add('show');
+  clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove('show'),2400);
+}
+
+/* ---------- copiar e-mail ---------- */
+ $$('[data-copy]').forEach(btn=>btn.addEventListener('click',async()=>{
+  const v=btn.dataset.copy;
+  try{await navigator.clipboard.writeText(v);}
+  catch(_){const ta=document.createElement('textarea');ta.value=v;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();}
+  toast((LANG==='en'?'COPIED — ':'COPIADO — ')+v.toUpperCase());
+}));
+
+/* ---------- nav ---------- */
+const nav=$('#nav');
+let ticking=false;
+function onScrollFrame(){
+  nav.classList.toggle('scrolled',scrollY>40);
+  const h=document.documentElement;
+  const p=h.scrollHeight-h.clientHeight;
+  $('#pbar').style.transform='scaleX('+(p?scrollY/p:0)+')';
+  railTick();
+  ticking=false;
+}
+addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(onScrollFrame);ticking=true;}},{passive:true});
+
+/* ---------- menu mobile ---------- */
+const menuBtn=$('#menuBtn');
+menuBtn.addEventListener('click',()=>{
+  const open=document.body.classList.toggle('menu-open');
+  menuBtn.setAttribute('aria-expanded',open);
+});
+ $$('.mnav a').forEach(a=>a.addEventListener('click',()=>{
+  document.body.classList.remove('menu-open');
+  menuBtn.setAttribute('aria-expanded','false');
+}));
+
+/* ---------- link ativo na nav ---------- */
+const nlinks={};
+ $$('.nav-links a').forEach(a=>nlinks[a.getAttribute('href').slice(1)]=a);
+const nio=new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(e.isIntersecting){
+      Object.values(nlinks).forEach(a=>a.classList.remove('act'));
+      const a=nlinks[e.target.id]; if(a)a.classList.add('act');
+    }
+  });
+},{rootMargin:'-40% 0px -55% 0px'});
+ $$('main section[id]').forEach(s=>nio.observe(s));
+
+/* ---------- revelação no scroll + contadores ---------- */
+function countUp(el){
+  if(el.classList.contains('counted'))return;
+  el.classList.add('counted');
+  const target=parseFloat(el.dataset.count),pre=el.dataset.prefix||'',dur=1300,t0=performance.now();
+  if(RM){el.textContent=pre+target.toLocaleString(LOC());return;}
+  (function frame(now){
+    const k=Math.min((now-t0)/dur,1),e=1-Math.pow(1-k,3);
+    el.textContent=pre+Math.round(target*e).toLocaleString(LOC());
+    if(k<1)requestAnimationFrame(frame);
+  })(t0);
+}
+const rio=new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(!e.isIntersecting)return;
+    e.target.classList.add('on');
+    $$('[data-count]',e.target).forEach(countUp);
+    if(e.target.hasAttribute('data-count'))countUp(e.target);
+    rio.unobserve(e.target);
+  });
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+ $$('.rv, .lines, .phone').forEach(el=>rio.observe(el));
+
+/* ---------- trilho do processo ---------- */
+const procSec=$('#procSec'),procFill=$('#procFill'),steps=$$('.step');
+function railTick(){
+  if(!procSec)return;
+  const r=procSec.getBoundingClientRect();
+  const start=innerHeight*0.75;
+  const total=r.height;
+  const passed=Math.min(Math.max(start-r.top,0),total);
+  procFill.style.height=(passed/total*100)+'%';
+  const fillEnd=r.top+passed;
+  steps.forEach(st=>{
+    st.classList.toggle('lit',st.getBoundingClientRect().top+40<fillEnd);
+  });
+}
+
+/* ---------- manchetes ---------- */
+addEventListener('load',()=>{setTimeout(()=>$('#heroH1').classList.add('on'),100);});
+setTimeout(()=>$('#heroH1').classList.add('on'),900);
+const ctio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');ctio.unobserve(e.target);}}),{threshold:.3});
+const ctH=$('#ctH'); if(ctH)ctio.observe(ctH);
+
+/* ---------- vídeo do PrescrittoMED (loop) ---------- */
+const pmVid=$('#pmVid');
+if(pmVid){
+  let vidDead=false;
+  function vidFail(){
+    if(vidDead)return; vidDead=true;
+    pmVid.style.display='none';
+    const img=$('#pmCapa'); if(img)img.style.display='block';
+  }
+  const vsrc=pmVid.querySelector('source');
+  if(vsrc)vsrc.addEventListener('error',vidFail);
+  pmVid.addEventListener('error',vidFail);
+  if(RM){
+    pmVid.removeAttribute('autoplay');
+  }else{
+    let vVis=false;
+    function vSync(){
+      if(vVis&&!document.hidden&&!vidDead){pmVid.play().catch(()=>{});}
+      else{pmVid.pause();}
+    }
+    new IntersectionObserver(es=>es.forEach(e=>{vVis=e.isIntersecting;vSync();}),{threshold:.15}).observe(pmVid);
+    document.addEventListener('visibilitychange',vSync);
+  }
+}
+
+/* ---------- console de deploy do hero ---------- */
+const bootBody=$('#bootBody'),bootServ=$('#bootServ'),termStat=$('#termStat');
+function logLine(html){
+  const d=document.createElement('div');
+  d.className='tline';d.innerHTML=html;bootBody.appendChild(d);return d;
+}
+function stat(t,cls){termStat.textContent=t;termStat.className='term-live'+(cls?' '+cls:'');}
+async function waitVisible(){while(document.hidden)await sleep(400);}
+async function bootLoop(){
+  while(true){
+    const S=TT[LANG];
+    bootBody.innerHTML='';bootServ.classList.remove('show');stat(S.idle,'');
+    await waitVisible();
+    const cmd=logLine('<span class="c-acc">$</span> <span class="cmd"></span><span class="caret"></span>');
+    const cspan=cmd.querySelector('.cmd');
+    for(const ch of S.cmd){cspan.textContent+=ch;await sleep(30+Math.random()*45);}
+    await sleep(320);
+    for(const s of S.steps){
+      const l=logLine('<span class="c-mut">▸</span> '+s[0]+' <span class="res"></span>');
+      await sleep(s[1]);
+      l.querySelector('.res').innerHTML=s[2];
+      await sleep(150);
+    }
+    logLine('<span class="c-acc">●</span> '+S.done);
+    bootServ.classList.add('show');stat(S.live,'live');
+    await sleep(4800);
+  }
+}
+function bootStatic(){
+  const S=TT[LANG];
+  bootBody.innerHTML='<div class="tline"><span class="c-acc">$</span> '+S.cmd+'</div>'+
+    S.steps.map(s=>'<div class="tline"><span class="c-mut">▸</span> '+s[0]+' <span class="res">'+s[2]+'</span></div>').join('')+
+    '<div class="tline"><span class="c-acc">●</span> '+S.done+'</div>';
+  bootServ.classList.add('show');stat(S.live,'live');
+}
+if(RM){bootStatic();}else{bootLoop();}
+
+/* ---------- feed ao vivo · Conexiia ---------- */
+const cxFeed=$('#cxFeed');
+function cxRow(e,t,prepend){
+  const d=document.createElement('div');
+  d.className='evline'+(prepend?' new':'');
+  d.innerHTML='<span class="et">'+t+'</span><span class="etp '+e[0]+'">'+e[1]+'</span><span class="ed">'+e[2]+'</span><span class="es '+e[4]+'">'+e[3]+'</span>';
+  if(prepend)cxFeed.insertBefore(d,cxFeed.firstChild); else cxFeed.appendChild(d);
+  if(prepend)requestAnimationFrame(()=>requestAnimationFrame(()=>d.classList.remove('new')));
+  while(cxFeed.children.length>7)cxFeed.removeChild(cxFeed.lastChild);
+}
+function seedCx(){
+  cxFeed.innerHTML='';
+  for(let i=6;i>0;i--){
+    const E=CXEV[LANG],e=E[Math.floor(Math.random()*E.length)];
+    cxRow(e,new Date(Date.now()-i*2100).toTimeString().slice(0,8),false);
+  }
+}
+seedCx();
+cxReSeed=seedCx;
+if(!RM){
+  let cxVisible=false;
+  new IntersectionObserver(es=>es.forEach(e=>cxVisible=e.isIntersecting),{threshold:.1}).observe(cxFeed);
+  (function cxLoop(){
+    setTimeout(()=>{
+      if(cxVisible&&!document.hidden){
+        const E=CXEV[LANG],e=E[Math.floor(Math.random()*E.length)];
+        cxRow(e,new Date().toTimeString().slice(0,8),true);
+      }
+      cxLoop();
+    },1400+Math.random()*2200);
+  })();
+}
+
+/* ---------- aplica idioma salvo ---------- */
+if(LANG==='en')applyLang('en');
+
+/* ---------- log ao vivo do Atlas ---------- */
+const atLog=$('#atLog');
+const ROUTES=[
+  ['POST','/v1/webhooks/payment','204'],['POST','/v1/webhooks/shipment','204'],
+  ['GET','/v1/orders?limit=50','200'],['GET','/v1/shipments/CT-8841','200'],
+  ['GET','/v1/customers/8412','200'],['POST','/v1/webhooks/billing','202'],
+  ['GET','/v1/trackings/TR-2210','200']
+];
+function logRow(m,p,st,ms){
+  const d=document.createElement('div');
+  d.className='aline new';
+  d.innerHTML='<span class="lt">'+new Date().toTimeString().slice(0,8)+'</span>'+
+    '<span class="lm c-mut">'+m+'</span><span class="lp">'+p+'</span>'+
+    '<span class="'+(st==='WARN'?'c-acc':'c-ok')+'">'+st+'</span>'+
+    '<span class="lms">'+ms+'ms</span>';
+  atLog.appendChild(d);
+  requestAnimationFrame(()=>requestAnimationFrame(()=>d.classList.remove('new')));
+  while(atLog.children.length>9)atLog.removeChild(atLog.firstChild);
+}
+(function seedLog(){
+  for(let i=6;i>0;i--){
+    const r=ROUTES[Math.floor(Math.random()*ROUTES.length)];
+    const d=document.createElement('div');
+    d.className='aline';
+    const t=new Date(Date.now()-i*2100).toTimeString().slice(0,8);
+    d.innerHTML='<span class="lt">'+t+'</span><span class="lm c-mut">'+r[0]+'</span><span class="lp">'+r[1]+'</span><span class="c-ok">'+r[2]+'</span><span class="lms">'+(6+Math.floor(Math.random()*18))+'ms</span>';
+    atLog.appendChild(d);
+  }
+})();
+if(!RM){
+  let logVisible=false;
+  new IntersectionObserver(es=>es.forEach(e=>logVisible=e.isIntersecting),{threshold:.1}).observe(atLog);
+  (function pushLoop(){
+    setTimeout(()=>{
+      if(logVisible&&!document.hidden){
+        const S=TT[LANG];
+        const warn=Math.random()<0.12;
+        const src=warn?S.warns[Math.floor(Math.random()*S.warns.length)]:ROUTES[Math.floor(Math.random()*ROUTES.length)];
+        logRow(src[0],src[1],src[2],6+Math.floor(Math.random()*20));
+      }
+      pushLoop();
+    },900+Math.random()*1700);
+  })();
+}
+
+/* ---------- acordeão de capacidades ---------- */
+ $$('.cap').forEach(cap=>{
+  const head=$('.cap-head',cap);
+  head.addEventListener('click',()=>{
+    const open=cap.classList.contains('open');
+    $$('.cap.open').forEach(c=>{c.classList.remove('open');$('.cap-head',c).setAttribute('aria-expanded','false');});
+    if(!open){cap.classList.add('open');head.setAttribute('aria-expanded','true');}
+  });
+});
+
+/* ---------- cursor personalizado ---------- */
+if(matchMedia('(hover:hover) and (pointer:fine)').matches&&!RM){
+  document.documentElement.classList.add('cur-on');
+  const dot=$('#cDot'),ring=$('#cRing'),label=$('#cLabel');
+  let x=innerWidth/2,y=innerHeight/2,rx=x,ry=y,hov=false;
+  addEventListener('mousemove',e=>{
+    x=e.clientX;y=e.clientY;
+    dot.style.transform='translate('+(x-2.5)+'px,'+(y-2.5)+'px)';
+  });
+  (function loop(){
+    rx+=(x-rx)*0.16;ry+=(y-ry)*0.16;
+    const s=hov?1.7:1;
+    ring.style.transform='translate('+(rx-17)+'px,'+(ry-17)+'px) scale('+s+')';
+    requestAnimationFrame(loop);
+  })();
+  document.addEventListener('mouseover',e=>{
+    const lblEl=e.target.closest('[data-cursor]');
+    const act=e.target.closest('a,button,.cap-head');
+    if(lblEl){label.textContent=lblEl.dataset.cursor;ring.classList.add('lbl');hov=true;}
+    else if(act){ring.classList.add('hov');hov=true;}
+    else{ring.classList.remove('lbl','hov');hov=false;}
+    dot.classList.toggle('hov',hov);
+  });
+  document.addEventListener('mouseleave',()=>{dot.style.opacity='0';ring.style.opacity='0';});
+  document.addEventListener('mouseenter',()=>{dot.style.opacity='1';ring.style.opacity='1';});
+}
+})();
+</script>
+</body>
+</html>
