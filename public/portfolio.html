@@ -691,7 +691,7 @@ body.lb-open{overflow:hidden}
     <div class="sec-head rv">
       <p class="kick" data-i18n="wk"><b>02</b>SELECTED WORK</p>
       <h2 class="sec-title" data-i18n="wt">O QUE JÁ CONSTRUÍ<span class="dot">.</span></h2>
-      <p class="sec-note" data-i18n="wn">Dois sistemas em produção, um projeto pessoal e uma adaptação de código aberto. <b>As interfaces são as protagonistas.</b></p>
+      <p class="sec-note" data-i18n="wn">Dois sistemas em produção, dois projetos pessoais e uma adaptação de código aberto. <b>As interfaces são as protagonistas.</b></p>
     </div>
 
     <!-- índice — o que cada projeto demonstra -->
@@ -719,6 +719,12 @@ body.lb-open{overflow:hidden}
         <span class="widx-num">04</span>
         <span class="widx-name">GESTÃO DE ESTOQUES</span>
         <span class="widx-what" data-i18n="wi4w">SISTEMA WEB PARA LOJAS — RAILS, NÃO PUBLICADO</span>
+        <span class="widx-ar"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 6h10M7 2l4 4-4 4"/></svg></span>
+      </a>
+      <a class="widx-row" href="#p5">
+        <span class="widx-num">05</span>
+        <span class="widx-name">CHÁS · VIDA ADULTA</span>
+        <span class="widx-what" data-i18n="wi5w">MARCA, HUMOR E E-COMMERCE — DO RÓTULO À LOJA E AO APP</span>
         <span class="widx-ar"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 6h10M7 2l4 4-4 4"/></svg></span>
       </a>
     </div>
@@ -954,6 +960,49 @@ body.lb-open{overflow:hidden}
         </div>
       </div>
     </article>
+
+    <!-- ══════════════════════════════════════════════
+         P5 — CHÁS PARA SOBREVIVER À VIDA ADULTA · MARCA + E-COMMERCE
+         Imagens: public/imagens/chas-hero.webp e chas-colecao.webp
+         ══════════════════════════════════════════════ -->
+    <article class="proj" id="p5">
+      <span class="proj-idx" aria-hidden="true">05</span>
+      <div class="proj-grid pg-right">
+        <div class="rv">
+          <p class="proj-kick" data-i18n="chK"><b>05</b> / MARCA · E-COMMERCE · HUMOR</p>
+          <h3 class="proj-name" data-i18n="chN">CHÁS PARA SOBREVIVER À VIDA ADULTA</h3>
+          <p class="proj-sub" data-i18n="chS">Um chá sem graça virou marca: 16 sabores com nome de situação, bula de remédio e humor ácido — do rótulo à loja web e ao app mobile.</p>
+          <dl class="spec">
+            <div class="spec-row"><dt data-i18n="lbCat">CATEGORIA</dt><dd data-i18n="chD0">E-commerce · Marca · Conteúdo</dd></div>
+            <div class="spec-row"><dt data-i18n="lbStat">STATUS</dt><dd data-i18n="chD1"><b>DESENVOLVIDO</b> · site de teste (preços e checkout de demonstração)</dd></div>
+            <div class="spec-row"><dt data-i18n="lbRole">PAPEL</dt><dd data-i18n="chD2"><b>Conceito, direção criativa, produto e desenvolvimento</b> — projeto pessoal</dd></div>
+            <div class="spec-row"><dt data-i18n="lbTone">TOM</dt><dd data-i18n="chD3">Humor ácido em tudo: o frete grátis vem com “o resto da vida adulta continua cobrando”, cada chá tem bula com indicação e efeitos, e o selo animado de cada caixa conta uma piada.</dd></div>
+            <div class="spec-row"><dt data-i18n="lbScope">ESCOPO</dt><dd data-i18n="chD4">16 sabores, kits, “monte seu kit”, quiz de 5 perguntas que receita o chá, presentes, área do cliente, carrinho e checkout. O app Flutter lê os mesmos dados.</dd></div>
+            <div class="spec-row"><dt data-i18n="lbStack">STACK</dt><dd data-i18n="chD5">HTML · CSS · JavaScript puro (sem build) · Python (servidor e geração das imagens) · Node.js (API de pagamento) · Flutter/Dart · Vercel</dd></div>
+            <div class="spec-row"><dt data-i18n="lbPay">PAGAMENTO</dt><dd data-i18n="chD6">Mercado Pago (Checkout Pro). O servidor recalcula preço, kit, cupom e frete — o navegador nunca decide o valor. Código pronto e testado; desligado até entrar a chave.</dd></div>
+          </dl>
+          <div class="proj-tags"><span class="chip">E-COMMERCE</span><span class="chip" data-i18n="chT1">MARCA</span><span class="chip">FLUTTER</span><span class="chip">MERCADO PAGO</span><span class="chip" data-i18n="chT2">HUMOR</span></div>
+        </div>
+        <div class="shots rv" data-d="1">
+          <figure class="browser" data-cursor="VER">
+            <div class="shot" style="aspect-ratio:2800/1252">
+              <img src="imagens/chas-hero.webp" alt="Três caixas da marca Chás para sobreviver à vida adulta: Reunião que podia ser e-mail, F*da-se e Paciência" loading="lazy" style="object-fit:contain;object-position:center" onerror="this.closest('.shot').classList.add('noimg')">
+              <div class="ph-msg"><strong>IMAGEM · CAIXAS</strong><p><b>imagens/chas-hero.webp</b></p></div>
+              <figcaption data-i18n="chF1">01 · As caixas: cada chá é uma situação da vida adulta</figcaption>
+            </div>
+          </figure>
+          <figure class="browser" data-cursor="VER">
+            <div class="shot" style="aspect-ratio:1368/1190">
+              <img src="imagens/chas-colecao.webp" alt="Seis rótulos da coleção: Paciência, Reunião que podia ser e-mail, Sumisso, Fofoca, Sumir do Mapa e F*da-se" loading="lazy" style="object-fit:contain;object-position:center" onerror="this.closest('.shot').classList.add('noimg')">
+              <div class="ph-msg"><strong>IMAGEM · RÓTULOS</strong><p><b>imagens/chas-colecao.webp</b></p></div>
+              <figcaption data-i18n="chF2">02 · Seis dos 16 rótulos, cada um com a sua frase</figcaption>
+            </div>
+          </figure>
+          <p class="fig" data-i18n="chFig"><b>FIG. 06</b> — CHÁS PARA SOBREVIVER À VIDA ADULTA · MARCA E EMBALAGEM</p>
+        </div>
+      </div>
+    </article>
+
   
       </section>
 
@@ -1031,7 +1080,7 @@ body.lb-open{overflow:hidden}
                 <circle class="sdot-o" cx="718" cy="240" r="3"/>
                 <text class="wl" x="20" y="296" data-i18n="sgB2">100% DO DESENVOLVIMENTO TÉCNICO · EM PRODUÇÃO · USUÁRIOS ATIVOS</text>
               </svg>
-              <p class="fig" style="margin:8px 4px 6px" data-i18n="fig3"><b>FIG. 06</b> — ARQUITETURA DE MÓDULOS · UM AMBIENTE, CINCO ÁREAS CENTRAIS</p>
+              <p class="fig" style="margin:8px 4px 6px" data-i18n="fig3"><b>FIG. 07</b> — ARQUITETURA DE MÓDULOS · UM AMBIENTE, CINCO ÁREAS CENTRAIS</p>
             </div>
             <ul class="deci">
               <li data-i18n="dc1"><span><b>Um ambiente só</b> — pesquisa clínica, protocolos, ferramentas e prescrição no mesmo fluxo.</span></li>
@@ -1064,7 +1113,7 @@ body.lb-open{overflow:hidden}
                 </div>
               </div>
             </figure>
-            <p class="fig" data-i18n="fig4"><b>FIG. 07</b> — EM PRODUÇÃO · PRONTUÁRIO — HISTÓRICO DO PACIENTE EM UMA TELA</p>
+            <p class="fig" data-i18n="fig4"><b>FIG. 08</b> — EM PRODUÇÃO · PRONTUÁRIO — HISTÓRICO DO PACIENTE EM UMA TELA</p>
             <p class="case-quote" data-i18n="cq">DA ARQUITETURA AO CÓDIGO<span class="dot">.</span> DO PRIMEIRO FLUXO AO PRODUTO EM USO<span class="dot">.</span></p>
             <div class="res-rows">
               <div class="rr"><b data-i18n="rr1b">PARTICIPAÇÃO</b><span data-i18n="rr1">100% do desenvolvimento técnico — frontend, backend, arquitetura, integrações e IA.</span></div>
@@ -1113,8 +1162,8 @@ body.lb-open{overflow:hidden}
       <button class="cap-head" aria-expanded="false"><span class="cap-num">03</span><span class="cap-title" data-i18n="c3t">SISTEMAS COM IA</span><span class="cap-desc" data-i18n="c3d">Fluxos com IA, assistentes inteligentes, automação e sistemas de apoio à decisão.</span><span class="cap-x"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 1v10M1 6h10"/></svg></span></button>
       <div class="cap-body"><div><div class="cap-inner">
         <ul data-i18n="c3ul">
-          <li>Pipelines de LLM com avaliação — não achismo</li>
-          <li>Retrieval, tool use e saídas estruturadas</li>
+          <li>Funcionalidades de IA dentro do produto, não demonstração</li>
+          <li>Motor de regras decide; o LLM só fraseia</li>
           <li>Humano no loop onde o risco exige</li>
         </ul>
         <div class="cap-seen" data-i18n="c3s">VISTO EM — <a href="#p1">PRESCRITTOMED</a> · <a href="#p3">IRON BEAR</a></div>
@@ -1137,11 +1186,11 @@ body.lb-open{overflow:hidden}
       <button class="cap-head" aria-expanded="false"><span class="cap-num">05</span><span class="cap-title" data-i18n="c5t">APLICATIVOS MOBILE</span><span class="cap-desc" data-i18n="c5d">Experiências mobile funcionais integradas a infraestrutura moderna de backend.</span><span class="cap-x"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 1v10M1 6h10"/></svg></span></button>
       <div class="cap-body"><div><div class="cap-inner">
         <ul data-i18n="c5ul">
-          <li>Offline-first onde a rede não é confiável</li>
+          <li>Uma base de código para web e Android (Flutter)</li>
           <li>Interações com sensação nativa, sem time nativo</li>
-          <li>Push, sync e trabalho em segundo plano bem feitos</li>
+          <li>Estado salvo no aparelho: a sacola sobrevive a fechar o app</li>
         </ul>
-        <div class="cap-seen" data-i18n="c5s">VISTO EM — <a href="#p3">IRON BEAR</a></div>
+        <div class="cap-seen" data-i18n="c5s">VISTO EM — <a href="#p3">IRON BEAR</a> · <a href="#p5">CHÁS PARA SOBREVIVER</a></div>
       </div></div></div>
     </div>
 
@@ -1165,13 +1214,13 @@ body.lb-open{overflow:hidden}
       <h2 class="sec-title" data-i18n="stk2">TUDO QUE EU USO<span class="dot">.</span></h2>
       <p class="sec-note" data-i18n="stk3">O conjunto completo, agrupado por função — e <b>onde cada camada roda de verdade</b>. Cada projeto tem a sua própria stack.</p>
     </div>
-    <div class="stk rv"><div class="stk-g" data-i18n="gA"><i>A</i>LINGUAGENS</div><div class="stk-i"><span class="sit">Python</span><span class="sit">Ruby</span><span class="sit">JavaScript</span><span class="sit">TypeScript</span><span class="sit">PHP</span><span class="sit">Java</span><span class="sit">Dart</span><span class="sit">SQL</span></div><div class="stk-a" data-i18n="apA"><b>APLICADO EM</b> — Python: PrescrittoMED · Ruby: Conexiia · TypeScript: Iron Bear</div></div>
-    <div class="stk rv"><div class="stk-g"><i>B</i>BACKEND &amp; APIS</div><div class="stk-i"><span class="sit">Ruby on Rails</span><span class="sit">Python</span><span class="sit">PHP</span><span class="sit">Java</span><span class="sit" data-i18n="sB1">APIs REST</span><span class="sit">Webhooks</span><span class="sit" data-i18n="sB3">Autenticação</span><span class="sit" data-i18n="sB6">Filas &amp; workers</span></div><div class="stk-a" data-i18n="apB"><b>APLICADO EM</b> — Rails: Conexiia · Gestão de Estoques · Python: PrescrittoMED</div></div>
-    <div class="stk rv"><div class="stk-g" data-i18n="gDb"><i>C</i>DADOS</div><div class="stk-i"><span class="sit">PostgreSQL</span><span class="sit">Redis</span><span class="sit" data-i18n="sDb5">Modelagem de dados</span><span class="sit">RLS</span></div><div class="stk-a" data-i18n="apDb"><b>APLICADO EM</b> — todos os projetos · RLS: Iron Bear</div></div>
-    <div class="stk rv"><div class="stk-g"><i>D</i>FRONTEND</div><div class="stk-i"><span class="sit">React</span><span class="sit">Next.js</span><span class="sit">Hotwire (Turbo · Stimulus)</span><span class="sit">Tailwind CSS</span><span class="sit">HTML · CSS</span><span class="sit" data-i18n="sC2">Arquitetura de componentes</span><span class="sit" data-i18n="sC3">Dashboards densos em dados</span><span class="sit" data-i18n="sC4">Sistemas responsivos</span></div><div class="stk-a" data-i18n="apC"><b>APLICADO EM</b> — Iron Bear · Conexiia · Gestão de Estoques · PrescrittoMED</div></div>
-    <div class="stk rv"><div class="stk-g" data-i18n="gM"><i>E</i>MOBILE</div><div class="stk-i"><span class="sit">React Native</span><span class="sit">Expo</span><span class="sit">Flutter</span></div><div class="stk-a" data-i18n="apM"><b>APLICADO EM</b> — Iron Bear</div></div>
+    <div class="stk rv"><div class="stk-g" data-i18n="gA"><i>A</i>LINGUAGENS</div><div class="stk-i"><span class="sit">Python</span><span class="sit">Ruby</span><span class="sit">JavaScript</span><span class="sit">TypeScript</span><span class="sit">PHP</span><span class="sit">Java</span><span class="sit">Dart</span><span class="sit">SQL</span></div><div class="stk-a" data-i18n="apA"><b>APLICADO EM</b> — Python: PrescrittoMED · Chás · Ruby: Conexiia · TypeScript: Iron Bear · JavaScript e Dart: Chás · PHP e Java: fora dos projetos acima</div></div>
+    <div class="stk rv"><div class="stk-g"><i>B</i>BACKEND &amp; APIS</div><div class="stk-i"><span class="sit">Ruby on Rails</span><span class="sit">Node.js</span><span class="sit">Python</span><span class="sit">PHP</span><span class="sit">Java</span><span class="sit" data-i18n="sB1">APIs REST</span><span class="sit">Webhooks</span><span class="sit" data-i18n="sB3">Autenticação</span><span class="sit" data-i18n="sB6">Filas &amp; workers</span></div><div class="stk-a" data-i18n="apB"><b>APLICADO EM</b> — Rails: Conexiia · Gestão de Estoques · Python: PrescrittoMED · Node.js (pagamento) e Python (servidor): Chás · PHP e Java: fora dos projetos acima</div></div>
+    <div class="stk rv"><div class="stk-g" data-i18n="gDb"><i>C</i>DADOS</div><div class="stk-i"><span class="sit">PostgreSQL</span><span class="sit">Redis</span><span class="sit" data-i18n="sDb5">Modelagem de dados</span><span class="sit">RLS</span></div><div class="stk-a" data-i18n="apDb"><b>APLICADO EM</b> — PostgreSQL: Iron Bear · Gestão de Estoques · Redis: Gestão de Estoques · RLS: Iron Bear</div></div>
+    <div class="stk rv"><div class="stk-g"><i>D</i>FRONTEND</div><div class="stk-i"><span class="sit">React</span><span class="sit">Next.js</span><span class="sit">Hotwire (Turbo · Stimulus)</span><span class="sit">Tailwind CSS</span><span class="sit">HTML · CSS</span><span class="sit" data-i18n="sC2">Arquitetura de componentes</span><span class="sit" data-i18n="sC3">Dashboards densos em dados</span><span class="sit" data-i18n="sC4">Sistemas responsivos</span></div><div class="stk-a" data-i18n="apC"><b>APLICADO EM</b> — Iron Bear · Conexiia · Gestão de Estoques · PrescrittoMED · Chás (HTML · CSS · JS puro)</div></div>
+    <div class="stk rv"><div class="stk-g" data-i18n="gM"><i>E</i>MOBILE</div><div class="stk-i"><span class="sit">React Native</span><span class="sit">Expo</span><span class="sit">Flutter</span></div><div class="stk-a" data-i18n="apM"><b>APLICADO EM</b> — React Native e Expo: Iron Bear · Flutter: Chás (app web e Android)</div></div>
     <div class="stk rv"><div class="stk-g" data-i18n="gD"><i>F</i>IA</div><div class="stk-i"><span class="sit" data-i18n="sD1">Integração de LLM</span><span class="sit" data-i18n="sD2">Agentes</span><span class="sit" data-i18n="sD3">Saídas estruturadas</span><span class="sit">Prompt engineering</span><span class="sit" data-i18n="sD5">Avaliação</span></div><div class="stk-a" data-i18n="apD"><b>APLICADO EM</b> — PrescrittoMED · Iron Bear</div></div>
-    <div class="stk rv"><div class="stk-g" data-i18n="gE"><i>G</i>INFRAESTRUTURA</div><div class="stk-i"><span class="sit">Docker</span><span class="sit">Linux</span><span class="sit">CI / CD</span><span class="sit">Git</span><span class="sit">Cloud</span><span class="sit">Vercel</span></div><div class="stk-a" data-i18n="apE"><b>APLICADO EM</b> — tudo que está em produção</div></div>
+    <div class="stk rv"><div class="stk-g" data-i18n="gE"><i>G</i>INFRAESTRUTURA</div><div class="stk-i"><span class="sit">Docker</span><span class="sit">Linux</span><span class="sit">CI / CD</span><span class="sit">Git</span><span class="sit">Cloud</span><span class="sit">Vercel</span></div><div class="stk-a" data-i18n="apE"><b>APLICADO EM</b> — tudo que está em produção · Vercel: Chás (deploy a cada merge)</div></div>
     <div class="stk rv"><div class="stk-g" data-i18n="gF"><i>H</i>FERRAMENTAS &amp; PRÁTICA</div><div class="stk-i"><span class="sit">GitHub</span><span class="sit">VS Code</span><span class="sit" data-i18n="sF3">Clientes de API</span><span class="sit" data-i18n="sF4">Observabilidade</span><span class="sit">Code review</span><span class="sit" data-i18n="sF6">Testes automatizados</span></div><div class="stk-a" data-i18n="apF"><b>APLICADO EM</b> — diariamente, sem negociação</div></div>
   </section>
 
@@ -1219,7 +1268,7 @@ body.lb-open{overflow:hidden}
           <div class="idrow"><b data-i18n="id1b">FUNÇÃO</b><span data-i18n="id1v">Desenvolvedora · Arquiteta de Sistemas · Product Builder</span></div>
           <div class="idrow"><b data-i18n="id2b">FOCO</b><span data-i18n="id2v">Sistemas web · APIs · IA · Automação · Arquitetura</span></div>
           <div class="idrow"><b data-i18n="id3b">EXPERIÊNCIA</b><span data-i18n="id3v">Ciclo completo de produto — da ideia à produção e além</span></div>
-          <div class="idrow"><b data-i18n="id4b">PROJETOS</b><span>PrescrittoMED · Conexiia · Iron Bear · Gestão de Estoques</span></div>
+          <div class="idrow"><b data-i18n="id4b">PROJETOS</b><span>PrescrittoMED · Conexiia · Iron Bear · Gestão de Estoques · Chás para Sobreviver</span></div>
           <div class="idrow"><b>STATUS</b><span data-i18n="id5v"><span class="c-ok">● DISPONÍVEL PARA PROJETOS SELECIONADOS</span></span></div>
         </div>
       </div>
@@ -1348,7 +1397,7 @@ hm1:`BUILDING SOFTWARE · AI · SYSTEMS`,hm2:`SCROLL`,hm3a:`LOCAL TIME`,
 fL:`ALL SYSTEMS OPERATIONAL`,fM:`DESIGNED &amp; BUILT BY HAND — NO TEMPLATES`,toTop:`TOP`,
 wk:`<b>02</b>SELECTED WORK`,
 wt:`WHAT I'VE BUILT<span class="dot">.</span>`,
-wn:`Two production systems, one personal project and one open-source adaptation. <b>The interfaces are the protagonists.</b>`,
+wn:`Two production systems, two personal projects and one open-source adaptation. <b>The interfaces are the protagonists.</b>`,
 wxh:`WHAT EACH PROJECT DEMONSTRATES`,
 wi1w:`A PRODUCT BUILT END TO END BY ME`,
 wi3w:`A PRODUCT OF MY OWN — MOBILE APP AND GYM DASHBOARD`,
@@ -1478,7 +1527,7 @@ arC3:`PROTOCOLS`,arC4:`clinical guidelines`,
 arC5:`PRESCRIPTION`,arC6:`digital flow · PDF`,
 arC7:`AI SERVICES`,arC8:`product features`,
 sgB2:`100% TECHNICAL DEVELOPMENT · IN PRODUCTION · ACTIVE USERS`,
-fig3:`<b>FIG. 06</b> — MODULE ARCHITECTURE · ONE ENVIRONMENT, FIVE CORE AREAS`,
+fig3:`<b>FIG. 07</b> — MODULE ARCHITECTURE · ONE ENVIRONMENT, FIVE CORE AREAS`,
 dc1:`<span><b>One environment</b> — clinical search, protocols, tools and prescription in the same flow.</span>`,
 dc2:`<span><b>Architecture before code</b> — modules and communication defined up front.</span>`,
 dc3:`<span><b>AI inside the product</b> — real features in daily use, not a demo.</span>`,
@@ -1488,7 +1537,7 @@ ph4a:`The result is a real digital product: built end to end, in production and 
 sb1:`IN PRODUCTION`,sb2:`ACTIVE USERS`,
 ph4t:`SCREEN 03 · HISTORY COMPONENT`,
 ph4p:`Save as <b>imagens/prescrittomed-prontuario.png</b> — patient history in a single screen.`,
-fig4:`<b>FIG. 07</b> — IN PRODUCTION · MEDICAL RECORD — PATIENT HISTORY IN ONE SCREEN`,
+fig4:`<b>FIG. 08</b> — IN PRODUCTION · MEDICAL RECORD — PATIENT HISTORY IN ONE SCREEN`,
 cq:`FROM ARCHITECTURE TO CODE<span class="dot">.</span> FROM THE FIRST FLOW TO THE PRODUCT IN USE<span class="dot">.</span>`,
 rr1b:`OWNERSHIP`,rr1:`100% of the technical development — frontend, backend, architecture, integrations and AI.`,
 rr2b:`STATUS`,rr2:`In production, with active users.`,
@@ -1614,7 +1663,7 @@ ibSy:`<b>● COACH</b> SUGGESTED LOAD +2.5 KG`
 });
 
 Object.assign(EN,{
-wn:`Two production systems, one personal project and one open-source adaptation. <b>The interfaces are the protagonists.</b>`,
+wn:`Two production systems, two personal projects and one open-source adaptation. <b>The interfaces are the protagonists.</b>`,
 wi4w:`WEB INVENTORY SYSTEM FOR RETAIL STORES — RAILS`,
 apB:`<b>APPLIED IN</b> — Rails: Conexiia · Stock Management · Python: PrescrittoMED`,
 apC:`<b>APPLIED IN</b> — Iron Bear · Conexiia · Stock Management · PrescrittoMED`,
@@ -1629,6 +1678,34 @@ p5d3:`Ruby on Rails 7 · Hotwire (Turbo, Stimulus) · PostgreSQL · Redis · Goo
 p5d4:`Products and SKUs, stock with sales forecast, production, stock counts, purchasing and suppliers, sales, reports and QR-code labels.`,
 p5d5:`Bling ERP via API.`,p5d6:`Open ERP — an open-source Ruby on Rails project`,
 lbBase:`BASE`,tEst:`INVENTORY`,tVar:`RETAIL`,chipNP:`NOT PUBLISHED`
+});
+
+Object.assign(EN,{
+wi5w:`BRAND, HUMOR AND E-COMMERCE — FROM LABEL TO STORE AND APP`,
+chK:`<b>05</b> / BRAND · E-COMMERCE · HUMOR`,chN:`TEAS TO SURVIVE ADULT LIFE`,
+chS:`A boring tea became a brand: 16 flavors named after situations, a drug-leaflet-style insert and dry, acid humor — from the label to the web store and the mobile app.`,
+chD0:`E-commerce · Brand · Content`,
+chD1:`<b>BUILT</b> · test site (demo prices and checkout)`,
+chD2:`<b>Concept, creative direction, product and development</b> — personal project`,
+lbTone:`TONE`,
+chD3:`Acid humor everywhere: free shipping comes with “the rest of adult life keeps charging”, every tea has a leaflet with indications and effects, and each box’s animated stamp tells a joke.`,
+chD4:`16 flavors, bundles, “build your own bundle”, a 5-question quiz that prescribes your tea, gifts, customer area, cart and checkout. The Flutter app reads the same data.`,
+chD5:`Plain HTML · CSS · JavaScript (no build) · Python (server and image generation) · Node.js (payment API) · Flutter/Dart · Vercel`,
+lbPay:`PAYMENT`,
+chD6:`Mercado Pago (Checkout Pro). The server recalculates price, bundle, coupon and shipping — the browser never decides the amount. Code ready and tested; switched off until the key is added.`,
+chT1:`BRAND`,chT2:`HUMOR`,
+chF1:`01 · The boxes: each tea is a situation of adult life`,
+chF2:`02 · Six of the 16 labels, each with its own line`,
+chFig:`<b>FIG. 06</b> — TEAS TO SURVIVE ADULT LIFE · BRAND AND PACKAGING`,
+apA:`<b>APPLIED IN</b> — Python: PrescrittoMED · Chás · Ruby: Conexiia · TypeScript: Iron Bear · JavaScript and Dart: Chás · PHP and Java: outside the projects above`,
+apB:`<b>APPLIED IN</b> — Rails: Conexiia · Stock Management · Python: PrescrittoMED · Node.js (payments) and Python (server): Chás · PHP and Java: outside the projects above`,
+apDb:`<b>APPLIED IN</b> — PostgreSQL: Iron Bear · Stock Management · Redis: Stock Management · RLS: Iron Bear`,
+apC:`<b>APPLIED IN</b> — Iron Bear · Conexiia · Stock Management · PrescrittoMED · Chás (plain HTML · CSS · JS)`,
+apM:`<b>APPLIED IN</b> — React Native and Expo: Iron Bear · Flutter: Chás (web and Android app)`,
+apE:`<b>APPLIED IN</b> — everything in production · Vercel: Chás (deploy on every merge)`,
+c3ul:`<li>AI features inside the product, not a demo</li><li>A rules engine decides; the LLM only phrases</li><li>Human-in-the-loop where the stakes require it</li>`,
+c5ul:`<li>One codebase for web and Android (Flutter)</li><li>Native-feel interactions without a native team</li><li>State saved on the device: the cart survives closing the app</li>`,
+c5s:`SEEN IN — <a href="#p3">IRON BEAR</a> · <a href="#p5">TEAS TO SURVIVE ADULT LIFE</a>`
 });
 
 const DICTS={pt:{},en:EN};
