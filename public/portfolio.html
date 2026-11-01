@@ -264,6 +264,9 @@ body.menu-open{overflow:hidden}
 .shot.noimg .ph-msg{display:flex}
 .vid-tag{position:absolute;top:12px;right:12px;z-index:3;display:inline-flex;align-items:center;gap:8px;font:600 9px var(--fm);letter-spacing:.14em;color:var(--txt);background:rgba(10,10,11,.78);border:1px solid var(--line2);padding:6px 10px;text-transform:uppercase}
 .shot.noimg .vid-tag{display:none}
+.vid-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;display:inline-flex;align-items:center;gap:10px;font:600 11px var(--fm);letter-spacing:.16em;color:#0A0A0B;background:var(--acc);border:0;padding:14px 20px;cursor:pointer}
+.vid-play svg{width:14px;height:14px;fill:currentColor}
+.vid-play:hover{background:var(--acc-hi)}
 .ph-msg svg{width:30px;height:30px;stroke:var(--mut);fill:none;stroke-width:1.2}
 .ph-msg strong{font:600 11px var(--fm);letter-spacing:.16em;color:var(--acc)}
 .ph-msg p{font:400 11px/1.7 var(--fm);color:var(--mut);max-width:36ch}
@@ -992,7 +995,7 @@ body.lb-open{overflow:hidden}
               </video>
               <span class="vid-tag" data-i18n="chVt"><i class="pulse"></i>VÍDEO · LOJA EM USO</span>
               <div class="ph-msg"><strong>VÍDEO · LOJA EM USO</strong><p><b>imagens/chas-demo.mp4</b></p></div>
-              <figcaption data-i18n="chF0">01 · A loja em uso: chá do dia, caixa que abre, chá indo para a sacola</figcaption>
+              <figcaption data-i18n="chF0">01 · A loja em uso: caixa que abre, botão que foge, chá indo para a sacola</figcaption>
             </div>
           </figure>
           <figure class="browser" data-cursor="VER">
@@ -1135,7 +1138,7 @@ body.lb-open{overflow:hidden}
     <div class="sec-head rv">
       <p class="kick" data-i18n="c2k"><b>03</b>ESTUDO DE CASO — 002</p>
       <h2 class="sec-title" data-i18n="c2h">DO CHÁ SEM GRAÇA À MARCA<span class="dot">.</span></h2>
-      <p class="sec-note" data-i18n="c2n">Como um produto simples virou <b>marca, loja e app</b>. A parte criativa e a parte técnica, lado a lado — e o que ainda falta para vender de verdade.</p>
+      <p class="sec-note" data-i18n="c2n">Como um produto simples virou <b>marca, loja e app</b>. A parte criativa, a pesquisa e a parte técnica, lado a lado — e o que ainda falta para vender de verdade.</p>
     </div>
     <div class="case-grid">
       <aside class="case-side rv">
@@ -1178,6 +1181,34 @@ body.lb-open{overflow:hidden}
         </div>
         <div class="phase rv">
           <p class="phase-k"><b>03</b><span data-i18n="lbPhase">FASE</span></p>
+          <div>
+            <h3 data-i18n="c2sh">O Estudo — pensado para ficar e voltar</h3>
+            <p data-i18n="c2sa">Uma loja comum termina quando o carrinho fecha. Aqui o ponto de partida foi o contrário: dar motivos para explorar, voltar outro dia e mostrar para outras pessoas. Antes de desenhar as telas, juntei o que a pesquisa de mercado e a academia dizem sobre usabilidade, engajamento e comunidade com princípios de projeto próprios — e cada cartão abaixo diz qual dos dois é.</p>
+            <p class="mods-h" data-i18n="c2sH">REFERÊNCIA OU PRINCÍPIO × O QUE O SITE FAZ</p>
+            <div class="mods">
+              <div class="mod" data-i18n="c2s1"><b>TIRAR ATRITO DO CAMINHO</b><p>Pesquisa: a Baymard Institute mede que perto de 70% dos carrinhos online são abandonados, e custos extras inesperados e checkout longo estão entre os motivos.<br>No site: frete grátis acima de R$ 99 com a meta visível na sacola, cálculo de frete na página do chá e compra sem criar conta (a API só pede nome, e-mail e CEP).</p></div>
+              <div class="mod" data-i18n="c2s2"><b>UM MOTIVO PARA VOLTAR AMANHÃ</b><p>Princípio: a pessoa volta quando há algo novo para ver, não só um preço.<br>No site: o “chá do dia” da home muda de chá, cor e frase conforme o dia, e datas especiais têm chá fixado à mão.</p></div>
+              <div class="mod" data-i18n="c2s3"><b>COLEÇÃO E PROGRESSO</b><p>Pesquisa: em cartões de fidelidade, progresso já iniciado aumentou a chance de completar o cartão (Nunes e Drèze, 2006), e quem se aproxima da meta acelera (Kivetz e outros, 2006).<br>No site: a “Carteira do CLT” ganha um carimbo por chá comprado, com 16 carimbos para a aposentadoria. Esse efeito foi estudado em cartões de fidelidade; não medimos no nosso site.</p></div>
+              <div class="mod" data-i18n="c2s4"><b>SER ENTENDIDO, NÃO SÓ ATENDIDO</b><p>Princípio: poucas perguntas e uma recomendação reduzem o esforço de escolher entre 16 chás parecidos.<br>No site: o quiz de 5 perguntas receita dois chás, e o “monte seu kit” dá desconto crescente a cada chá escolhido.</p></div>
+              <div class="mod" data-i18n="c2s5"><b>HUMOR QUE CONVIDA, NÃO QUE ATACA</b><p>Pesquisa: um estudo no Journal of Consumer Research (DOI 10.1093/jcr/ucae051) encontrou que provocar com bom humor aumentou o engajamento mais que humor só engraçado, e que a vantagem some quando a provocação é antissocial.<br>No site: a piada é sobre a situação que todo mundo reconhece, nunca sobre quem está lendo.</p></div>
+              <div class="mod" data-i18n="c2s6"><b>COMPARTILHAR VIRA COMUNIDADE</b><p>Princípio: o que dá vontade de mandar para alguém se espalha sozinho.<br>No site: resultado do quiz para stories, cartão digital de presente com link público, 16 figurinhas e o botão “Mandar pra alguém que precisa”.</p></div>
+            </div>
+            <ul class="deci">
+              <li data-i18n="c2sd1"><span><b>Surpresa sem atrapalhar</b> — o botão “Responder” do chá do ex foge do mouse, e cada caixa tem um selo animado; as surpresas respeitam a opção “reduzir movimento” do sistema.</span></li>
+              <li data-i18n="c2sd2"><span><b>Conteúdo que vale a visita</b> — cada chá tem bula com indicação, efeitos e modo de usar, então a página do produto tem o que ler, não só preço e foto.</span></li>
+            </ul>
+            <p data-i18n="c2sn">O que isso ainda não prova: sem tráfego real, não há taxa de retorno nem de conversão para mostrar. As referências explicam por que escolhi essas mecânicas, não que a loja já performa assim.</p>
+            <p class="mods-h" data-i18n="c2rH">REFERÊNCIAS</p>
+            <ul class="deci">
+              <li><span>Baymard Institute — <i>Cart Abandonment Rate Statistics</i> (baymard.com/lists/cart-abandonment-rate).</span></li>
+              <li><span>Nunes, J. C.; Drèze, X. (2006). <i>The Endowed Progress Effect.</i> Journal of Consumer Research, 32(4), 504–512.</span></li>
+              <li><span>Kivetz, R.; Urminsky, O.; Zheng, Y. (2006). <i>The Goal-Gradient Hypothesis Resurrected.</i> Journal of Marketing Research, 43(1).</span></li>
+              <li><span><i>Brand Teasing: How Brands Build Strong Relationships by Making Fun of Their Consumers.</i> Journal of Consumer Research, DOI 10.1093/jcr/ucae051.</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="phase rv">
+          <p class="phase-k"><b>04</b><span data-i18n="lbPhase">FASE</span></p>
           <div>
             <h3 data-i18n="c2p3h">O Desenvolvimento</h3>
             <p data-i18n="c2p3a">Quase tudo nasce de uma fonte só: um arquivo de dados com os 16 sabores, kits, perguntas do quiz e bulas, gerado por um script em Python. O site e o app Flutter leem o mesmo arquivo, então uma frase corrigida muda nos dois.</p>
@@ -1225,14 +1256,14 @@ body.lb-open{overflow:hidden}
               </video>
               <span class="vid-tag" data-i18n="c2vt"><i class="pulse"></i>VÍDEO · LOJA EM USO</span>
               <div class="ph-msg"><strong>VÍDEO · LOJA EM USO</strong><p><b>imagens/chas-demo.mp4</b></p></div>
-                <figcaption data-i18n="c2cap">A loja publicada em uso: o chá do dia muda conforme o dia, a caixa abre e o selo conta a piada, o chá voa para a sacola</figcaption>
+                <figcaption data-i18n="c2cap">Gravação do site de teste: rola os chás, a caixa abre e o selo conta a piada, o botão “Responder” do chá do ex foge do mouse, os chás vão para a sacola</figcaption>
               </div>
             </figure>
-            <p class="fig" data-i18n="c2fig2"><b>FIG. 10</b> — A LOJA PUBLICADA EM USO · GRAVAÇÃO DO SITE DE TESTE (A SEGUNDA DATA É SIMULADA NO NAVEGADOR)</p>
+            <p class="fig" data-i18n="c2fig2"><b>FIG. 10</b> — A LOJA EM USO · GRAVAÇÃO REAL DO SITE DE TESTE</p>
           </div>
         </div>
         <div class="phase rv">
-          <p class="phase-k"><b>04</b><span data-i18n="lbPhase">FASE</span></p>
+          <p class="phase-k"><b>05</b><span data-i18n="lbPhase">FASE</span></p>
           <div>
             <h3 data-i18n="c2p4h">O Resultado — e o que falta</h3>
             <p data-i18n="c2p4a">O resultado é uma marca completa e uma loja que funciona de ponta a ponta em modo de demonstração. Ainda não é uma loja vendendo: o site é de teste, com preços, CNPJ e checkout de mentira, e o pagamento está desligado até entrar a chave.</p>
@@ -1837,7 +1868,7 @@ c5s:`SEEN IN — <a href="#p3">IRON BEAR</a> · <a href="#p5">TEAS TO SURVIVE AD
 
 Object.assign(EN,{
 c2k:`<b>03</b>CASE STUDY — 002`,c2h:`FROM A BORING TEA TO A BRAND<span class="dot">.</span>`,
-c2n:`How a simple product became a <b>brand, a store and an app</b>. The creative side and the technical side, together — and what is still missing to actually sell.`,
+c2n:`How a simple product became a <b>brand, a store and an app</b>. The creative side, the research and the technical side, together — and what is still missing to actually sell.`,
 c2Sk:`<b>002</b> / BRAND · E-COMMERCE · HUMOR`,c2L:`READ THE CASE STUDY ↓`,
 c2p1h:`The Problem`,
 c2p1a:`Tea is one of the most generic categories there is: a box, a flavor, a photo of a leaf. That was exactly the starting point — a boring tea, like every other one.`,
@@ -1876,11 +1907,27 @@ c2r4b:`NEXT STEP`,c2r4:`To really sell: a real tax ID and prices, a Mercado Pago
 
 Object.assign(EN,{
 chVt:`VIDEO · STORE IN USE`,c2vt:`VIDEO · STORE IN USE`,
-chF0:`01 · The store in use: tea of the day, opening box, tea flying into the bag`,
+chF0:`01 · The store in use: opening box, a button that runs away, tea flying into the bag`,
 chF1:`02 · The boxes: each tea is a situation of adult life`,
 c2cap0:`Six of the 16 labels, each with its own line`,
-c2cap:`The published store in use: the tea of the day changes with the day, the box opens and the stamp tells the joke, the tea flies into the bag`,
-c2fig2:`<b>FIG. 10</b> — THE PUBLISHED STORE IN USE · RECORDING OF THE TEST SITE (THE SECOND DATE IS SIMULATED IN THE BROWSER)`
+c2cap:`Recording of the test site: scrolling the teas, the box opens and the stamp tells the joke, the ex-tea “Reply” button runs from the mouse, the teas go into the bag`,
+c2fig2:`<b>FIG. 10</b> — THE STORE IN USE · REAL RECORDING OF THE TEST SITE`
+});
+
+Object.assign(EN,{
+c2sh:`The Study — designed to stay and to come back`,
+c2sa:`An ordinary store ends when the cart closes. Here the starting point was the opposite: give people reasons to explore, to come back another day and to show it to others. Before drawing any screen, I put together what market research and academia say about usability, engagement and community with design principles of my own — and each card below says which of the two it is.`,
+c2sH:`REFERENCE OR PRINCIPLE × WHAT THE SITE DOES`,
+c2s1:`<b>TAKE FRICTION OUT OF THE WAY</b><p>Research: Baymard Institute measures that close to 70% of online carts are abandoned, and unexpected extra costs and long checkouts are among the reasons.<br>On the site: free shipping above R$ 99 with the goal visible in the bag, shipping calculated on the tea page and checkout without creating an account (the API only asks for name, email and postal code).</p>`,
+c2s2:`<b>A REASON TO COME BACK TOMORROW</b><p>Principle: people come back when there is something new to see, not just a price.<br>On the site: the home’s “tea of the day” changes tea, color and line with the day, and special dates have a hand-picked tea.</p>`,
+c2s3:`<b>COLLECTION AND PROGRESS</b><p>Research: in loyalty cards, progress already started raised the chance of completing the card (Nunes and Drèze, 2006), and people speed up as they near the goal (Kivetz and others, 2006).<br>On the site: the “Worker’s Card” gets one stamp per tea bought, with 16 stamps for retirement. This effect was studied in loyalty cards; we have not measured it on our site.</p>`,
+c2s4:`<b>BE UNDERSTOOD, NOT JUST SERVED</b><p>Principle: a few questions and one recommendation reduce the effort of choosing among 16 similar teas.<br>On the site: the 5-question quiz prescribes two teas, and “build your own bundle” gives a growing discount with every tea chosen.</p>`,
+c2s5:`<b>HUMOR THAT INVITES, NOT ATTACKS</b><p>Research: a Journal of Consumer Research study (DOI 10.1093/jcr/ucae051) found that teasing in a good-humored way raised engagement more than purely funny humor, and that the advantage disappears when the teasing is antisocial.<br>On the site: the joke is about the situation everyone recognizes, never about whoever is reading.</p>`,
+c2s6:`<b>SHARING BECOMES COMMUNITY</b><p>Principle: what people want to send to someone spreads on its own.<br>On the site: quiz result for stories, a digital gift card with a public link, 16 stickers and the “Send to someone who needs it” button.</p>`,
+c2sd1:`<span><b>Surprise without getting in the way</b> — the ex-tea “Reply” button runs from the mouse, and every box has an animated stamp; the surprises respect the system’s “reduce motion” setting.</span>`,
+c2sd2:`<span><b>Content worth the visit</b> — each tea has a leaflet with indication, effects and directions, so the product page has something to read, not just a price and a photo.</span>`,
+c2sn:`What this does not prove yet: without real traffic there is no return rate or conversion rate to show. The references explain why I chose these mechanics, not that the store already performs this way.`,
+c2rH:`REFERENCES`
 });
 
 const DICTS={pt:{},en:EN};
@@ -2047,10 +2094,26 @@ function loopVideo(vid,fallbackSel){
   const src=vid.querySelector('source');
   if(src)src.addEventListener('error',fail);
   vid.addEventListener('error',fail);
-  if(RM){vid.removeAttribute('autoplay');return;}
+  /* com "reduzir movimento" ou autoplay bloqueado (economia de energia), o vídeo não toca sozinho:
+     mostra um botão para a pessoa iniciar */
+  let btn=null,manual=false;
+  function showPlay(){
+    if(btn||dead)return;
+    const host=vid.parentElement;
+    btn=document.createElement('button');btn.type='button';btn.className='vid-play';
+    btn.setAttribute('aria-label',LANG==='en'?'Play video':'Reproduzir vídeo');
+    btn.innerHTML='<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z"/></svg>'+(LANG==='en'?'PLAY VIDEO':'REPRODUZIR VÍDEO');
+    btn.addEventListener('click',()=>{manual=true;btn.remove();btn=null;vid.play().catch(()=>{});});
+    host.appendChild(btn);
+  }
+  if(RM){vid.removeAttribute('autoplay');showPlay();return;}
   let vis=false;
   function sync(){
-    if(vis&&!document.hidden&&!dead){vid.play().catch(()=>{});}
+    if(manual)return;
+    if(vis&&!document.hidden&&!dead){
+      const r=vid.play();
+      if(r&&r.then)r.then(()=>{if(btn){btn.remove();btn=null;}}).catch(()=>showPlay());
+    }
     else{vid.pause();}
   }
   new IntersectionObserver(es=>es.forEach(e=>{vis=e.isIntersecting;sync();}),{threshold:.15}).observe(vid);
