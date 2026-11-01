@@ -986,20 +986,23 @@ body.lb-open{overflow:hidden}
         </div>
         <div class="shots rv" data-d="1">
           <figure class="browser" data-cursor="VER">
-            <div class="shot" style="aspect-ratio:2800/1252">
-              <img src="imagens/chas-hero.webp" alt="Três caixas da marca Chás para sobreviver à vida adulta: Reunião que podia ser e-mail, F*da-se e Paciência" loading="lazy" style="object-fit:contain;object-position:center" onerror="this.closest('.shot').classList.add('noimg')">
-              <div class="ph-msg"><strong>IMAGEM · CAIXAS</strong><p><b>imagens/chas-hero.webp</b></p></div>
-              <figcaption data-i18n="chF1">01 · As caixas: cada chá é uma situação da vida adulta</figcaption>
+            <div class="shot">
+              <video id="chVid" poster="imagens/chas-capa.jpg" autoplay muted loop playsinline preload="metadata">
+                <source src="imagens/chas-demo.mp4" type="video/mp4">
+              </video>
+              <span class="vid-tag" data-i18n="chVt"><i class="pulse"></i>VÍDEO · LOJA EM USO</span>
+              <div class="ph-msg"><strong>VÍDEO · LOJA EM USO</strong><p><b>imagens/chas-demo.mp4</b></p></div>
+              <figcaption data-i18n="chF0">01 · A loja em uso: chá do dia, caixa que abre, chá indo para a sacola</figcaption>
             </div>
           </figure>
           <figure class="browser" data-cursor="VER">
-            <div class="shot" style="aspect-ratio:1368/1190">
-              <img src="imagens/chas-colecao.webp" alt="Seis rótulos da coleção: Paciência, Reunião que podia ser e-mail, Sumisso, Fofoca, Sumir do Mapa e F*da-se" loading="lazy" style="object-fit:contain;object-position:center" onerror="this.closest('.shot').classList.add('noimg')">
-              <div class="ph-msg"><strong>IMAGEM · RÓTULOS</strong><p><b>imagens/chas-colecao.webp</b></p></div>
-              <figcaption data-i18n="chF2">02 · Seis dos 16 rótulos, cada um com a sua frase</figcaption>
+            <div class="shot" style="aspect-ratio:2800/1252">
+              <img src="imagens/chas-hero.webp" alt="Três caixas da marca Chás para sobreviver à vida adulta: Reunião que podia ser e-mail, F*da-se e Paciência" loading="lazy" style="object-fit:contain;object-position:center" onerror="this.closest('.shot').classList.add('noimg')">
+              <div class="ph-msg"><strong>IMAGEM · CAIXAS</strong><p><b>imagens/chas-hero.webp</b></p></div>
+              <figcaption data-i18n="chF1">02 · As caixas: cada chá é uma situação da vida adulta</figcaption>
             </div>
           </figure>
-          <p class="fig" data-i18n="chFig"><b>FIG. 06</b> — CHÁS PARA SOBREVIVER À VIDA ADULTA · MARCA E EMBALAGEM</p>
+          <p class="fig" data-i18n="chFig"><b>FIG. 06</b> — CHÁS PARA SOBREVIVER À VIDA ADULTA · LOJA EM USO E EMBALAGEM</p>
         </div>
       </div>
     </article>
@@ -1164,6 +1167,13 @@ body.lb-open{overflow:hidden}
               <div class="mod" data-i18n="c2m4"><b>NÃO RESPONDE O EX — “DOCE, SÓ O CHÁ”</b><p>Modo de usar: um sachê. Segure a xícara com as duas mãos. Solte o celular.</p></div>
               <div class="mod" data-i18n="c2m5"><b>ESQUECI O QUE VIM FAZER</b><p>Efeitos: memória curta, chá bom, resolução do problema: nenhuma. Se lembrar do que ia fazer, parabéns.</p></div>
             </div>
+            <figure class="browser" style="margin-top:30px" data-cursor="VER">
+              <div class="shot" style="aspect-ratio:1368/1190">
+                <img src="imagens/chas-colecao.webp" alt="Seis rótulos da coleção: Paciência, Reunião que podia ser e-mail, Sumisso, Fofoca, Sumir do Mapa e F*da-se" loading="lazy" style="object-fit:contain;object-position:center" onerror="this.closest('.shot').classList.add('noimg')">
+                <div class="ph-msg"><strong>IMAGEM · RÓTULOS</strong><p><b>imagens/chas-colecao.webp</b></p></div>
+                <figcaption data-i18n="c2cap0">Seis dos 16 rótulos, cada um com a sua frase</figcaption>
+              </div>
+            </figure>
           </div>
         </div>
         <div class="phase rv">
@@ -1208,6 +1218,17 @@ body.lb-open{overflow:hidden}
               <li data-i18n="c2d4"><span><b>Preço decidido no servidor</b> — a API em Node recalcula itens, kit, cupom e frete; o que o navegador manda é ignorado. O pagamento abre no Mercado Pago (Checkout Pro), o cartão nunca passa pelo site, e o aviso de pagamento tem a assinatura conferida (com o segredo configurado).</span></li>
               <li data-i18n="c2d5"><span><b>Compartilhar é produto</b> — resultado do quiz para stories, cartão digital de presente com link público, figurinhas e uma “Carteira do CLT” com um carimbo por chá comprado.</span></li>
             </ul>
+            <figure class="browser" style="margin-top:34px" data-cursor="VER">
+              <div class="shot">
+                <video id="chVid2" poster="imagens/chas-capa.jpg" autoplay muted loop playsinline preload="metadata">
+                <source src="imagens/chas-demo.mp4" type="video/mp4">
+              </video>
+              <span class="vid-tag" data-i18n="c2vt"><i class="pulse"></i>VÍDEO · LOJA EM USO</span>
+              <div class="ph-msg"><strong>VÍDEO · LOJA EM USO</strong><p><b>imagens/chas-demo.mp4</b></p></div>
+                <figcaption data-i18n="c2cap">A loja publicada em uso: o chá do dia muda conforme o dia, a caixa abre e o selo conta a piada, o chá voa para a sacola</figcaption>
+              </div>
+            </figure>
+            <p class="fig" data-i18n="c2fig2"><b>FIG. 10</b> — A LOJA PUBLICADA EM USO · GRAVAÇÃO DO SITE DE TESTE (A SEGUNDA DATA É SIMULADA NO NAVEGADOR)</p>
           </div>
         </div>
         <div class="phase rv">
@@ -1802,7 +1823,7 @@ chD6:`Mercado Pago (Checkout Pro). The server recalculates price, bundle, coupon
 chT1:`BRAND`,chT2:`HUMOR`,
 chF1:`01 · The boxes: each tea is a situation of adult life`,
 chF2:`02 · Six of the 16 labels, each with its own line`,
-chFig:`<b>FIG. 06</b> — TEAS TO SURVIVE ADULT LIFE · BRAND AND PACKAGING`,
+chFig:`<b>FIG. 06</b> — TEAS TO SURVIVE ADULT LIFE · STORE IN USE AND PACKAGING`,
 apA:`<b>APPLIED IN</b> — Python: PrescrittoMED · Chás · Ruby: Conexiia · TypeScript: Iron Bear · JavaScript and Dart: Chás · PHP and Java: outside the projects above`,
 apB:`<b>APPLIED IN</b> — Rails: Conexiia · Stock Management · Python: PrescrittoMED · Node.js (payments) and Python (server): Chás · PHP and Java: outside the projects above`,
 apDb:`<b>APPLIED IN</b> — PostgreSQL: Iron Bear · Stock Management · Redis: Stock Management · RLS: Iron Bear`,
@@ -1851,6 +1872,15 @@ c2r1b:`ROLE`,c2r1:`Concept, creative direction, product and development — site
 c2r2b:`TESTS AND BUILD`,c2r2:`14 automated tests for the payment API, with a simulated Mercado Pago; Flutter app compiling for web and Android.`,
 c2r3b:`NOT YET`,c2r3:`The APK has not been opened on a real device; customer reviews are fictional and accounts live only on the device; shipping is a fixed test value.`,
 c2r4b:`NEXT STEP`,c2r4:`To really sell: a real tax ID and prices, a Mercado Pago key, calculated shipping, real reviews and a database for accounts and orders.`
+});
+
+Object.assign(EN,{
+chVt:`VIDEO · STORE IN USE`,c2vt:`VIDEO · STORE IN USE`,
+chF0:`01 · The store in use: tea of the day, opening box, tea flying into the bag`,
+chF1:`02 · The boxes: each tea is a situation of adult life`,
+c2cap0:`Six of the 16 labels, each with its own line`,
+c2cap:`The published store in use: the tea of the day changes with the day, the box opens and the stamp tells the joke, the tea flies into the bag`,
+c2fig2:`<b>FIG. 10</b> — THE PUBLISHED STORE IN USE · RECORDING OF THE TEST SITE (THE SECOND DATE IS SIMULATED IN THE BROWSER)`
 });
 
 const DICTS={pt:{},en:EN};
@@ -2028,6 +2058,8 @@ function loopVideo(vid,fallbackSel){
 }
 loopVideo($('#pmVid'),'#pmCapa');
 loopVideo($('#ibVid'));
+loopVideo($('#chVid'));
+loopVideo($('#chVid2'));
 
 /* ---------- console de deploy do hero ---------- */
 const bootBody=$('#bootBody'),bootServ=$('#bootServ'),termStat=$('#termStat');
